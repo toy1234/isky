@@ -171,10 +171,7 @@
                                         content: '';
                                         width: 100%;
                                         height: 100%;
-                                        background-image: url('/resources/images/mobile/newmuffin/img/point/202308/soldout_stamp.png');
-                                        background-size: 100% auto;
-                                        background-repeat: no-repeat;
-                                        background-position: 50% 50%;
+                                        background: url('/resources/images/mobile/newmuffin/img/point/202308/soldout_stamp.png') 50% 50%/100% auto no-repeat;
                                     }
                                 }
                             }
@@ -188,6 +185,7 @@
                         text-align: left;
 
                         .dot_list {
+                            margin: 0 6px;
                             @include listdot(4px, 12px, $pcF);
                         }
 
@@ -250,8 +248,7 @@
                                 height: 100px;
                                 border-radius: 12px;
                                 box-sizing: border-box;
-                                background: #f9f9fb url('/resources/images/mobile/newmuffin/img/point/202308/img_okmuffin_change.jpg') 50% 50% no-repeat;
-                                background-size: contain;
+                                background: #f9f9fb url('/resources/images/mobile/newmuffin/img/point/202308/img_okmuffin_change.jpg') 50% 50%/contain no-repeat;
                             }
 
                             &+.section {
@@ -316,7 +313,7 @@
                                 display: block;
                                 width: 42px;
                                 height: 42px;
-                                background: transparent url('/resources/images/mobile/newmuffin/img/point/202308/ico-comp.svg') 0 0/100% auto no-repeat;
+                                background: transparent url('/resources/images/mobile/newmuffin/img/point/202308/ico-comp.svg') 0 0/contain no-repeat;
                             }
 
 
@@ -500,6 +497,15 @@
                             &:first-of-type {
                                 margin-top: 8px;
                             }
+
+                            .dot_list {
+                                margin: 20px 6px 0;
+                                @include listdot(8px, 14px, $pc4);
+
+                                >li {
+                                    padding-left: 12px;
+                                }
+                            }
                         }
 
 
@@ -526,6 +532,10 @@
                         line-height: 1.556;
                         color: $pc1;
                         padding-bottom: 8px;
+                    }
+
+                    .dot_list {
+                        margin: 0 6px;
                     }
                 }
 
@@ -626,7 +636,7 @@
         display: inline-block;
         width: 7.1rem;
         height: 3.3rem;
-        background: url('/resources/images/mobile/newmuffin/img/point/202308/logo-footer.svg') 0 0/100% auto no-repeat;
+        background: url('/resources/images/mobile/newmuffin/img/point/202308/logo-footer.svg') 0 0/contain no-repeat;
         font: 0/0 a;
 
     }
@@ -659,21 +669,12 @@
         width: 20px;
         height: 20px;
         margin-right: 4px;
-        background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-info.svg');
-        background-repeat: no-repeat;
-        background-size: 20px auto;
+        background: url('/resources/images/mobile/newmuffin/img/point/202308/ico-info.svg') 0 0/contain no-repeat;
+
     }
 }
 
-.txt_list {
-    font-size: 12px;
-    color: $pc6;
-    line-height: 1.5;
-    margin-top: 4px;
-}
-
 .dot_list {
-    margin: 0 6px;
     @include listdot(4px, 12px, $pc4);
 
     ul {
@@ -681,16 +682,6 @@
 
         >li {
             letter-spacing: .01em;
-        }
-    }
-
-    &.type1 {
-        margin-top: 20px;
-        @include listdot(8px, 14px, $pc4);
-
-        >li {
-            padding-left: 12px;
-            word-break: break-all;
         }
     }
 }
@@ -714,7 +705,6 @@
             display: block;
             width: 4px;
             height: 1px;
-            border-radius: 50%;
             background-color: $pc4;
         }
     }
@@ -724,6 +714,7 @@
 .btn_group {
     display: flex;
     justify-content: center !important;
+    align-items: center;
     gap: 10px;
 
     &+.btn_group {
@@ -754,6 +745,11 @@ button {
 
     &.disabled,
     &:disabled {
+        background-color: $pcD !important;
+        border-color: $pcD !important;
+        color: $pcF;
+        cursor: default !important;
+
         &:after {
             display: none;
         }
@@ -779,12 +775,6 @@ button {
             background-color: $pc0;
         }
 
-        &:disabled,
-        &.disabled {
-            background-color: $pcD;
-            cursor: default;
-        }
-
         &.line {
             background-color: $pcF;
             border: 1px solid $pcR;
@@ -793,27 +783,9 @@ button {
 
             &:disabled,
             &.disabled {
-                border-color: $pcD;
-                color: $pc9;
-                cursor: default;
-            }
-        }
-
-        &[class*=ico_] {
-            &:before {
-                content: '';
-                width: 24px;
-                height: 24px;
-                display: inline-block;
-                margin-right: 4px;
-            }
-        }
-
-        &.ico_refresh {
-            &:before {
-                background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-refresh.svg');
-                background-repeat: no-repeat;
-                background-size: 24px auto;
+                background-color: $pcF !important;
+                border-color: $pcD !important;
+                color: $pc9 !important;
             }
         }
     }
@@ -844,7 +816,7 @@ button {
             height: 24px;
             background-position: 50% 50%;
             background-repeat: no-repeat;
-
+            background-size: contain;
         }
 
         &.back {
@@ -859,7 +831,6 @@ button {
                 background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-close.svg');
             }
         }
-
     }
 
     &.txt_btn {
@@ -876,6 +847,7 @@ button {
         &:before {
             background-position: 50% 50%;
             background-repeat: no-repeat;
+            background-size: contain;
         }
 
         &[class*=arrow_] {
@@ -904,12 +876,13 @@ button {
 
             &.up {
                 &:before {
-                    transform: translateY(-50%) rotate(-180deg);
+                    transform: translateY(-50%) rotate(180deg);
                 }
             }
         }
     }
 
+    //flag
     @at-root [class*=flag_] {
         align-self: flex-end;
         display: inline-block;
@@ -958,6 +931,7 @@ button {
                 border-bottom: 2px solid $pc4;
                 color: $pc4;
                 font-weight: 700;
+                pointer-events: none;
                 cursor: default;
             }
         }
@@ -991,7 +965,7 @@ button {
     margin-top: 24px;
 
     .dot_list {
-        margin-top: 4px;
+        margin: 4px 6px 0;
         @include listdot (0px, 12px, $pc6);
     }
 }
@@ -1071,11 +1045,6 @@ table {
 
             &::placeholder {
                 text-align: left;
-            }
-
-            &[type=number] {
-                text-align: right;
-                padding-right: 46px;
             }
 
             &[data-unit] {
@@ -1178,7 +1147,6 @@ table {
         width: 1px !important;
         height: 1px !important;
         clip: rect(1px, 1px, 1px, 1px);
-        -webkit-clip-path: inset(50%);
         clip-path: inset(50%);
 
         &+label {
@@ -1197,8 +1165,7 @@ table {
                 content: '';
                 width: 20px;
                 height: 20px;
-                background: url('/resources/images/mobile/newmuffin/img/point/202308/ico-radio-off.svg') 50% 50% no-repeat;
-                background-size: 20px auto;
+                background: url('/resources/images/mobile/newmuffin/img/point/202308/ico-radio-off.svg') 0 0/contain no-repeat;
             }
         }
 
@@ -1239,6 +1206,7 @@ table {
 }
 
 .radio_box_group {
+    margin-top: 28px;
     display: flex;
     flex-direction: column;
 
@@ -1278,8 +1246,9 @@ table {
                 }
 
                 &[class*=img] {
-                    padding-left: 94px !important;
+                    padding-left: 98px !important;
                     min-height: 82px;
+                    gap: 5px;
 
                     &:before {
                         content: '';
@@ -1287,13 +1256,14 @@ table {
                         height: 82px;
                         background-color: $pc7;
                         position: absolute;
-                        top: 0;
-                        left: 0;
+                        top: 50%;
+                        left: 4px;
+                        transform: translateY(-50%);
                         border-radius: 20px;
                         box-sizing: border-box;
-                        background-position: center center;
-                        background-size: contain;
+                        background-position: 50% 50%;
                         background-repeat: no-repeat;
+                        background-size: contain;
                     }
 
                     dd {
@@ -1365,7 +1335,6 @@ table {
         width: 1px !important;
         height: 1px !important;
         clip: rect(1px, 1px, 1px, 1px);
-        -webkit-clip-path: inset(50%);
         clip-path: inset(50%);
 
         &+label {
@@ -1381,12 +1350,10 @@ table {
             &:before {
                 flex: none;
                 display: inline-block;
-                overflow: hidden;
                 content: '';
                 width: 20px;
                 height: 20px;
-                background: transparent url('/resources/images/mobile/newmuffin/img/point/202308/ico-chk-off.svg') 0 0/100% auto no-repeat;
-                border-radius: 4px;
+                background: url('/resources/images/mobile/newmuffin/img/point/202308/ico-chk-off.svg') 0 0/contain no-repeat;
             }
         }
 

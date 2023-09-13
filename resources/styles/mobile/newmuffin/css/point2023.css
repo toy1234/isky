@@ -457,16 +457,16 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url("/resources/images/mobile/newmuffin/img/point/202308/soldout_stamp.png");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background: url("/resources/images/mobile/newmuffin/img/point/202308/soldout_stamp.png") 50% 50%/100% auto no-repeat;
 }
 .muffin_point_wrap_mobile section.contents.main .muffin_point_footer {
   padding: 25px 20px;
   background-color: #4C4A4F;
   color: #fff;
   text-align: left;
+}
+.muffin_point_wrap_mobile section.contents.main .muffin_point_footer .dot_list {
+  margin: 0 6px;
 }
 .muffin_point_wrap_mobile section.contents.main .muffin_point_footer .dot_list li {
   position: relative;
@@ -549,8 +549,7 @@ body {
   border-radius: 12px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #f9f9fb url("/resources/images/mobile/newmuffin/img/point/202308/img_okmuffin_change.jpg") 50% 50% no-repeat;
-  background-size: contain;
+  background: #f9f9fb url("/resources/images/mobile/newmuffin/img/point/202308/img_okmuffin_change.jpg") 50% 50%/contain no-repeat;
 }
 .muffin_point_wrap_mobile section.contents .inner h2.account + .section {
   margin-top: 0;
@@ -602,7 +601,7 @@ body {
   display: block;
   width: 42px;
   height: 42px;
-  background: transparent url("/resources/images/mobile/newmuffin/img/point/202308/ico-comp.svg") 0 0/100% auto no-repeat;
+  background: transparent url("/resources/images/mobile/newmuffin/img/point/202308/ico-comp.svg") 0 0/contain no-repeat;
 }
 .muffin_point_wrap_mobile section.contents .inner .section.inform_box.none:before {
   background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-none-data.svg");
@@ -789,6 +788,34 @@ body {
 .muffin_point_wrap_mobile section.contents .inner .section dd:first-of-type {
   margin-top: 8px;
 }
+.muffin_point_wrap_mobile section.contents .inner .section dd .dot_list {
+  margin: 20px 6px 0;
+}
+.muffin_point_wrap_mobile section.contents .inner .section dd .dot_list li {
+  position: relative;
+  padding-left: 10px;
+  font-size: 14px;
+  color: #4e5054;
+  text-align: left;
+  line-height: 1.5;
+}
+.muffin_point_wrap_mobile section.contents .inner .section dd .dot_list li:not(:first-child) {
+  margin-top: 8px;
+}
+.muffin_point_wrap_mobile section.contents .inner .section dd .dot_list li:before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  display: block;
+  width: 3px;
+  height: 3px;
+  background: #4e5054;
+  border-radius: 50%;
+}
+.muffin_point_wrap_mobile section.contents .inner .section dd .dot_list > li {
+  padding-left: 12px;
+}
 #applyInform dd,
 .inform_box dd {
   font-size: 14px !important;
@@ -808,6 +835,9 @@ body {
   line-height: 1.556;
   color: #171718;
   padding-bottom: 8px;
+}
+.muffin_point_wrap_mobile section.contents .notice .dot_list {
+  margin: 0 6px;
 }
 .muffin_point_wrap_mobile section.contents .result-area {
   padding-top: 10px;
@@ -890,7 +920,7 @@ body {
   display: inline-block;
   width: 7.1rem;
   height: 3.3rem;
-  background: url("/resources/images/mobile/newmuffin/img/point/202308/logo-footer.svg") 0 0/100% auto no-repeat;
+  background: url("/resources/images/mobile/newmuffin/img/point/202308/logo-footer.svg") 0 0/contain no-repeat;
   font: 0/0 a;
 }
 
@@ -922,21 +952,9 @@ body {
   width: 20px;
   height: 20px;
   margin-right: 4px;
-  background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-info.svg");
-  background-repeat: no-repeat;
-  background-size: 20px auto;
+  background: url("/resources/images/mobile/newmuffin/img/point/202308/ico-info.svg") 0 0/contain no-repeat;
 }
 
-.txt_list {
-  font-size: 12px;
-  color: #74797D;
-  line-height: 1.5;
-  margin-top: 4px;
-}
-
-.dot_list {
-  margin: 0 6px;
-}
 .dot_list li {
   position: relative;
   padding-left: 10px;
@@ -965,35 +983,6 @@ body {
 .dot_list ul > li {
   letter-spacing: 0.01em;
 }
-.dot_list.type1 {
-  margin-top: 20px;
-}
-.dot_list.type1 li {
-  position: relative;
-  padding-left: 10px;
-  font-size: 14px;
-  color: #4e5054;
-  text-align: left;
-  line-height: 1.5;
-}
-.dot_list.type1 li:not(:first-child) {
-  margin-top: 8px;
-}
-.dot_list.type1 li:before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 0;
-  display: block;
-  width: 3px;
-  height: 3px;
-  background: #4e5054;
-  border-radius: 50%;
-}
-.dot_list.type1 > li {
-  padding-left: 12px;
-  word-break: break-all;
-}
 
 .hyphen_list {
   font-size: 13px;
@@ -1014,7 +1003,6 @@ body {
   display: block;
   width: 4px;
   height: 1px;
-  border-radius: 50%;
   background-color: #4e5054;
 }
 
@@ -1025,6 +1013,9 @@ body {
   -webkit-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
 }
 .btn_group + .btn_group {
@@ -1049,6 +1040,14 @@ button:not(.link, .ico_btn, .arrow_down):active:after {
   height: 100%;
   background-color: #000000;
   opacity: 0.1;
+}
+a.disabled, a:disabled,
+button.disabled,
+button:disabled {
+  background-color: #dadfe3 !important;
+  border-color: #dadfe3 !important;
+  color: #fff;
+  cursor: default !important;
 }
 a.disabled:after, a:disabled:after,
 button.disabled:after,
@@ -1082,12 +1081,6 @@ a.btn.c_black,
 button.btn.c_black {
   background-color: #000000;
 }
-a.btn:disabled, a.btn.disabled,
-button.btn:disabled,
-button.btn.disabled {
-  background-color: #dadfe3;
-  cursor: default;
-}
 a.btn.line,
 button.btn.line {
   background-color: #fff;
@@ -1098,23 +1091,9 @@ button.btn.line {
 a.btn.line:disabled, a.btn.line.disabled,
 button.btn.line:disabled,
 button.btn.line.disabled {
-  border-color: #dadfe3;
-  color: #9ba1a7;
-  cursor: default;
-}
-a.btn[class*=ico_]:before,
-button.btn[class*=ico_]:before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  margin-right: 4px;
-}
-a.btn.ico_refresh:before,
-button.btn.ico_refresh:before {
-  background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-refresh.svg");
-  background-repeat: no-repeat;
-  background-size: 24px auto;
+  background-color: #fff !important;
+  border-color: #dadfe3 !important;
+  color: #9ba1a7 !important;
 }
 a.ico_btn,
 button.ico_btn {
@@ -1150,6 +1129,7 @@ button.ico_btn:before {
   height: 24px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 a.ico_btn.back:before,
 button.ico_btn.back:before {
@@ -1176,6 +1156,7 @@ a.txt_btn:before,
 button.txt_btn:before {
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 a.txt_btn[class*=arrow_],
 button.txt_btn[class*=arrow_] {
@@ -1208,8 +1189,8 @@ button.txt_btn.arrow_down:before {
 }
 a.txt_btn.arrow_down.up:before,
 button.txt_btn.arrow_down.up:before {
-  -webkit-transform: translateY(-50%) rotate(-180deg);
-          transform: translateY(-50%) rotate(-180deg);
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
 }
 [class*=flag_] {
   -ms-flex-item-align: end;
@@ -1264,6 +1245,7 @@ button.txt_btn.arrow_down.up:before {
   border-bottom: 2px solid #4e5054;
   color: #4e5054;
   font-weight: 700;
+  pointer-events: none;
   cursor: default;
 }
 .tab_group .tab_round {
@@ -1288,7 +1270,7 @@ button.txt_btn.arrow_down.up:before {
   margin-top: 24px;
 }
 .tab_section .dot_list {
-  margin-top: 4px;
+  margin: 4px 6px 0;
 }
 .tab_section .dot_list li {
   position: relative;
@@ -1405,10 +1387,6 @@ table.table_01 td:first-child {
 .input_box input.comma::placeholder {
   text-align: left;
 }
-.input_box input.comma[type=number] {
-  text-align: right;
-  padding-right: 46px;
-}
 .input_box input.comma[data-unit] {
   text-align: right;
   padding-right: 26px;
@@ -1499,7 +1477,7 @@ table.table_01 td:first-child {
   height: 1px !important;
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
+          clip-path: inset(50%);
 }
 .radio_box input[type=radio] + label {
   display: -webkit-inline-box;
@@ -1523,8 +1501,7 @@ table.table_01 td:first-child {
   content: "";
   width: 20px;
   height: 20px;
-  background: url("/resources/images/mobile/newmuffin/img/point/202308/ico-radio-off.svg") 50% 50% no-repeat;
-  background-size: 20px auto;
+  background: url("/resources/images/mobile/newmuffin/img/point/202308/ico-radio-off.svg") 0 0/contain no-repeat;
 }
 .radio_box input[type=radio]:checked + label:before {
   background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-radio-on.svg");
@@ -1549,6 +1526,7 @@ table.table_01 td:first-child {
 }
 
 .radio_box_group {
+  margin-top: 28px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1596,8 +1574,9 @@ table.table_01 td:first-child {
   font-size: 14px;
 }
 .info_box[class*=img] {
-  padding-left: 94px !important;
+  padding-left: 98px !important;
   min-height: 82px;
+  gap: 5px;
 }
 .info_box[class*=img]:before {
   content: "";
@@ -1605,14 +1584,16 @@ table.table_01 td:first-child {
   height: 82px;
   background-color: #F3F4F6;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 4px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   border-radius: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-position: center center;
-  background-size: contain;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 .info_box[class*=img] dd {
   color: #4e5054;
@@ -1659,7 +1640,7 @@ table.table_01 td:first-child {
   height: 1px !important;
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
+          clip-path: inset(50%);
 }
 .chk_box input[type=checkbox] + label {
   display: -webkit-inline-box;
@@ -1680,12 +1661,10 @@ table.table_01 td:first-child {
       -ms-flex: none;
           flex: none;
   display: inline-block;
-  overflow: hidden;
   content: "";
   width: 20px;
   height: 20px;
-  background: transparent url("/resources/images/mobile/newmuffin/img/point/202308/ico-chk-off.svg") 0 0/100% auto no-repeat;
-  border-radius: 4px;
+  background: url("/resources/images/mobile/newmuffin/img/point/202308/ico-chk-off.svg") 0 0/contain no-repeat;
 }
 .chk_box input[type=checkbox]:checked + label:before {
   background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-chk-on.svg");

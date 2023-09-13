@@ -64,111 +64,174 @@
             <!-- contents -->
             <section class="contents" title="본문 영역">
                 <div class="inner">
-                    <div>
-                        <button class="ico_btn back"><span>이전</span></button>
-                        <button class="ico_btn close"><span>닫기</span></button>
-                    </div>
+                    <div class="section">
+                        <h2 class="title">Button</h2>
+                        <div class="btn_group">
+                            <button class="ico_btn back"><span>이전</span></button>
+                            <button class="ico_btn close"><span>닫기</span></button>
+                            <button class="txt_btn"><span>조회</span></button>
+                            <button class="txt_btn arrow_down">더보기</button>
+                            <button class="txt_btn arrow_down up">접기</button>
+                        </div>
 
-                    <div class="btn_group">
-                        <button class="btn line">취소</button>
-                        <button class="btn">선택완료</button>
-                    </div>
+                        <div class="btn_group">
+                            <button class="btn line">취소</button>
+                            <button class="btn">선택완료</button>
+                        </div>
 
-                    <div class="btn_group">
-                        <a href="#none" class="btn line disabled">취소</a>
-                        <a href="#none" class="btn disabled">선택완료</a>
-                    </div>
-                    <br><br>
-
-                    <div>
-                        <button class="btn">button</button>
+                        <div class="btn_group">
+                            <a href="#none" class="btn line disabled">취소</a>
+                            <a href="#none" class="btn disabled">선택완료</a>
+                        </div>
                         <br><br>
-                        <button class="btn" disabled>button</button>
+
+                        <div>
+                            <button class="btn">button</button>
+                            <br><br>
+                            <button class="btn" disabled>button</button>
 
 
-                        <br><br>
-                        <a href="#none" class="btn">button</a>
+                            <br><br>
+                            <a href="#none" class="btn">button</a>
 
-                        <br><br>
-                        <a href="#none" class="btn disabled">button</a>
-                    </div>
-                    <br><br>
-
-                    <ul class="tab_group">
-                        <li class="tab_round active"><a href="#none">주유소</a></li>
-                        <li class="tab_round"><a href="MUFFIN_3000P_EVENT_MAIN_MODIFY_2-2.html">충전소</a></li>
-                    </ul>
-
-                    <br><br>
-
-                    <div class="input_group">
-                        <div class="input_box">
-                            <input type="tel" maxlength="12" placeholder="전화번호를 입력해주세요" value="">
-                        </div>
-
-                        <div class="input_box">
-                            <input type="text" inputmode="numeric" class="inp comma" data-unit="P"
-                                placeholder="포인트를 입력해주세요." value="1220">
-                            <button class="ico_btn del"><span>삭제</span></button>
-                        </div>
-
-                        <div class="input_box">
-                            <input type="text" inputmode="numeric" class="inp comma" data-unit="원"
-                                placeholder="금액을 입력해주세요" value="">
-                            <button class="ico_btn del"><span>삭제</span></button>
+                            <br><br>
+                            <a href="#none" class="btn disabled">button</a>
                         </div>
                     </div>
 
+                    <div class="section">
+                        <h2 class="title">Tab Button</h2>
 
-                    <div class="input_group search">
-                        <div class="input_box">
-                            <input type="text" class="inp" placeholder="도로명 주소 또는 주유소명">
-                            <button class="ico_btn del"><span>삭제</span></button>
-                        </div>
-                        <button class="txt_btn search"><span>조회</span></button>
+                        <ul class="tab_group">
+                            <li class="tab active"><a href="#none">주유소</a></li>
+                            <li class="tab"><a href="MUFFIN_3000P_EVENT_MAIN_MODIFY_2-2.html">LPG충전소</a></li>
+                        </ul>
+
+                        <ul class="tab_group">
+                            <li class="tab_round active"><a href="#none">주유소</a></li>
+                            <li class="tab_round"><a href="MUFFIN_3000P_EVENT_MAIN_MODIFY_2-2.html">LPG충전소</a></li>
+                        </ul>
                     </div>
 
-                    <br><br>
+                    <div class="section">
+                        <h2 class="title">Form</h2>
 
-                    <div class="radio_group">
-                        <div class="radio_box">
-                            <input type="radio" name="rd00" id="rdt01" checked><label for="rdt01">머핀포인트</label>
-                        </div>
-                        <div class="radio_box">
-                            <input type="radio" name="rd00" id="rdt02"><label for="rdt02">OK캐쉬백</label>
-                        </div>
-                        <div class="radio_box">
-                            <input type="radio" name="rd00" id="rdt03"><label for="rdt03">블루멤버스</label>
-                        </div>
-                    </div>
-
-                    <br><br>
-
-                    <div class="chk_box all">
-                        <input type="checkbox" name="chk00" id="chkt00" checked>
-                        <label for="chkt00">
-                            전체 동의
-                        </label>
-                    </div>
-
-                    <ul class="chk_list">
-                        <li>
-                            <div class="chk_box">
-                                <input type="checkbox" name="chk00" id="chkt01" checked>
-                                <label for="chkt01">(필수) 머핀 회원 이용약관</label>
+                        <div class="input_group">
+                            <div class="input_box">
+                                <input type="text" maxlength="12" placeholder="Placeholder" value="">
                             </div>
-                            <a href="#none" class="link" title="약관">보기</a>
-                        </li>
-                        <li>
-                            <div class="chk_box">
-                                <input type="checkbox" name="chk00" id="chkt02">
-                                <label for="chkt02">(필수) 머핀 회원 개인정보 수집 및 이용 동의 글씨가 길어질 경우</label>
+
+                            <div class="input_box">
+                                <input type="text" inputmode="numeric" class="inp comma" data-unit="P"
+                                    placeholder="포인트를 입력해주세요." value="1220">
+                                <button class="ico_btn del"><span>삭제</span></button>
                             </div>
-                            <a href="#none" class="link" title="약관">보기</a>
-                        </li>
-                    </ul>
+
+                            <div class="input_box">
+                                <input type="text" inputmode="numeric" class="inp comma" data-unit="원"
+                                    placeholder="금액을 입력해주세요" value="">
+                                <button class="ico_btn del"><span>삭제</span></button>
+                            </div>
+                        </div>
 
 
+                        <div class="input_group search">
+                            <div class="input_box">
+                                <input type="text" class="inp" placeholder="도로명 주소 또는 주유소명" value="">
+                                <button class="ico_btn del"><span>삭제</span></button>
+                            </div>
+                            <button class="txt_btn"><span>조회</span></button>
+                        </div>
+
+                        <br><br>
+
+                        <div class="radio_group">
+                            <div class="radio_box">
+                                <input type="radio" name="rd00" id="rdt01" checked><label for="rdt01">머핀포인트</label>
+                            </div>
+                            <div class="radio_box">
+                                <input type="radio" name="rd00" id="rdt02"><label for="rdt02">OK캐쉬백</label>
+                            </div>
+                            <div class="radio_box">
+                                <input type="radio" name="rd00" id="rdt03"><label for="rdt03">블루멤버스</label>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="chk_box">
+                            <input type="checkbox" name="chk01" id="chkt11">
+                            <label for="chkt11">(필수) 개인정보 제3자 동의</label>
+                        </div>
+
+                        <br>
+
+                        <div class="chk_box all">
+                            <input type="checkbox" name="chk00" id="chkt00" checked>
+                            <label for="chkt00">
+                                전체 동의
+                            </label>
+                        </div>
+
+                        <ul class="chk_list">
+                            <li>
+                                <div class="chk_box">
+                                    <input type="checkbox" name="chk00" id="chkt01" checked>
+                                    <label for="chkt01">(필수) 머핀 회원 이용약관</label>
+                                </div>
+                                <a href="#none" class="link" title="약관">보기</a>
+                            </li>
+                            <li>
+                                <div class="chk_box">
+                                    <input type="checkbox" name="chk00" id="chkt02">
+                                    <label for="chkt02">(필수) 머핀 회원 개인정보 수집 및 이용 동의 글씨가 길어질 경우</label>
+                                </div>
+                                <a href="#none" class="link" title="약관">보기</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="title">Flag</h2>
+                        <br>
+                        <span class="flag_reg">신청완료</span>
+                        <span class="flag_cancel">신청취소</span>
+                        <span class="flag_ing">배송중</span>
+                        <span class="flag_comp">배송완료</span>
+                        <span class="flag_comp">수령완료</span>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="title">Emoji</h2>
+                        <br>
+                        <h2 class="title">
+                            &#127881;
+                            &#128549;
+                            &#127873;
+                            &#127939;
+                            &#129395;
+                            &#128664;
+                        </h2>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="title">Text</h2>
+                        <br>
+                        <p class="txt_info">신청 정보를 문자로 알려드립니다.</p>
+                        <br>
+                        <ul class="dot_list">
+                            <li>머핀포인트를 1,500P 이상 3,000P 미만 보유한 고객에 한하여 포인트 전환 신청 가능합니다.</li>
+                            <li>전환 가능한 OK캐쉬백포인트는 최대 1,500P입니다.<br>(머핀포인트를 2,500P 보유하신 경우, 신청을 위해 추가로 필요한 500P 만큼만 전환
+                                가능합니다.)
+                            </li>
+                        </ul>
+                        <br>
+                        <ul class="hyphen_list">
+                            <li>아이보리 컬러</li>
+                            <li>내부 암막 코팅 (자외선 차단)</li>
+                            <li>길이 105cm, 무게 650g 내외</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
             <!-- //contents -->
