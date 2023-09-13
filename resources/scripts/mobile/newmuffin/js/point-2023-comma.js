@@ -47,7 +47,6 @@ $(document).ready(function () {
                 btmSheet.classList.remove('fade')
 
                 body.classList.remove('scroll_blocked')
-
             })
         }
     }

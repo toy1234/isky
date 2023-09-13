@@ -2,7 +2,10 @@ $(document).ready(function () {
 
     bodyScroll()
     inputVal()
-    layerPopup()
+    layerOpen()
+    layerClose()
+
+
 
     var body = document.querySelector('body')
     var pointEvent = document.querySelector('.muffin_point_wrap_mobile')
@@ -30,56 +33,51 @@ $(document).ready(function () {
 
     function layerActive(obj) {
         var el = obj.firstElementChild
-        var pageY = document.documentElement.scrollTop
         var type = (obj.style.display == '') ? 'block' : ''
         obj.style.display = type
 
         if (el.classList.contains('btm_sheet')) {
             el.classList.toggle('fade')
         }
-
         body.classList.toggle('scroll_blocked')
-
 
         var position = (body.style.top == '') ? - pageY + 'px' : ''
         body.style.top = position
 
         window.scrollTo({ 'top': pageY })
-
-
     }
 
-
+    var pageY = document.documentElement.scrollTop
+    // var target
 
     //layerPopup
-    function layerPopup() {
+    function layerOpen() {
         var btnOpen = document.querySelectorAll('.l_open')
+
         for (var i = 0; i < btnOpen.length; i++) {
             btnOpen[i].addEventListener("click", function (e) {
                 e.preventDefault()
                 var item = this.dataset.id
                 var target = document.querySelector(item)
-
+                pageY = document.documentElement.scrollTop
                 layerActive(target)
-
-                var btnClose = target.querySelectorAll('.l_close, .overlay')
-
-                for (var i = 0; i < btnClose.length; i++) {
-                    btnClose[i].addEventListener("click", function (e) {
-                        e.preventDefault()
-
-
-                        layerActive(target)
-
-                        return false
-                    })
-                }
+                console.log(pageY)
             })
         }
-
-
     }
 
+    function layerClose() {
+        var btnClose = document.querySelectorAll('.l_close, .overlay')
+
+        for (var i = 0; i < btnClose.length; i++) {
+            btnClose[i].addEventListener("click", function (e) {
+                e.preventDefault()
+                var target = this.closest('.muffin_point_layer_popup')
+                layerActive(target)
+                console.log(pageY)
+            })
+        }
+    }
 
 
 

@@ -99,7 +99,6 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      /*border-top: 2px solid #ef3340;*/
       border-bottom: 1px solid #d8d8d8;
     }
 
@@ -129,9 +128,26 @@
       /* font-weight: bold; */
     }
 
+    table span {
+      color: #ef3340;
+      font-size: 12px;
+      font-family: dotum !important;
+
+    }
+
+    table i {
+      display: block;
+      color: #4c535d;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: dotum !important;
+      line-height: 18px;
+    }
+
 
     table tbody td:last-of-type {
-      text-align: center !important;
+      /* text-align: center !important; */
+      line-height: 1.5;
     }
 
     /*table tbody td:nth-child(5) { font-family: 'Pretendard-Regular'; color: #666; }*/
@@ -206,10 +222,10 @@
     <div class="contents">
       <header>
         <h1 class="logo"></h1>
-        <h2>3천 포인트 이벤트 [2023]</h2>
+        <h2>3천 포인트 이벤트 [2023]</i></h2>
       </header>
       <article style="width: 100%; overflow-x:auto;">
-        <table style="padding-bottom: 500px">
+        <table>
           <colgroup>
             <col width="60" />
             <col width="160" />
@@ -217,7 +233,7 @@
             <col width="120" />
             <col />
             <col width="120" />
-            <col width="180" />
+            <col width="280" />
           </colgroup>
           <thead>
             <tr class="bot_line">
@@ -225,7 +241,7 @@
               <th>1depth</th>
               <th>2depth</th>
               <th>3depth</th>
-              <th>file Name [link]</th>
+              <th>file Name [link]</i></th>
               <th>type</th>
               <th>비고</th>
             </tr>
@@ -237,9 +253,9 @@
             <tr>
               <td class="num">1</td>
               <td>layout</td>
-              <td>page</td>
+              <td>Sub</td>
               <td></td>
-              <td><a href="../../WEB-INF/html/mobile/point2023/sub.html" target="_blank">sub.html</a></td>
+              <td><a href="../../WEB-INF/html/mobile/point2023/layout.html" target="_blank">layout.html</a></td>
               <td></td>
               <td></td>
             </tr>
@@ -248,18 +264,18 @@
               <td></td>
               <td>약관</td>
               <td></td>
-              <td><a href="../../WEB-INF/html/mobile/point2023/sub_terms.html" target="_blank">sub_terms.html</a></td>
+              <td><a href="../../WEB-INF/html/mobile/point2023/policy.html" target="_blank">policy.html</a></td>
               <td></td>
               <td></td>
             </tr>
             <tr>
               <td class="num">3</td>
-              <td>component</td>
+              <td>UI component</td>
               <td></td>
               <td></td>
               <td><a href="../../WEB-INF/html/mobile/point2023/component.html" target="_blank">component.html</a></td>
               <td></td>
-              <td>[20230901] 수정<br>[20230913] 정리</td>
+              <td><i>[20230901]</i> 수정<i>[20230913]</i>component 정리</td>
             </tr>
 
             <tr>
@@ -282,20 +298,21 @@
                 <a href="../../WEB-INF/html/mobile/point2023/alert.html" target="_blank">alert.html</a>
               </td>
               <td>Alert</td>
-              <td>개발 참조바람</td>
+              <td><span>개발 참조바람</span></td>
             </tr>
             <tr>
               <td class="num">7</td>
-              <td>Error Page</td>
+              <td></td>
               <td></td>
               <td></td>
               <td>
-                <a href="../../WEB-INF/html/mobile/point2023/ERROR_PAGE.html" target="_blank">
-                  ERROR_PAGE.html
-                </a>
+                <a href="../../WEB-INF/html/mobile/point2023/errorPage.html" target="_blank">errorPage.html</a>
               </td>
-              <td></td>
-              <td>개발 참조바람<br>[20230901] 수정<br>[20230908] 문구수정, 새로고침버튼삭제</td>
+              <td>error Page</td>
+              <td>
+                <span>개발 참조바람</span>
+                <i>[20230901]</i> 수정<i>[20230908]</i> 문구수정, 새로고침버튼삭제
+              </td>
             </tr>
 
 
@@ -307,9 +324,9 @@
               <td>이벤트 메인</td>
               <td></td>
               <td></td>
-              <td><a href="../../WEB-INF/html/mobile/point2023/main.html" target="_blank">main.html</a></td>
+              <td><a href="../../WEB-INF/html/mobile/point2023/MAIN.html" target="_blank">MAIN.html</a></td>
               <td></td>
-              <td>[20230906] 유의사항 문구 변경<br>[20230908] 상품순서/문구변경, 유의사항 문구 변경</td>
+              <td><i>[20230906]</i> 유의사항 문구 변경<i>[20230908]</i> 상품순서/문구변경, 유의사항 문구 변경</td>
             </tr>
             <tr>
               <td class="num">2</td>
@@ -335,7 +352,9 @@
                 </a>
               </td>
               <td></td>
-              <td>[20230901] 수정<br>[20230906] 유의사항 문구변경<br>[20230907] 상단 문구영역 변경, input inputmode 추가<br>[20230908]
+              <td><i>[20230901]</i> input .comma 추가<i>[20230906]</i> 유의사항 문구변경<i>[20230907]</i> 상단 문구영역 변경, input
+                inputmode
+                추가<i>[20230908]</i>
                 간격수정(.mt12 추가)</td>
             </tr>
             <tr>
@@ -349,7 +368,7 @@
                 </a>
               </td>
               <td></td>
-              <td>[20230904] 상단 문구영역 변경, emoji 추가<br>[20230906] 유의사항 문구변경</td>
+              <td><i>[20230904]</i> 상단 문구영역 변경, emoji 추가<i>[20230906]</i> 유의사항 문구변경</td>
             </tr>
             <tr>
               <td class="num">5</td>
@@ -362,7 +381,7 @@
                 </a>
               </td>
               <td></td>
-              <td>[20230904] 상단 문구영역 변경, emoji 추가 [20230906] 문구 변경</td>
+              <td><i>[20230904]</i> 상단 문구영역 변경, emoji 추가<i>[20230906]</i> 문구 변경</td>
             </tr>
             <tr>
               <td class="num">6</td>
@@ -375,7 +394,7 @@
                 </a>
               </td>
               <td></td>
-              <td>[20230904] emoji 추가<br>[20230907] 문구 변경</td>
+              <td><i>[20230904]</i> emoji 추가<i>[20230907]</i> 문구 변경</td>
             </tr>
             <tr>
               <td class="num">7</td>
@@ -389,8 +408,9 @@
                 </a>
               </td>
               <td></td>
-              <td>[20230904] 상단 문구영역 변경, emoji 추가[20230906] 문구변경<br>[20230907] 사은품 이미지 삭제, 문구변경<br>[20230908] 간격 수정에 따른
-                .pb0 삭제</td>
+              <td><i>[20230904]</i> 상단 문구영역 변경, emoji 추가<i>[20230906]</i> 문구변경<i>[20230907]</i> 사은품 이미지 삭제,
+                문구변경<i>[20230908]</i> 간격 수정에
+                따른 .pb0 삭제</td>
             </tr>
             <tr>
               <td class="num">8</td>
@@ -403,7 +423,7 @@
                 </a>
               </td>
               <td>bottomsheet</td>
-              <td>[20230907] 품절 문구 삭제</td>
+              <td><i>[20230907]</i> 품절 문구 삭제</td>
             </tr>
             <tr>
               <td class="num">9</td>
@@ -417,7 +437,7 @@
                 </a>
               </td>
               <td>tab page</td>
-              <td>[20230904] emoji 추가<br>[20230908] tab 문구 변경</td>
+              <td><i>[20230904]</i> emoji 추가<i>[20230908]</i> tab 문구 변경</td>
             </tr>
             <tr>
               <td class="num">10</td>
@@ -431,7 +451,7 @@
                 </a>
               </td>
               <td>tab page</td>
-              <td>[20230904] emoji 추가<br>[20230908] tab 문구 변경</td>
+              <td><i>[20230904]</i> emoji 추가<i>[20230908]</i> tab 문구 변경</td>
             </tr>
             <tr>
               <td class="num">11</td>
@@ -444,7 +464,7 @@
                 </a>
               </td>
               <td></td>
-              <td>[20230904] emoji 추가<br>[20230906] 문구 수정</td>
+              <td><i>[20230904]</i> emoji 추가<i>[20230906]</i> 문구 수정</td>
             </tr>
             <tr>
               <td class="num">12</td>
@@ -459,7 +479,9 @@
               <td>
               </td>
               <td>
-                [20230907] 수령완료 flag 추가<br>[20230908] 신청취소 (가능상태) 일때, style(횡간) 변경 적용<br>[20230912] 신청완료 flag 추가
+                <i>[20230907]</i> 수령완료 flag 추가<i>[20230908]</i> 신청취소 (가능상태) 일때, style(횡간) 변경 적용<i>[20230912]</i>
+                신청완료 flag
+                추가
               </td>
             </tr>
             <tr>
@@ -475,7 +497,7 @@
               <td>
               </td>
               <td>
-                [20230908] HISTORY_1 분리 (횡간 확인용)<br>[20230912] 신청완료 flag 추가/flag class 변경
+                <i>[20230908]</i> HISTORY_1 분리 (횡간 확인용)<i>[20230912]</i> 신청완료 flag 추가/flag class 변경
               </td>
             </tr>
             <tr>
@@ -491,7 +513,7 @@
               <td>
               </td>
               <td>
-                [20230904]상단문구영역 변경, emoji 추가<br>[20230906] 문구변경, emoji 삭제
+                <i>[20230904]</i>상단문구영역 변경, emoji 추가<i>[20230906]</i> 문구변경, emoji 삭제
               </td>
             </tr>
             <tr>
@@ -507,7 +529,7 @@
               <td>
               </td>
               <td>
-                [20230904] 상단문구영역 변경, emoji 추가, 유의사항 추가<br>[20230906] 문구변경, emoji 삭제
+                <i>[20230904]</i> 상단문구영역 변경, emoji 추가, 유의사항 추가<i>[20230906]</i> 문구변경, emoji 삭제
               </td>
             </tr>
             <tr>
@@ -523,7 +545,7 @@
               <td>
               </td>
               <td>
-                [20230904] 유의사항 추가<br>[20230906] 문구변경
+                <i>[20230904]</i> 유의사항 추가<i>[20230906]</i> 문구변경
               </td>
             </tr>
             <tr>
@@ -536,7 +558,7 @@
                   target="_blank">MUFFIN_3000P_EVENT_POLICY_1</a>
               </td>
               <td>약관</td>
-              <td>[20230901] 신규</td>
+              <td><i>[20230901]</i> 신규</td>
             </tr>
             <tr>
               <td class="num">18</td>
@@ -548,7 +570,7 @@
                   target="_blank">MUFFIN_3000P_EVENT_POLICY_2</a>
               </td>
               <td>약관</td>
-              <td>[20230901] 신규<br>[20230912] 문구수정</td>
+              <td><i>[20230901]</i> 신규<i>[20230912]</i> 문구수정</td>
             </tr>
             <tr>
               <td class="num">19</td>
@@ -560,7 +582,7 @@
                   target="_blank">MUFFIN_3000P_EVENT_POLICY_3</a>
               </td>
               <td>약관</td>
-              <td>[20230901] 수정<br>[20230912] 문구수정</td>
+              <td><i>[20230901]</i> 수정<i>[20230912]</i> 문구수정</td>
             </tr>
             <tr>
               <td class="num">20</td>
@@ -572,7 +594,7 @@
                   target="_blank">MUFFIN_3000P_EVENT_POLICY_4</a>
               </td>
               <td>약관</td>
-              <td>[20230901] 신규<br>[20230907] 문구수정<br>[20230912] 문구수정</td>
+              <td><i>[20230901]</i> 신규<i>[20230907]</i> 문구수정<i>[20230912]</i> 문구수정</td>
             </tr>
             <tr>
 

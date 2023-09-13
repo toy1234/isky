@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-  <title>Layout</title>
+  <title>Sub Layout</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
@@ -21,6 +21,7 @@
   <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/common.js"></script>
   <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/lottie-player.js"></script>
   <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/point-2023.js"></script>
+
   <!-- 20230526 수정 -->
   <script type="text/javascript">
     $(document).ready(function () {
@@ -40,6 +41,7 @@
     <div id="container">
       <h2 class="blind">본문 콘텐츠 영역</h2>
       <div id="content">
+        엔트린
       </div>
     </div>
   </div>
@@ -49,32 +51,43 @@
 
 
 
-  <!-- START : 3000포인트 이벤트 [2023] -->
-  <div class="muffin_point_wrap load" style="display: block">
-    <div class="muffin_point_wrap_mobile active">
+  <!-- START : 3천 포인트 이벤트 [2023] -->
+  <div class="muffin_point_wrap" style="display: block">
+    <div class="muffin_point_wrap_mobile">
       <!-- header -->
-      <header class="active">
+      <header>
         <button class="ico_btn back"><span>이전</span></button>
-        <h1>
-          포인트
-        </h1>
-        <button class="ico_btn close"><span>닫기</span></button>
+        <h1 class="is-show">포인트 조회/전환</h1>
       </header>
       <!-- //header -->
+
 
       <!-- contents -->
       <section class="contents" title="본문 영역">
         <div class="inner">
-
+          <h2>
+            김머핀님의<br> 머핀포인트가 <em>3,000P</em> 이상 <span>있어야<br>사은품 선택이 가능합니다.</span>
+          </h2>
+        </div>
+        <div class="notice">
+          <strong>유의사항</strong>
+          <ul class="dot_list">
+            <li>유의사항 입니다. 유의사항 입니다 유의사항 입니다 유의사항 입니다</li>
+            <li>유의사항 입니다.</li>
+          </ul>
         </div>
       </section>
       <!-- //contents -->
 
+
+      <!-- btm_fix -->
       <article class="btm_fix">
-        <div class="content_btn fix active">
-          <a href="#" class="btn">다음</a>
+        <div class="btn_group">
+          <button class="btn l_open" data-id="#popup01">다음</button>
         </div>
       </article>
+      <!-- //btm_fix -->
+
 
       <!-- footer -->
       <footer class="muffin_point_mobile_footer ">
@@ -96,10 +109,29 @@
         </div>
       </footer>
       <!-- //footer -->
-
     </div>
+
+
+
+    <!-- start : alert -->
+    <div class="muffin_point_layer_popup" id="popup01">
+      <div class="muffin_point_layer_wrap alert">
+        <div class="overlay"></div>
+        <div class="modal_content">
+          <section class="modal_body">
+            내용입니다. <br>내용입니다. 내용입니다.
+          </section>
+          <article class="btn_group">
+            <button class="btn l_close">확인</button>
+          </article>
+        </div>
+      </div>
+    </div>
+    <!-- //end : alert -->
+
+
   </div>
-  <!-- //END : 3000포인트 이벤트 [2023] -->
+  <!-- //END : 3천 포인트 이벤트 [2023] -->
 </body>
 
 </html>

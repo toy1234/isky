@@ -1156,7 +1156,7 @@ table {
             font-size: 16px;
             color: $pc4;
             font-weight: 500;
-            line-height: 1.4;
+            line-height: 20px;
             padding: 12px 16px 12px 0;
 
             &:before {
@@ -1256,9 +1256,8 @@ table {
                         height: 82px;
                         background-color: $pc7;
                         position: absolute;
-                        top: 50%;
+                        top: 0;
                         left: 4px;
-                        transform: translateY(-50%);
                         border-radius: 20px;
                         box-sizing: border-box;
                         background-position: 50% 50%;
@@ -1344,7 +1343,7 @@ table {
             font-size: 14px;
             color: $pc4;
             font-weight: 500;
-            line-height: 1.4;
+            line-height: 20px;
             padding: 10px 16px 10px 0;
 
             &:before {
