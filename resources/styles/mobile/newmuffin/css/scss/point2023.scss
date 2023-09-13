@@ -1,0 +1,1619 @@
+@charset "UTF-8";
+
+@import "_normalize.scss";
+@import "_common.scss";
+
+/*------------------------ font ------------------------*/
+* {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+}
+
+
+/*------------------------ common ------------------------*/
+.is-blind {
+    overflow: hidden;
+    border: 0;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+}
+
+
+/*------------------------ layout ------------------------*/
+.muffin_point_wrap {
+    z-index: 100001;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $pcF;
+    word-break: keep-all;
+
+    &_mobile {
+        height: 100%;
+
+        &.terms-popup {
+            section {
+                &.contents {
+                    padding-bottom: 20px;
+
+                    .inner {
+                        padding: 0 16px 20px;
+                    }
+                }
+            }
+        }
+
+        //header
+        &>header {
+            background: $pcF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 54px;
+            padding: 0;
+            z-index: 50;
+
+            h1 {
+                opacity: 0;
+                width: 100%;
+                font-size: 18px;
+                font-weight: 700;
+                color: $pc1;
+                padding: 0 54px;
+                @include clamp(1);
+
+                &.is-show {
+                    opacity: 1;
+                }
+            }
+
+            &.active {
+                box-shadow: 0px 1px 0px rgba(0, 0, 0, .08);
+                text-align: center;
+
+                h1 {
+                    opacity: 1;
+                    transition: opacity .3s ease-in;
+                }
+            }
+
+            button {
+                position: absolute;
+                top: 0;
+                width: 54px;
+                height: 54px;
+
+                &.back {
+                    left: 0;
+                    margin-right: auto;
+                }
+
+                &.info {
+                    margin-left: auto;
+                }
+
+                &.close {
+                    right: 0;
+                }
+            }
+        }
+
+        section {
+            min-height: 100%;
+            padding: 54px 0 80px;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            &.contents {
+
+                // main banner
+                &.main {
+                    padding-top: 0;
+                    font-size: 16px;
+                    background-color: #f2f4f6;
+
+                    .muffin_point_banner,
+                    .muffin_point_gift_banner {
+                        img {
+                            max-width: 100%;
+                            width: 100%;
+                            vertical-align: top;
+                        }
+                    }
+
+                    .muffin_point_banner {
+                        position: relative;
+
+                        >.btn_round {
+                            position: absolute;
+                            bottom: 17.5%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            display: block;
+                            width: 58%;
+                            height: 6.5%;
+                        }
+                    }
+
+                    .muffin_point_gift_banner {
+                        dd {
+                            &+dd {
+                                margin-top: 25px;
+                            }
+
+                            &.point_gift {
+                                &.soldout {
+                                    position: relative;
+
+                                    img {
+                                        filter: brightness(0.4);
+                                    }
+
+                                    &:after {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        content: '';
+                                        width: 100%;
+                                        height: 100%;
+                                        background-image: url('/resources/images/mobile/newmuffin/img/point/202308/soldout_stamp.png');
+                                        background-size: 100% auto;
+                                        background-repeat: no-repeat;
+                                        background-position: 50% 50%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .muffin_point_footer {
+                        padding: 25px 20px;
+                        background-color: #4C4A4F;
+                        color: $pcF;
+                        text-align: left;
+
+                        .dot_list {
+                            @include listdot(4px, 12px, $pcF);
+                        }
+
+                        .footer-link {
+                            font-size: 12px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                            margin-top: 20px;
+
+                            >a:not(.logo-footer) {
+                                border-bottom: 1px solid $pcF;
+                                height: 16px;
+                            }
+
+                            .logo-footer {
+                                margin-left: auto;
+                                display: block;
+                                width: 130px;
+                                height: 27px;
+                                background-image: url('/resources/images/mobile/newmuffin/img/point/202308/logo_footer.svg');
+                                background-size: contain;
+                            }
+                        }
+                    }
+                }
+
+                .inner {
+                    padding: 20px 16px;
+                    text-align: left;
+
+                    h2 {
+                        font-size: 22px;
+                        font-weight: 700;
+                        color: $pc1;
+                        line-height: 1.455;
+                        padding-bottom: 32px;
+
+                        &.title {
+                            font-size: 18px;
+                            padding-bottom: 0;
+
+                            >[class*=emoji] {
+                                display: inline-block;
+                                margin-left: 4px;
+                                line-height: 0;
+                            }
+                        }
+
+                        &.account {
+                            position: relative;
+                            padding-bottom: 118px;
+
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                height: 100px;
+                                border-radius: 12px;
+                                box-sizing: border-box;
+                                background: #f9f9fb url('/resources/images/mobile/newmuffin/img/point/202308/img_okmuffin_change.jpg') 50% 50% no-repeat;
+                                background-size: contain;
+                            }
+
+                            &+.section {
+                                margin-top: 0;
+                            }
+                        }
+
+                        >em {
+                            color: $pcR;
+                        }
+
+                        >span {
+                            font-weight: 500;
+                        }
+                    }
+
+                    .section {
+                        position: relative;
+                        margin: 8px -16px 0;
+                        padding: 20px 16px;
+
+                        .title {
+                            padding-bottom: 0;
+                        }
+
+                        &:first-child {
+                            margin-top: 0;
+                            padding-top: 0;
+                        }
+
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+
+                        +.section {
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                top: -8px;
+                                left: 0;
+                                display: block;
+                                background-color: $pc7;
+                                width: 100%;
+                                height: 8px;
+                            }
+
+                        }
+
+                        &.inform_box {
+                            position: relative;
+                            text-align: center;
+                            padding-bottom: 48px;
+                            min-height: 104px;
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                display: block;
+                                width: 42px;
+                                height: 42px;
+                                background: transparent url('/resources/images/mobile/newmuffin/img/point/202308/ico-comp.svg') 0 0/100% auto no-repeat;
+                            }
+
+
+                            &.none {
+                                &:before {
+                                    background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-none-data.svg');
+                                }
+                            }
+
+                            &.error,
+                            &.cancel {
+                                &:before {
+                                    background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-cancel.svg');
+                                }
+                            }
+
+                            dt {
+                                position: relative;
+                                padding-top: 52px;
+                                padding-bottom: 5px;
+
+                                >[class*=emoji] {
+                                    display: inline-block;
+                                    margin-left: 4px;
+                                    line-height: 0;
+                                }
+                            }
+
+                            dd {
+                                color: $pc4;
+                                justify-content: center;
+                                margin-top: 10px !important;
+                            }
+                        }
+
+                        @at-root .d-flex {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            flex-wrap: wrap;
+
+                            dd {
+                                margin-top: 0 !important;
+
+                                &.w100 {
+                                    flex: 1 1 auto;
+                                    align-items: flex-start;
+                                    margin-top: 8px !important;
+                                }
+                            }
+                        }
+
+
+                        @at-root .gift_thumbnail {
+                            overflow: hidden;
+                            width: 82px;
+                            height: 82px;
+                            background-color: $pc7;
+                            border-radius: 10px;
+
+                            &+.gift_name {
+                                margin-left: 12px;
+                            }
+                        }
+
+                        @at-root .gift_name {
+                            line-height: 28px;
+                            font-size: 16px;
+                            color: $pc4 !important;
+                        }
+
+                        dt {
+                            font-size: 18px;
+                            line-height: 1.556;
+                            color: $pc1;
+                            font-weight: 700;
+
+                            >strong {
+                                display: inline-block;
+                                font-size: 22px;
+                                line-height: 1.455;
+                            }
+
+                            &.d-flex-column-center {
+                                padding-top: 34px !important;
+                                padding-bottom: 12px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+
+                                .gift_thumbnail {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 120px;
+                                    height: 120px;
+                                    border-radius: 12px;
+
+                                    img {
+                                        width: 82px;
+                                        height: auto;
+                                    }
+                                }
+
+                                .gift_name {
+                                    margin-top: 10px;
+                                    margin-left: 0;
+                                    font-size: 18px;
+                                }
+
+                                &+dd,
+                                &+dd+dd {
+                                    padding: 0 8px;
+                                }
+                            }
+                        }
+
+                        dd {
+                            font-size: 16px;
+                            color: $pc1;
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 4px;
+                            line-height: 1.5;
+                            letter-spacing: -.02em;
+
+                            @at-root .is-has-btn dd {
+                                min-height: 28px !important;
+
+                                .txt_btn {
+                                    display: inline-block !important;
+                                }
+                            }
+
+                            @at-root #applyInform dd:first-of-type {
+                                margin-top: 28px;
+                            }
+
+                            &.btn_area {
+                                margin-top: 20px;
+                                padding-bottom: 24px;
+                                justify-content: center;
+                            }
+
+                            &.total {
+                                border-top: 1px solid $pcE;
+                                padding-top: 10px;
+                                margin-top: 10px;
+                            }
+
+                            em {
+                                color: $pc5;
+                                font-weight: 600;
+                            }
+
+                            .point {
+                                color: $pcR;
+                                text-align: right;
+                            }
+
+                            span {
+                                display: inline-flex;
+                                align-items: center;
+                                margin-right: auto;
+                                padding-right: 12px;
+                                color: $pc6;
+
+                                &+span {
+                                    margin-left: auto;
+                                    margin-right: 0;
+                                    padding-right: 0;
+                                    text-align: right;
+
+                                    &+.txt_btn {
+                                        margin-left: 16px;
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            &:first-of-type {
+                                margin-top: 8px;
+                            }
+                        }
+
+
+                        @at-root #applyInform,
+                        .inform_box {
+                            dd {
+                                font-size: 14px !important;
+                            }
+                        }
+                    }
+                }
+
+                .notice {
+                    margin-top: auto;
+                    font-size: 14px;
+                    background-color: $pc7;
+                    padding: 24px 16px 40px;
+                    min-height: 130px;
+                    text-align: left;
+
+                    >strong {
+                        display: block;
+                        font-size: 18px;
+                        line-height: 1.556;
+                        color: $pc1;
+                        padding-bottom: 8px;
+                    }
+                }
+
+                .result-area {
+                    padding-top: 10px;
+
+                    .inform_box {
+                        display: block;
+                        text-align: center;
+
+                        padding: 40px 0;
+                        font-size: 16px;
+                        color: $pc4;
+                    }
+                }
+            }
+        }
+
+        .btm_fix {
+            padding: 16px;
+            background-color: $pcF;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+        }
+    }
+}
+
+
+/*------------------------ footer ------------------------*/
+.muffin_point_mobile_footer {
+    display: none;
+    position: relative;
+    padding: 3.2rem 2rem 4.8rem 3rem;
+    background-color: $pcB;
+
+    .wrap-links {
+        margin-left: -2.2rem;
+        text-align: left;
+
+        .item {
+            display: inline-block;
+            margin-top: 1.6rem;
+            margin-left: 2.2rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 1.9rem;
+            letter-spacing: 0;
+            color: $pc4;
+        }
+    }
+
+    .wrap-info {
+        margin-top: 2rem;
+        text-align: left;
+
+        .item {
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 2.5rem;
+            color: $pc9;
+            letter-spacing: 0;
+
+            .item-inner {
+                position: relative;
+                display: inline-block;
+
+                &:not(:first-of-type) {
+                    padding-left: 2.1rem;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 1rem;
+                        top: 50%;
+                        margin-top: -0.6rem;
+                        width: 0.1rem;
+                        height: 1.2rem;
+                        background-color: $pcD;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: 1.2rem;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: $pc9;
+        letter-spacing: 0;
+    }
+
+    .logo-footer {
+        margin-top: 2.4rem;
+        display: inline-block;
+        width: 7.1rem;
+        height: 3.3rem;
+        background: url('/resources/images/mobile/newmuffin/img/point/202308/logo-footer.svg') 0 0/100% auto no-repeat;
+        font: 0/0 a;
+
+    }
+}
+
+
+/*------------------------ UI component ------------------------*/
+//margin
+.mt12 {
+    margin-top: 12px !important;
+}
+
+//text
+.tit {
+    color: $pc4;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.txt_info {
+    margin-top: 6px;
+    color: $pc9;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+
+    &:before {
+        flex: none;
+        content: '';
+        width: 20px;
+        height: 20px;
+        margin-right: 4px;
+        background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-info.svg');
+        background-repeat: no-repeat;
+        background-size: 20px auto;
+    }
+}
+
+.txt_list {
+    font-size: 12px;
+    color: $pc6;
+    line-height: 1.5;
+    margin-top: 4px;
+}
+
+.dot_list {
+    margin: 0 6px;
+    @include listdot(4px, 12px, $pc4);
+
+    ul {
+        margin-top: 4px;
+
+        >li {
+            letter-spacing: .01em;
+        }
+    }
+
+    &.type1 {
+        margin-top: 20px;
+        @include listdot(8px, 14px, $pc4);
+
+        >li {
+            padding-left: 12px;
+            word-break: break-all;
+        }
+    }
+}
+
+.hyphen_list {
+    font-size: 13px;
+    line-height: 1.385;
+    font-weight: 100;
+    color: $pc6;
+
+    >li {
+        position: relative;
+        padding-left: 11px;
+        word-break: keep-all;
+
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 9px;
+            content: '';
+            display: block;
+            width: 4px;
+            height: 1px;
+            border-radius: 50%;
+            background-color: $pc4;
+        }
+    }
+}
+
+// button
+.btn_group {
+    display: flex;
+    justify-content: center !important;
+    gap: 10px;
+
+    &+.btn_group {
+        margin-top: 40px;
+    }
+}
+
+a,
+button {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    &:not(.link, .ico_btn, .arrow_down) {
+
+        &:active:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $pc0;
+            opacity: .1;
+        }
+    }
+
+    &.disabled,
+    &:disabled {
+        &:after {
+            display: none;
+        }
+    }
+
+    &.btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 48px;
+        padding: 0 13px;
+        border-radius: 12px;
+        background-color: $pcR;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        color: $pcF;
+        white-space: nowrap;
+        cursor: pointer;
+
+        &.c_black {
+            background-color: $pc0;
+        }
+
+        &:disabled,
+        &.disabled {
+            background-color: $pcD;
+            cursor: default;
+        }
+
+        &.line {
+            background-color: $pcF;
+            border: 1px solid $pcR;
+            color: $pcR;
+            font-weight: 500;
+
+            &:disabled,
+            &.disabled {
+                border-color: $pcD;
+                color: $pc9;
+                cursor: default;
+            }
+        }
+
+        &[class*=ico_] {
+            &:before {
+                content: '';
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                margin-right: 4px;
+            }
+        }
+
+        &.ico_refresh {
+            &:before {
+                background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-refresh.svg');
+                background-repeat: no-repeat;
+                background-size: 24px auto;
+            }
+        }
+    }
+
+    &.ico_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 54px;
+        height: 54px;
+        background-color: $pcF;
+        position: relative;
+
+        >span {
+            overflow: hidden;
+            border: 0;
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            clip: rect(1px, 1px, 1px, 1px);
+            -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+        }
+
+        &:before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+
+        }
+
+        &.back {
+            &:before {
+                background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-back.svg');
+            }
+        }
+
+        &.close,
+        &.l_close {
+            &:before {
+                background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-close.svg');
+            }
+        }
+
+    }
+
+    &.txt_btn {
+        display: inline-block;
+        position: relative;
+        background-color: $pc7;
+        padding: 0 8px;
+        font-size: 12px;
+        color: $pc4;
+        border-radius: 4px;
+        height: 28px;
+        line-height: 28px;
+
+        &:before {
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+
+        &[class*=arrow_] {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            padding-right: 24px;
+
+            &:before {
+                position: absolute;
+                right: 4px;
+                top: 50%;
+                transform: translateY(-50%);
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                transition: all .5s ease;
+            }
+        }
+
+        &.arrow_down {
+            &:before {
+                background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-arrow-down.svg');
+            }
+
+            &.up {
+                &:before {
+                    transform: translateY(-50%) rotate(-180deg);
+                }
+            }
+        }
+    }
+
+    @at-root [class*=flag_] {
+        align-self: flex-end;
+        display: inline-block;
+        text-align: center;
+        padding: 0 4px;
+        height: 19px;
+        line-height: 19px;
+        font-size: 12px;
+        border-radius: 2px;
+        color: $pcF;
+        background-color: $pc9;
+        font-weight: 100;
+
+        &.flag_ing {
+            background-color: $pcG;
+        }
+
+        &.flag_comp {
+            background-color: $pc2;
+        }
+    }
+
+}
+
+//tab
+.tab_group {
+    display: flex;
+    margin-top: 28px;
+
+    [class^=tab] {
+        flex: 1;
+
+        a {
+            width: 100%;
+            display: inline-flex;
+            height: 32px;
+            box-sizing: border-box;
+            font-size: 16px;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid $pc8;
+        }
+
+        &.active {
+            a {
+                border-bottom: 2px solid $pc4;
+                color: $pc4;
+                font-weight: 700;
+                cursor: default;
+            }
+        }
+    }
+
+    .tab_round {
+        max-width: 90px;
+
+        &+.tab_round {
+            margin-left: 8px;
+        }
+
+        a {
+            border-radius: 32px;
+            font-size: 12px;
+            border: 1px solid $pcD;
+        }
+
+        &.active {
+            a {
+                background-color: $pc3;
+                border-color: $pc3;
+                color: $pcF;
+                font-weight: 100;
+            }
+        }
+    }
+}
+
+.tab_section {
+    margin-top: 24px;
+
+    .dot_list {
+        margin-top: 4px;
+        @include listdot (0px, 12px, $pc6);
+    }
+}
+
+//table
+table {
+    &.table_01 {
+        margin-top: 12px;
+        width: 100%;
+        font-size: 12px;
+        color: $pc4;
+        border-bottom: 1px solid $pcD;
+
+        th {
+            background-color: $pc7;
+            border-left: 1px solid $pcD;
+            border-top: 1px solid $pcD;
+            padding: 10px 0;
+
+            &:first-child {
+                border-left: none;
+            }
+        }
+
+        td {
+            border-left: 1px solid $pcD;
+            border-top: 1px solid $pcD;
+            padding: 10px 5px;
+            font-weight: 500;
+            max-width: 30px;
+            @include clamp(1);
+
+            &:first-child {
+                border-left: none;
+            }
+        }
+    }
+}
+
+//input 
+.input_box {
+    display: flex;
+    gap: 8px;
+    padding: 4px 0;
+    position: relative;
+
+    label {
+        font-size: 12px;
+        color: $pc6;
+        line-height: 20px;
+    }
+
+    input {
+        z-index: 1;
+        background-color: transparent;
+        color: $pc4;
+        font-size: 16px;
+        width: 100%;
+        height: 32px;
+        padding: 2px;
+        border-bottom: 1px solid $pc8;
+
+        &::placeholder {
+            color: $pc8;
+        }
+
+        &:focus {
+            border-color: $pc5;
+        }
+
+        &.inp {
+            padding-right: 29px;
+        }
+
+        &.comma {
+            color: $pcR;
+
+            &::placeholder {
+                text-align: left;
+            }
+
+            &[type=number] {
+                text-align: right;
+                padding-right: 46px;
+            }
+
+            &[data-unit] {
+                text-align: right;
+                padding-right: 26px;
+            }
+
+            @at-root .input_box.is_focus {
+                input.comma {
+                    &[data-unit] {
+                        padding-right: 46px;
+                    }
+                }
+            }
+        }
+
+
+        &+.ico_btn {
+            flex: none;
+            background-color: transparent;
+            display: none;
+            position: absolute;
+            right: 0;
+            bottom: 50%;
+            transform: translateY(50%);
+            width: 24px;
+            height: 24px;
+            z-index: 1;
+
+            &.del {
+                &:before {
+                    background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-delete.svg');
+                }
+            }
+        }
+    }
+
+    .unit {
+        flex: none;
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        color: $pcR !important;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 0 !important;
+    }
+
+    &.is_focus {
+        input {
+            border-color: $pc5;
+        }
+
+        .unit {
+            right: 31px;
+        }
+
+        .ico_btn {
+            display: flex;
+        }
+    }
+}
+
+.input_group {
+    width: 100%;
+
+    &.search {
+        display: flex;
+
+        .input_box {
+            flex: 1 1 auto;
+        }
+
+        .ico_btn {
+            &.search {
+                &:before {
+                    background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-delete.svg');
+                }
+            }
+        }
+
+        .txt_btn {
+            flex: none;
+            align-self: flex-end;
+            margin-bottom: 4px;
+            margin-left: 16px;
+        }
+    }
+}
+
+// radio
+.radio_box {
+    position: relative;
+    display: inline-flex;
+
+    input[type=radio] {
+        overflow: hidden;
+        border: 0;
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(50%);
+        clip-path: inset(50%);
+
+        &+label {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+            color: $pc4;
+            font-weight: 500;
+            line-height: 1.4;
+            padding: 12px 16px 12px 0;
+
+            &:before {
+                flex: none;
+                display: inline-block;
+                content: '';
+                width: 20px;
+                height: 20px;
+                background: url('/resources/images/mobile/newmuffin/img/point/202308/ico-radio-off.svg') 50% 50% no-repeat;
+                background-size: 20px auto;
+            }
+        }
+
+        &:checked {
+            &+label {
+                &:before {
+                    background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-radio-on.svg');
+                }
+            }
+        }
+
+        &:disabled {
+            &+label {
+                color: $pc9;
+
+                &:before {
+                    filter: contrast(0.9);
+                }
+
+                .info_box {
+
+                    * {
+                        color: $pc8;
+                    }
+
+                    li:before {
+                        background-color: $pc8;
+                    }
+
+                    &:before {
+                        filter: grayscale(1);
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.radio_box_group {
+    display: flex;
+    flex-direction: column;
+
+    .radio_box {
+        padding: 20px 0;
+        border-top: 1px solid $pcE;
+
+        &:first-child {
+            border-top: none;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        label {
+            width: 100%;
+            padding: 0 !important;
+
+            @at-root .info_box {
+                flex: 1;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                dt {
+                    color: $pc1;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 1.5;
+                }
+
+                dd {
+                    color: $pc1;
+                    font-size: 14px;
+                }
+
+                &[class*=img] {
+                    padding-left: 94px !important;
+                    min-height: 82px;
+
+                    &:before {
+                        content: '';
+                        width: 82px;
+                        height: 82px;
+                        background-color: $pc7;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border-radius: 20px;
+                        box-sizing: border-box;
+                        background-position: center center;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+
+                    dd {
+                        color: $pc4;
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+                }
+
+                &.img_01 {
+                    &:before {
+                        background-image: url('/resources/images/mobile/newmuffin/img/point/202308/img_gift_01.png')
+                    }
+                }
+
+                &.img_02 {
+                    &:before {
+                        background-image: url('/resources/images/mobile/newmuffin/img/point/202308/img_gift_02.png')
+                    }
+                }
+
+                &.img_03 {
+                    &:before {
+                        background-image: url('/resources/images/mobile/newmuffin/img/point/202308/img_gift_03.png')
+                    }
+                }
+
+                &.img_04 {
+                    &:before {
+                        background-image: url('/resources/images/mobile/newmuffin/img/point/202308/img_gift_04.png')
+                    }
+                }
+
+                &.img_05 {
+                    &:before {
+                        background-image: url('/resources/images/mobile/newmuffin/img/point/202308/img_gift_05.png')
+                    }
+                }
+            }
+
+            @at-root .modal_body {
+                .radio_box_group {
+                    margin-top: -10px;
+
+                    .radio_box {
+                        padding: 15px 0;
+
+                        label {
+                            .soldout {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// checkbox
+.chk_box {
+    position: relative;
+    display: inline-flex;
+
+    input[type=checkbox] {
+        overflow: hidden;
+        border: 0;
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(50%);
+        clip-path: inset(50%);
+
+        &+label {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: $pc4;
+            font-weight: 500;
+            line-height: 1.4;
+            padding: 10px 16px 10px 0;
+
+            &:before {
+                flex: none;
+                display: inline-block;
+                overflow: hidden;
+                content: '';
+                width: 20px;
+                height: 20px;
+                background: transparent url('/resources/images/mobile/newmuffin/img/point/202308/ico-chk-off.svg') 0 0/100% auto no-repeat;
+                border-radius: 4px;
+            }
+        }
+
+        &:checked {
+            &+label {
+                &:before {
+                    background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-chk-on.svg');
+                }
+            }
+        }
+    }
+
+
+    &.all {
+        input[type=checkbox] {
+            &+label {
+                font-size: 16px;
+                color: $pc0;
+                padding: 12px 16px 12px 0;
+            }
+        }
+    }
+}
+
+// 약관동의
+.chk_list {
+    border-top: 1px solid $pcE;
+    padding-top: 10px;
+    margin-bottom: 51px;
+
+    >li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &+li {
+            margin-top: 4px;
+        }
+
+        .chk_box {
+            flex: 1 1 auto;
+
+            input[type=checkbox] {
+                &+label {
+                    &:before {
+                        background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-chk-sm-off.svg');
+                    }
+                }
+
+                &:checked {
+                    &+label {
+                        &:before {
+                            background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-chk-sm-on.svg');
+                        }
+                    }
+                }
+            }
+
+            @at-root .link {
+                flex: none;
+                display: inline-block;
+                color: $pc5;
+                font-size: 12px;
+                padding-bottom: 1px;
+                border-bottom: 1px solid $pc5;
+                line-height: 14px;
+                align-self: center;
+            }
+        }
+    }
+}
+
+// 약관
+.terms-popup {
+    .terms_wrap {
+        font-size: 14px;
+
+        h2+h3 {
+            margin-top: 0;
+        }
+
+        h3 {
+            margin: 32px 0 16px;
+            color: $pc4;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        >p {
+            font-size: 12px;
+            color: $pc9;
+            word-break: break-word;
+            line-height: 1.4;
+        }
+    }
+}
+
+//body scroll 차단
+body.scroll_blocked {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+//layer_popup
+.muffin_point_layer_popup {
+    display: none;
+    pointer-events: none;
+
+    .muffin_point_layer_wrap {
+        z-index: 2400;
+        display: flex;
+        pointer-events: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        justify-content: center;
+        margin: auto;
+
+        .modal_content {
+            display: flex;
+            flex-direction: column;
+            background-color: $pcF;
+            outline: none;
+            position: absolute;
+            pointer-events: auto;
+            border-radius: 12px;
+            padding: 40px 16px 16px;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.5;
+
+            .ico_btn {
+                position: absolute;
+                top: 12px;
+                right: 0;
+            }
+
+            .modal_header {
+                h2 {
+                    font-size: 22px;
+                    line-height: 32px !important;
+                    font-weight: 700;
+                    color: $pc1;
+                }
+            }
+
+            .modal_body {
+                padding: 0 0 24px;
+                color: $pc4;
+            }
+
+            .btn_group {
+                margin-top: auto;
+            }
+        }
+
+        &.alert {
+            align-items: center;
+
+            .modal_header {
+                padding-bottom: 8px;
+            }
+
+            .modal_content {
+                max-height: calc(100% - 72px);
+                min-height: 120px;
+                width: calc(100% - 72px);
+                max-width: 350px;
+                margin: 36px;
+                padding-top: 24px;
+            }
+        }
+
+        &.btm_sheet {
+            align-items: flex-end;
+
+            .modal_header {
+                h2 {
+                    line-height: 1.35;
+                }
+            }
+
+            .modal_content {
+                left: 0;
+                right: 0;
+                bottom: 0;
+                max-height: calc(100vh - 72px);
+                border-radius: 20px 20px 0 0;
+                text-align: left;
+                opacity: 0;
+
+                .modal_body {
+                    overflow-y: auto;
+                    padding-top: 20px;
+                    padding-bottom: 16px;
+                }
+            }
+
+            &.fade {
+                .modal_content {
+                    animation: fadeIn ease .3s;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+    }
+
+    .overlay {
+        pointer-events: auto;
+        background-color: $pc0;
+        position: fixed;
+        opacity: .4;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+}

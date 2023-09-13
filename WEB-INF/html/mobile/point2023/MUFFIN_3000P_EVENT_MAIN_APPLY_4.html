@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>신청 정보 확인/변경</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="/resources/styles/mobile/newmuffin/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/resources/styles/mobile/newmuffin/css/cmm.css">
+    <link rel="stylesheet" type="text/css" href="/resources/styles/mobile/newmuffin/css/main.css">
+    <!--<link rel="stylesheet" type="text/css" href="/resources/styles/mobile/newmuffin/css/skmuffin.css?ver=20220825">  20230508 삭제 -->
+    <!-- <link rel="stylesheet" type="text/css" href="/resources/styles/mobile/newmuffin/css/muffin2023.css"> -->
+    <!-- 20230508 추가 -->
+    <link rel="stylesheet" type="text/css" href="/resources/styles/mobile/newmuffin/css/point2023.css">
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/jquery.touchSlider.js"></script>
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/jquery.event.drag-1.5.min.js"></script>
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/common.js"></script>
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/lottie-player.js"></script>
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/point-2023.js"></script>
+
+    <!-- 20230526 수정 -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        });
+    </script>
+
+</head>
+
+<body class="main">
+    <div id="skip">
+        <a href="#content">본문 바로가기</a>
+    </div>
+    <!-- SK 엔크린 wrap -->
+    <div id="wrap">
+        <header id="header"></header>
+        <div id="container">
+            <h2 class="blind">본문 콘텐츠 영역</h2>
+            <div id="content">
+                엔트린
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <!-- //SK 엔크린  wrap -->
+
+
+
+
+    <!-- START : 3천 포인트 이벤트 [2023] -->
+    <div class="muffin_point_wrap" style="display: block">
+        <div class="muffin_point_wrap_mobile">
+            <!-- header -->
+            <header>
+                <button class="ico_btn back"><span>이전</span></button>
+                <h1 class="is-show">신청 정보 확인/변경</h1>
+            </header>
+            <!-- //header -->
+
+
+            <!-- contents -->
+            <section class="contents" title="신청 정보 확인/변경">
+                <div class="inner">
+                    <!-- 상단 문구 영역 변경 20230904 -->
+                    <h2 class="title"><!--.pb0 삭제 20230908-->
+                        거의 다 왔어요!<i class="emoji">&#127939;</i>
+                        <br>마지막으로 신청 정보를 확인해주세요.
+                    </h2>
+                    <!-- //상단 문구 영역 변경 20230904 -->
+                    <dl class="section">
+                        <dt>신청자</dt>
+                        <dd><span>이름</span>김머핀</dd>
+                        <dd><span>휴대폰</span>010-1234-5678</dd>
+                        <dd>
+                            <p class="txt_info">신청 정보를 문자로 알려드립니다.</p><!-- 문구 변경 20230906-->
+                        </dd>
+                    </dl>
+                    <dl class="section">
+                        <dt>포인트</dt><!-- 문구 수정 20230904 -->
+                        <dd><span>머핀포인트</span><em>5,460P</em></dd><!-- 문구 수정 20230906 -->
+                        <dd><span>사은품 신청</span><em class="point">-3,000P</em></dd>
+                        <dd class="total"><span>신청 후 머핀포인트</span><em>2,460P</em></dd><!--class="total" 추가-->
+                    </dl>
+                    <dl class="section d-flex">
+                        <dt>사은품</dt>
+                        <dd class="w100">
+                            <!-- 사은품 이미지 삭제 20230907
+                            <div class="gift_thumbnail">
+                                <img src="/resources/images/mobile/newmuffin/img/point/202308/img_gift_01.png" alt="장우산">
+                                <img src="/resources/images/mobile/newmuffin/img/point/202308/img_gift_02.png"
+                                    alt="미니소화기">
+                                <img src="/resources/images/mobile/newmuffin/img/point/202308/img_gift_03.png" alt="옥스포드 블록">
+                                <img src="/resources/images/mobile/newmuffin/img/point/202308/img_gift_04.png" alt="세탁세제">
+                                <img src="/resources/images/mobile/newmuffin/img/point/202308/img_gift_05.png" alt="물티슈 세트">
+                            </div>-->
+                            <span class="gift_name">미니 소화기</span>
+                            <button data-id="#popup01" class="txt_btn l_open">변경</button>
+                        </dd>
+                    </dl>
+                    <!-- 수령지 조회 전 문구 변경 20230908-->
+                    <dl class="section">
+                        <dt>수령지</dt>
+                        <dd>
+                            <span>수령지를 선택해주세요.</span>
+                            <button class="txt_btn">선택</button>
+                        </dd>
+                    </dl>
+                    <!-- //수령지 조회 전 문구 변경 20290908-->
+
+                    <dl class="section">
+                        <dt>수령지</dt><!-- 문구변경 20230907-->
+                        <dd>
+                            <span>기흥셀프주유소</span>
+                            <button class="txt_btn">변경</button>
+                        </dd>
+                        <dd class="w100">
+                            <p class="txt_info">최근 방문한 주유/충전소입니다.</p>
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+            <!-- //contents -->
+
+
+            <!-- btm_fix -->
+            <article class="btm_fix">
+                <div class="btn_group">
+                    <button class="btn">신청완료</button>
+                </div>
+            </article>
+            <!-- //btm_fix -->
+
+
+        </div>
+
+
+
+        <!-- start : 사은품 변경 -->
+        <div class="muffin_point_layer_popup" id="popup01">
+            <div class="muffin_point_layer_wrap btm_sheet"><!-- .btm_sheet 추가-->
+                <div class="overlay"></div>
+                <div class="modal_content">
+                    <!-- <button class="ico_btn l_close"><span>닫기</span></button> -->
+                    <header class="modal_header">
+                        <h2>사은품 변경</h2>
+                    </header>
+                    <section class="modal_body">
+                        <!-- start : popup contents -->
+                        <div class="radio_box_group">
+                            <div class="radio_box">
+                                <input type="radio" id="rd01" name="gift">
+                                <label for="rd01">
+                                    장우산<span class="soldout">(품절)</span>
+                                </label>
+                            </div>
+                            <div class="radio_box">
+                                <input type="radio" id="rd02" name="gift" checked>
+                                <label for="rd02">
+                                    미니 소화기<span class="soldout">(품절)</span>
+                                </label>
+                            </div>
+                            <div class="radio_box">
+                                <input type="radio" id="rd03" name="gift">
+                                <label for="rd03">
+                                    옥스포드 블록<span class="soldout">(품절)</span>
+                                </label>
+                            </div>
+                            <!-- 순서 변경 20230907 -->
+                            <div class="radio_box">
+                                <input type="radio" id="rd04" name="gift" disabled><!-- soldout 시 disabled 추가-->
+                                <label for="rd04">
+                                    테크 세탁세제<span class="soldout">(품절)</span>
+                                </label>
+                            </div>
+                            <div class="radio_box">
+                                <input type="radio" id="rd05" name="gift">
+                                <label for="rd05">
+                                    베베숲 물티슈 세트<span class="soldout">(품절)</span><!-- 문구 수정 20230904 -->
+                                </label>
+                            </div>
+                            <!-- //순서 변경 20230907 -->
+                        </div>
+                        <!-- //end : popup contents -->
+                    </section>
+                    <article class="btn_group">
+                        <button class="btn line l_close">취소</button>
+                        <button class="btn">선택완료</button>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <!-- //end : 사은품 변경 -->
+    </div>
+    <!-- //END : 3천 포인트 이벤트 [2023] -->
+</body>
+
+</html>

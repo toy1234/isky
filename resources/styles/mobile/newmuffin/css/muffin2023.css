@@ -1,0 +1,1055 @@
+@charset "utf-8";
+/* @import url("../../../../../https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"); 20230530 삭제 */
+
+/* font */
+/* 20230530 추가 */
+@font-face {
+  font-family: "Pretendard";
+  src: url("../../../../../resources/font/Pretendard-Regular.eot");
+  src: url("../../../../../resources/font/Pretendard-Regular.woff2") format("woff2"), url("../../../../../../font/Pretendard-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  src: url("../../../../../resources/font/Pretendard-SemiBold.eot");
+  src: url("../../../../../resources/font/Pretendard-SemiBold.woff2") format("woff2"), url("../../../../../../font/Pretendard-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  src: url("../../../../../resources/font/Pretendard-Bold.eot");
+  src: url("../../../../../resources/font/Pretendard-Bold.woff2") format("woff2"), url("../../../../../../font/Pretendard-Bold.woff") format("woff");
+}
+
+/* //20230530 추가 */
+
+/*------------------------ mormalize.css ------------------------*/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+
+/**
+   * Remove the margin in all browsers.
+   */
+
+body {
+  margin: 0;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+
+main {
+  display: block;
+}
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+     ========================================================================== */
+
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+
+a {
+  background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+     ========================================================================== */
+
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+
+details {
+  display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+     ========================================================================== */
+
+/**
+   * Add the correct display in IE 10+.
+   */
+
+template {
+  display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+
+[hidden] {
+  display: none;
+}
+
+
+/*------------------------ reset.css ------------------------*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*------------------------ font ------------------------*/
+* {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+}
+
+/*------------------------ common ------------------------*/
+:root {
+  --primary-color: #171718;
+  --second-color: #4E5054;
+  --con-txt-title: 56px;
+  --con-txt-sub: 32px;
+  --font-size-title: 1.75rem;
+  --font-size-sub: 1.125rem;
+  --font-wg-title: 700;
+  --font-wg-sub: 600;
+  /* 20230530 수정 */
+  --con-liheHight-title: 36px;
+  --con-liheHight-sub: 24px;
+}
+
+.content_title h2 {
+  color: var(--primary-color);
+  font-weight: var(--font-wg-title);
+  font-size: var(--font-size-title);
+  line-height: var(--con-liheHight-title);
+}
+
+.content_title h3 {
+  color: var(--second-color);
+  font-weight: var(--font-wg-sub);
+  font-size: var(--font-size-sub);
+  line-height: var(--con-liheHight-sub);
+  margin-top: 20px;
+}
+
+.content_title h3 span {
+  display: block;
+}
+
+img {
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.aic {
+  align-items: center;
+}
+
+.hidden {
+  position: fixed;
+  left: 0;
+  top: -99999em;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+input,
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* ios footer addr 대응 */
+.call a {
+  color: #9ba1a7;
+}
+
+/*------------------------ layout ------------------------*/
+.muffin_wrap {
+  z-index: 100001;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  word-break: keep-all;
+}
+
+.muffin_wrap_mobile {
+  height: 100%;
+}
+
+.muffin_wrap_mobile section {
+  /* height:46rem; */
+  height: 100%;
+  padding: 100px 0;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*------------------------ btn ------------------------*/
+article.muffin_qr {
+  position: sticky;
+  left: 50%;
+  padding: 2.5rem 0;
+  bottom: 0;
+  z-index: 1;
+  letter-spacing: 0;
+  box-sizing: border-box;
+}
+
+.muffin_qr .content_btn {
+  width: 100%;
+  text-align: center;
+}
+
+.muffin_qr .content_btn a {
+  width: 136px;
+  line-height: 52px;
+  height: 52px;
+  display: inline-block;
+  border-radius: 100px;
+  background: #fff;
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: var(--font-wg-title);
+}
+
+.muffin_qr .content_btn.active a {
+  background: #ef3340;
+  color: #fff;
+}
+
+/*------------------------ header ------------------------*/
+header.muffin_white {
+  z-index: 10000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.muffin_white .logo_muffin {
+  padding: 30px 31px 16.5px;
+  box-sizing: border-box;
+}
+
+.muffin_white .logo_muffin a {
+  width: 4.2706rem;
+  height: 1.25rem;
+  display: block;
+  background: url('/resources/images/mobile/newmuffin/img/skmuffin/muffin2023/muffin_white.png') 100%/100% no-repeat;
+  text-indent: -9999em;
+}
+
+/* header active */
+header.muffin_white.active h1 {
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, .08);
+  background: #fff;
+}
+
+header.muffin_white.active h1 a {
+  background: url('/resources/images/mobile/newmuffin/img/skmuffin/muffin2023/muffin_red.png') 0/100% no-repeat;
+}
+
+/*------------------------ content ------------------------*/
+.muffin_wrap_mobile .content1 {
+  background: url('/resources/images/mobile/newmuffin/img/skmuffin/muffin2023/bg.png') 0 0/100% auto no-repeat;
+  height: 100vh;
+  padding: 0;
+  flex-direction: row;
+  align-items: center;
+}
+
+.muffin_wrap_mobile .content1_list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.muffin_wrap_mobile .content1 .content1_list .content_title {
+  font-size: var(--con-txt-sub);
+  line-height: 38px;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  letter-spacing: 0;
+}
+
+.content1_title_txt_list {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 1.8rem;
+  line-height: 3.8rem;
+}
+
+.content1_title_txt_list em {
+  position: absolute;
+  top: 0.75rem;
+  left: 0;
+  opacity: 0;
+  transform: translateY(0.2em);
+  transition: opacity 0.3s cubic-bezier(0.65, 0, 0.35, 1), transform 0.6s 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.content1_title_txt_list em.active {
+  opacity: 1;
+  transform: translateY(-1.5rem);
+  transition: opacity 0.6s cubic-bezier(0.65, 0, 0.35, 1), transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* img slide */
+.content1_list .content_img {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-top: 40px;
+  width: 40.625rem;
+  height: 40.625rem;
+}
+
+.content1_list .content_img p {
+  position: absolute;
+  transform: translateY(0);
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.content1_list .content_img p.active {
+  opacity: 1;
+  transition: opacity 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* img slide End */
+
+.content1_list .content_img img {
+  width: 100%;
+}
+
+.muffin_wrap_mobile .content2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.muffin_wrap_mobile section.content5 {
+  height: 33rem;
+}
+
+.content5 .content_title_desc {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.content5 .content_title_desc h2 span {
+  display: block;
+}
+
+.content5 .content_title_desc h3 {
+  margin-bottom: 12px;
+}
+
+.muffin_wrap_mobile section.content6 {
+  background: #333341;
+  height: 7.875rem;
+  padding: 0;
+}
+
+.content6 .main_btn {
+  display: flex;
+  margin: 0 auto;
+}
+
+.content6 .main_btn a {
+  width: 238px;
+  display: block;
+  background: #fff;
+  color: var(--primary-color);
+  font-size: 16px;
+  line-height: 56px;
+  margin: 0 auto;
+  font-weight: var(--font-wg-title);
+  border-radius: 10px;
+  position: relative;
+  padding-right: 45px;
+  box-sizing: border-box;
+}
+
+/* 20230530 추가 */
+.content6 .main_btn button {
+  width: 238px;
+  display: block;
+  background: #fff;
+  color: var(--primary-color);
+  font-size: 16px;
+  line-height: 56px;
+  margin: 0 auto;
+  font-weight: var(--font-wg-title);
+  border-radius: 10px;
+  position: relative;
+  padding-right: 45px;
+  box-sizing: border-box;
+}
+
+.content6 .main_btn button::after {
+  content: '';
+  width: 7px;
+  height: 100%;
+  right: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url('/resources/images/mobile/newmuffin/img/skmuffin/muffin2023/arrow_btn.png') 100%/100% no-repeat;
+}
+
+/* //20230530 추가 */
+
+.content6 .main_btn a::after {
+  content: '';
+  width: 7px;
+  height: 100%;
+  right: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url('/resources/images/mobile/newmuffin/img/skmuffin/muffin2023/arrow_btn.png') 100%/100% no-repeat;
+}
+
+/*------------------------ footer ------------------------*/
+.mobile_footer {
+  background: #f9f9fc;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.mobile_footer .footer_wrap {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+  padding: 48px 30px;
+  box-sizing: border-box;
+}
+
+.mobile_footer>div {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 135px;
+  box-sizing: border-box;
+}
+
+.mobile_footer .footer_logo {
+  width: 71px;
+  height: 33px;
+  background: url('/resources/images/mobile/newmuffin/img/skmuffin/muffin2023/footer_logo_20230601.png') 100%/100% no-repeat;
+  /* 20230601 수정 */
+}
+
+.mobile_footer .footer_logo h2 {
+  text-indent: -9999em;
+}
+
+.mobile_footer .fnb .fnb_list {
+  font-size: 16px;
+  display: flex;
+  gap: 24px;
+  line-height: 21.48px;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+
+.mobile_footer .fnb .addr_wrap {
+  color: #9ba1a7;
+  line-height: 25px;
+}
+
+.mobile_footer .footer_addr {
+  margin-top: 8px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mobile_footer .footer_addr li {
+  position: relative;
+}
+
+.mobile_footer .footer_addr li::after {
+  content: '';
+  position: absolute;
+  right: -11px;
+  top: 6.5px;
+  width: 0.075rem;
+  height: 12px;
+  background: #dadfe3;
+}
+
+.mobile_footer .footer_addr li:last-child::after {
+  display: none;
+}
+
+/* 20230530 추가 */
+/*------------------------  하단 그만보기 쿠키 ------------------------*/
+.muffin_wrap .btn_close_wrap {
+  width: 100%;
+}
+
+.muffin_wrap .btn_close_wrap .btn_today_close {
+  width: 50%;
+  float: left;
+  background: #000;
+  color: #fff;
+  font-size: 3.6vw;
+  padding: 5% 0;
+  border-right: 0.1vw solid #fff;
+  vertical-align: top;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: 'NotoSansKR', '맑은 고딕', Arial, AppleGothic, Helvetica, sans-serif;
+}
+
+.muffin_wrap .btn_close_wrap .btn_close {
+  width: 50%;
+  float: left;
+  background: #494748;
+  color: #fff;
+  font-size: 3.6vw;
+  padding: 5% 0;
+  border-left: 0.1vw solid #fff;
+  text-align: center;
+  box-sizing: border-box;
+  /* font-family:'NotoSansKR', '맑은 고딕', Arial, AppleGothic, Helvetica, sans-serif; */
+}
+
+
+/* //20230530 추가 */
+
+
+/*------------------------ responsive ------------------------*/
+@media (max-width:960px) {
+  .mobile_footer .footer_wrap {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .mobile_footer .fnb .fnb_list {
+    line-height: 19.09px;
+    gap: 0;
+    font-size: 16px;
+  }
+
+  .mobile_footer .fnb .fnb_list li {
+    margin-right: 24px;
+    margin-bottom: 16px;
+    line-height: 19.09px;
+  }
+
+  .mobile_footer .footer_addr {
+    gap: 0;
+  }
+
+  .mobile_footer .footer_addr li {
+    margin-right: 20px;
+  }
+
+  .mobile_footer .addr_wrap p {
+    margin: 12px 0 24px;
+    line-height: 18px;
+  }
+
+  .mobile_footer .addr_wrap p span {
+    display: block;
+  }
+}
+
+@media (max-width:768px) {
+  .mobile_footer .footer_addr li+li::after {
+    display: none;
+  }
+
+  .content1_list .content_img {
+    width: 90%;
+    height: 50%;
+  }
+}
+
+@media (max-width:400px) {
+  .mobile_footer .fnb .fnb_list li:nth-child(3) {
+    margin-right: 0;
+  }
+
+}
+
+/* 20230601 수정 */
+@media (max-width:374px) {
+  .mobile_footer .fnb .fnb_list li:nth-child(3) {
+    margin-right: 24px;
+  }
+}
+
+/* //20230601 수정 */

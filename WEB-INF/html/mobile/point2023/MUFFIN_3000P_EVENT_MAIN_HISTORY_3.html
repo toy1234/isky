@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>신청내역이 없는 경우</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="/resources/styles/mobile/newmuffin/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/resources/styles/mobile/newmuffin/css/cmm.css">
+    <link rel="stylesheet" type="text/css" href="/resources/styles/mobile/newmuffin/css/main.css">
+    <!--<link rel="stylesheet" type="text/css" href="/resources/styles/mobile/newmuffin/css/skmuffin.css?ver=20220825">  20230508 삭제 -->
+    <!-- <link rel="stylesheet" type="text/css" href="/resources/styles/mobile/newmuffin/css/muffin2023.css"> -->
+    <!-- 20230508 추가 -->
+    <link rel="stylesheet" type="text/css" href="/resources/styles/mobile/newmuffin/css/point2023.css">
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/jquery.touchSlider.js"></script>
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/jquery.event.drag-1.5.min.js"></script>
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/common.js"></script>
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/lottie-player.js"></script>
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/point-2023.js"></script>
+
+    <!-- 20230526 수정 -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // 더보기버튼
+            $('.arrow_down').on('click', function () {
+                if ($(this).hasClass('up')) {
+                    $(this).removeClass('up').text('더보기')
+                    $('#addData').hide()
+                } else {
+                    $(this).addClass('up').text('접기')
+                    $('#addData').show()
+                }
+            })
+        });
+    </script>
+
+</head>
+
+<body class="main">
+    <div id="skip">
+        <a href="#content">본문 바로가기</a>
+    </div>
+    <!-- SK 엔크린 wrap -->
+    <div id="wrap">
+        <header id="header"></header>
+        <div id="container">
+            <h2 class="blind">본문 콘텐츠 영역</h2>
+            <div id="content">
+                엔트린
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <!-- //SK 엔크린  wrap -->
+
+
+
+
+    <!-- START : 3천 포인트 이벤트 [2023] -->
+    <div class="muffin_point_wrap" style="display: block">
+        <div class="muffin_point_wrap_mobile">
+            <!-- header -->
+            <header>
+                <button class="ico_btn back"><span>이전</span></button>
+                <h1 class="is-show">신청내역</h1>
+            </header>
+            <!-- //header -->
+
+
+            <!-- contents -->
+            <section class="contents" title="신청내역">
+                <div class="inner">
+                    <!-- START : 2023년 신청내역이 없는 경우 -->
+                    <!-- 상단문구 영역 변경 20230904 -->
+                    <dl class="section inform_box none"><!-- .none 추가 20230907 -->
+                        <dt>사은품 신청 내역이 없습니다.</dt><!--문구변경,  emoji 삭제 20230906 -->
+                        <dd>머핀포인트로 사은품 신청해보세요!</dd>
+                    </dl>
+                    <!-- //상단문구 영역 변경 20230904 -->
+
+                    <!-- //END : 2023년 신청내역이 없는 경우 -->
+
+
+                    <!-- START : 지난 신청내역 -->
+                    <dl class="section">
+                        <dt>지난 신청내역</dt>
+                        <dd>
+                            <table class="table_01">
+                                <colgroup>
+                                    <col style="width: 25%;" span="4">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>신청일자</th>
+                                        <th>사은품</th>
+                                        <th>수령지</th>
+                                        <th>상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2023.11.01</td>
+                                        <td>미니 소화기</td>
+                                        <td>(주) 연합진흥 고성</td>
+                                        <td>신청완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2022.10.29</td>
+                                        <td>오토모 차량 충전기</td>
+                                        <td>논현 충전소 논현 충전소</td>
+                                        <td>배송완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2022.10.28</td>
+                                        <td>옥스포드 블록</td>
+                                        <td>SK 잠실주유소</td>
+                                        <td>신청취소</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2021.11.01</td>
+                                        <td>캠핑의자</td>
+                                        <td>퇴계로</td>
+                                        <td>배송완료</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </dd>
+                    </dl>
+                    <!-- //END : 지난 신청내역 -->
+                </div>
+                <div class="notice">
+                    <strong>유의사항</strong>
+                    <ul class="dot_list">
+                        <li>사은품 변경을 원하시는 경우, 신청 취소 후 재신청하셔야 합니다.</li>
+                        <li>사은품 신청 취소, 수령지 변경은 <strong>해당 신청 차수의 마지막 날 자정 이전</strong>까지 가능합니다.
+                            <ul>
+                                <li>1차 : 23.10.04(수) ~ <strong>10.15(일)</strong></li>
+                                <li>2차 : 23.10.16(월) ~ <strong>10.29(일)</strong></li>
+                                <li>3차 : 23.10.30(월) ~ <strong>11.12(일)</strong></li>
+                                <li>4차 : 23.11.13(월) ~ <strong>11.26(일)</strong></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- //contents -->
+
+
+            <!-- btm_fix -->
+            <article class="btm_fix">
+                <div class="btn_group">
+                    <button class="btn">메인 화면 이동</button>
+                </div>
+            </article>
+            <!-- //btm_fix -->
+
+
+        </div>
+    </div>
+    <!-- //END : 3천 포인트 이벤트 [2023] -->
+</body>
+
+</html>

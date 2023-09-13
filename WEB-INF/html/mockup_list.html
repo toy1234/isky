@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>MockUp List</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>SKE 뉴엔트린 : 3천포인트이벤트 : MockUp List</title>
+  <link rel="stylesheet" type="text/css" href="/resources/styles/mobile/newmuffin/css/point2023.css">
+  <style>
+    body {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      letter-spacing: 0;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .contents {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      display: flex;
+      align-items: flex-end;
+      background-color: #ef3340;
+      padding-right: 20px;
+    }
+
+    header h2 {
+      margin-left: auto;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      padding-bottom: 10px;
+    }
+
+    .logo {
+      width: 133px;
+      height: 60px;
+      background: url(/resources/images/mobile/newmuffin/img/point/202308/logo.svg) 0 0/100% auto no-repeat;
+      filter: brightness(100);
+      font: 0/0 a;
+    }
+
+    footer {
+      margin-top: auto;
+      background-color: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ef3340;
+    }
+
+    a.top {
+      background-color: #ff7a00;
+      padding: 4px 20px;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 6px;
+      margin: 10px;
+      display: inline-block;
+    }
+
+    a.logo {
+      background-color: transparent;
+    }
+
+    table button {
+      border: 1px solid #ced4da;
+      color: #7d7d80;
+      font-size: 12px;
+      height: 24px;
+      line-height: 24px;
+      padding: 0 10px !important;
+      border-radius: 2px !important;
+    }
+
+    table button:hover {
+      background-color: #c2ced9;
+      color: #fff;
+      border-color: #a2b2c3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      /*border-top: 2px solid #ef3340;*/
+      border-bottom: 1px solid #d8d8d8;
+    }
+
+    table thead th {
+      background-color: #ef3340 !important;
+      border-color: #fff;
+      color: #fff !important;
+      font-family: "Pretendard-SemiBold";
+      font-size: 14px !important;
+      text-align: center;
+    }
+
+    table tbody th {
+      background-color: #f3f4f6 !important;
+      text-align: center !important;
+    }
+
+    table th,
+    table td {
+      border-top: 1px solid #d8d8d8;
+      border-right: 1px solid #d8d8d8;
+      color: #333 !important;
+      padding: 10px !important;
+      vertical-align: middle;
+      font-size: 14px !important;
+      word-break: keep-all;
+      /* font-weight: bold; */
+    }
+
+
+    table tbody td:last-of-type {
+      text-align: center !important;
+    }
+
+    /*table tbody td:nth-child(5) { font-family: 'Pretendard-Regular'; color: #666; }*/
+
+    table tr:last-of-type th,
+    table tr:last-of-type td {
+      border-bottom: 1px solid #d8d8d8;
+    }
+
+    /*table tbody tr td:last-of-type { border-right: 0; }*/
+
+    table th span {
+      padding: 0 4px;
+      border-radius: 4px;
+      line-height: 20px;
+      height: 20px;
+      background: #fff;
+      border: 1px solid #ccc;
+      color: #222;
+      font-size: 11px;
+      display: inline-block;
+      margin: 0 auto 2px auto;
+    }
+
+    @media (max-width:1024px) {
+      table {
+        width: 1024px;
+      }
+    }
+
+    table th em {
+      display: block;
+    }
+
+    td img {
+      cursor: pointer;
+    }
+
+    #preview {
+      z-index: 9999;
+      position: absolute;
+      border: 0px solid #ccc;
+      background: #333;
+      padding: 1px;
+      display: none;
+      color: #fff;
+    }
+
+    td img {
+      border: 1px solid #ccc;
+      padding: 1px;
+      width: 70px;
+    }
+
+    td.num {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    tr.division td,
+    tr.division th {
+      /*border-top-color: #ef3340; border-top-style: dashed;*/
+      font-size: 14px !important;
+      font-family: "Pretendard-SemiBold";
+    }
+  </style>
+  <script type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="contents">
+      <header>
+        <h1 class="logo"></h1>
+        <h2>3천 포인트 이벤트 [2023]</h2>
+      </header>
+      <article style="width: 100%; overflow-x:auto;">
+        <table style="padding-bottom: 500px">
+          <colgroup>
+            <col width="60" />
+            <col width="160" />
+            <col width="220" />
+            <col width="120" />
+            <col />
+            <col width="120" />
+            <col width="180" />
+          </colgroup>
+          <thead>
+            <tr class="bot_line">
+              <th>No</th>
+              <th>1depth</th>
+              <th>2depth</th>
+              <th>3depth</th>
+              <th>file Name [link]</th>
+              <th>type</th>
+              <th>비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="division">
+              <th colspan="7">UI Guide</th>
+            </tr>
+            <tr>
+              <td class="num">1</td>
+              <td>layout</td>
+              <td>page</td>
+              <td></td>
+              <td><a href="../../WEB-INF/html/mobile/point2023/sub.html" target="_blank">sub.html</a></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="num">2</td>
+              <td></td>
+              <td>약관</td>
+              <td></td>
+              <td><a href="../../WEB-INF/html/mobile/point2023/sub_terms.html" target="_blank">sub_terms.html</a></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="num">3</td>
+              <td>component</td>
+              <td></td>
+              <td></td>
+              <td><a href="../../WEB-INF/html/mobile/point2023/component.html" target="_blank">component.html</a></td>
+              <td></td>
+              <td>[20230901] 수정</td>
+            </tr>
+
+            <tr>
+              <td class="num">5</td>
+              <td>layerPopup</td>
+              <td>BottomSheet</td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/bottomSheet.html" target="_blank">bottomSheet.html</a>
+              </td>
+              <td>BottomSheet</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="num">6</td>
+              <td></td>
+              <td>Alert</td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/alert.html" target="_blank">alert.html</a>
+              </td>
+              <td>Alert</td>
+              <td>개발 참조바람</td>
+            </tr>
+            <tr>
+              <td class="num">7</td>
+              <td>Error Page</td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/ERROR_PAGE.html" target="_blank">
+                  ERROR_PAGE.html
+                </a>
+              </td>
+              <td></td>
+              <td>개발 참조바람<br>[20230901] 수정<br>[20230908] 문구수정, 새로고침버튼삭제</td>
+            </tr>
+
+
+            <tr class="division">
+              <th colspan="7">Mobile</th>
+            </tr>
+            <tr>
+              <td class="num">1</td>
+              <td>이벤트 메인</td>
+              <td></td>
+              <td></td>
+              <td><a href="../../WEB-INF/html/mobile/point2023/main.html" target="_blank">main.html</a></td>
+              <td></td>
+              <td>[20230906] 유의사항 문구 변경<br>[20230908] 상품순서/문구변경, 유의사항 문구 변경</td>
+            </tr>
+            <tr>
+              <td class="num">2</td>
+              <td></td>
+              <td>약관 동의</td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_APPLY_STEP1.html" target="_blank">
+                  MUFFIN_3000P_EVENT_APPLY_STEP1
+                </a>
+              </td>
+              <td>bottomsheet</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="num">3</td>
+              <td>포인트 전환</td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_APPLY_2.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_APPLY_2-1<br>MUFFIN_3000P_EVENT_MAIN_APPLY_2-2
+                </a>
+              </td>
+              <td></td>
+              <td>[20230901] 수정<br>[20230906] 유의사항 문구변경<br>[20230907] 상단 문구영역 변경, input inputmode 추가<br>[20230908]
+                간격수정(.mt12 추가)</td>
+            </tr>
+            <tr>
+              <td class="num">4</td>
+              <td>포인트 조회</td>
+              <td>3,000P 이상</td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_APPLY_2-3.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_APPLY_2-3
+                </a>
+              </td>
+              <td></td>
+              <td>[20230904] 상단 문구영역 변경, emoji 추가<br>[20230906] 유의사항 문구변경</td>
+            </tr>
+            <tr>
+              <td class="num">5</td>
+              <td></td>
+              <td>3,000P 미만</td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_APPLY_2-4.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_APPLY_2-4
+                </a>
+              </td>
+              <td></td>
+              <td>[20230904] 상단 문구영역 변경, emoji 추가 [20230906] 문구 변경</td>
+            </tr>
+            <tr>
+              <td class="num">6</td>
+              <td>사은품 선택</td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_APPLY_3.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_APPLY_3
+                </a>
+              </td>
+              <td></td>
+              <td>[20230904] emoji 추가<br>[20230907] 문구 변경</td>
+            </tr>
+            <tr>
+              <td class="num">7</td>
+              <td>신청 정보 확인/변경</td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_APPLY_4.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_APPLY_4-1<br>
+                  MUFFIN_3000P_EVENT_MAIN_APPLY_4-2
+                </a>
+              </td>
+              <td></td>
+              <td>[20230904] 상단 문구영역 변경, emoji 추가[20230906] 문구변경<br>[20230907] 사은품 이미지 삭제, 문구변경<br>[20230908] 간격 수정에 따른
+                .pb0 삭제</td>
+            </tr>
+            <tr>
+              <td class="num">8</td>
+              <td></td>
+              <td>사은품 변경</td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_MODIFY_1.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_MODIFY_1
+                </a>
+              </td>
+              <td>bottomsheet</td>
+              <td>[20230907] 품절 문구 삭제</td>
+            </tr>
+            <tr>
+              <td class="num">9</td>
+              <td></td>
+              <td>사은품 수령지 선택</td>
+              <td>주유소</td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_MODIFY_2-1.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_MODIFY_2-1<br>
+                  MUFFIN_3000P_EVENT_MAIN_MODIFY_2-3
+                </a>
+              </td>
+              <td>tab page</td>
+              <td>[20230904] emoji 추가<br>[20230908] tab 문구 변경</td>
+            </tr>
+            <tr>
+              <td class="num">10</td>
+              <td></td>
+              <td></td>
+              <td>충전소</td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_MODIFY_2-2.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_MODIFY_2-2<br>
+                  MUFFIN_3000P_EVENT_MAIN_MODIFY_2-4
+                </a>
+              </td>
+              <td>tab page</td>
+              <td>[20230904] emoji 추가<br>[20230908] tab 문구 변경</td>
+            </tr>
+            <tr>
+              <td class="num">11</td>
+              <td>신청완료</td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_APPLY_5.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_APPLY_5
+                </a>
+              </td>
+              <td></td>
+              <td>[20230904] emoji 추가<br>[20230906] 문구 수정</td>
+            </tr>
+            <tr>
+              <td class="num">12</td>
+              <td>신청내역</td>
+              <td>신청취소</td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_HISTORY_1.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_HISTORY_1
+                </a>
+              </td>
+              <td>
+              </td>
+              <td>
+                [20230907] 수령완료 flag 추가<br>[20230908] 신청취소 (가능상태) 일때, style(횡간) 변경 적용<br>[20230912] 신청완료 flag 추가
+              </td>
+            </tr>
+            <tr>
+              <td class="num">13</td>
+              <td></td>
+              <td>배송중/배송완료/수령완료</td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_HISTORY_2.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_HISTORY_2
+                </a>
+              </td>
+              <td>
+              </td>
+              <td>
+                [20230908] HISTORY_1 분리 (횡간 확인용)<br>[20230912] 신청완료 flag 추가/flag class 변경
+              </td>
+            </tr>
+            <tr>
+              <td class="num">14</td>
+              <td></td>
+              <td>신청내역 없는 경우</td>
+              <td>2023년</td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_HISTORY_3.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_HISTORY_3
+                </a>
+              </td>
+              <td>
+              </td>
+              <td>
+                [20230904]상단문구영역 변경, emoji 추가<br>[20230906] 문구변경, emoji 삭제
+              </td>
+            </tr>
+            <tr>
+              <td class="num">15</td>
+              <td></td>
+              <td></td>
+              <td>2023년+지난</td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_HISTORY_4.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_HISTORY_4
+                </a>
+              </td>
+              <td>
+              </td>
+              <td>
+                [20230904] 상단문구영역 변경, emoji 추가, 유의사항 추가<br>[20230906] 문구변경, emoji 삭제
+              </td>
+            </tr>
+            <tr>
+              <td class="num">16</td>
+              <td></td>
+              <td>사은품 신청 취소</td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_MAIN_HISTORY_5.html" target="_blank">
+                  MUFFIN_3000P_EVENT_MAIN_HISTORY_5
+                </a>
+              </td>
+              <td>
+              </td>
+              <td>
+                [20230904] 유의사항 추가<br>[20230906] 문구변경
+              </td>
+            </tr>
+            <tr>
+              <td class="num">17</td>
+              <td></td>
+              <td>개인정보 수집 및 이용동의(필수)</td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_POLICY_1.html"
+                  target="_blank">MUFFIN_3000P_EVENT_POLICY_1</a>
+              </td>
+              <td>약관</td>
+              <td>[20230901] 신규</td>
+            </tr>
+            <tr>
+              <td class="num">18</td>
+              <td></td>
+              <td>개인정보 제3자 이용동의(필수)</td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_POLICY_2.html"
+                  target="_blank">MUFFIN_3000P_EVENT_POLICY_2</a>
+              </td>
+              <td>약관</td>
+              <td>[20230901] 신규<br>[20230912] 문구수정</td>
+            </tr>
+            <tr>
+              <td class="num">19</td>
+              <td></td>
+              <td>개인정보 처리방침</td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_POLICY_3.html"
+                  target="_blank">MUFFIN_3000P_EVENT_POLICY_3</a>
+              </td>
+              <td>약관</td>
+              <td>[20230901] 수정<br>[20230912] 문구수정</td>
+            </tr>
+            <tr>
+              <td class="num">20</td>
+              <td></td>
+              <td>포인트 전환 > 개인정보 제3자 동의</td>
+              <td></td>
+              <td>
+                <a href="../../WEB-INF/html/mobile/point2023/MUFFIN_3000P_EVENT_POLICY_4.html"
+                  target="_blank">MUFFIN_3000P_EVENT_POLICY_4</a>
+              </td>
+              <td>약관</td>
+              <td>[20230901] 신규<br>[20230907] 문구수정<br>[20230912] 문구수정</td>
+            </tr>
+            <tr>
+
+          </tbody>
+
+          <tbody>
+            <tr class="division">
+              <th colspan="7">멤버쉽 - 혜택 상세 페이지</th>
+            </tr>
+            <tr>
+              <td class="num">0</td>
+              <td>혜택 상세 페이지</td>
+              <td></td>
+              <td></td>
+              <td><a href="../../WEB-INF/html/mobile/event/benefit_template.html"
+                  target="_blank">benefit_template.html</a></td>
+              <td>Template</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="num">1</td>
+              <td></td>
+              <td>카수리 : 출장 엔진오일 교환 할인</td>
+              <td></td>
+              <td><a href="../../WEB-INF/html/mobile/event/benefit_01.html" target="_blank">benefit_01.html</a></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <footer>
+        <small>© SK ENERGY CO., LTD. ALL RIGHTS RESERVED.</small>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

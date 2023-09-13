@@ -1,0 +1,46 @@
+{
+    "window.zoomLevel": 0,
+    "editor.wordWrap": "on",
+    "editor.fontFamily": "d2coding",
+    "editor.tabSize": 4,
+    "editor.renderWhitespace": "boundary",
+    "editor.fontSize": 15,
+    "editor.mouseWheelZoom": true,
+    "editor.colorDecorators": true,
+    "editor.codeLens": false,
+    "editor.formatOnSave": true,
+    "powermode.enabled": true,
+    // "workbench.colorTheme": "Default Light+",​
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/.."
+        }
+        // {
+        //     "format": "compressed",
+        //     "extensionName": ".min.css",
+        //     "savePath": null
+        // }
+    ],
+    // "liveSassCompile.settings.excludeList": [
+    //     "**/node_modules/**",
+    //     ".vscode/**"
+    // ],
+    // map 생성 여부
+    "liveSassCompile.settings.generateMap": false,
+    // 크로스브라우징
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ],
+    "workbench.settings.useSplitJSON": true,
+    "terminal.integrated.tabs.enabled": true,
+    "gitlens.advanced.messages": {
+        "suppressGitMissingWarning": true
+    },
+    "liveServer.settings.CustomBrowser": "chrome",
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.port": 5500,
+    "liveServer.settings.host": "127.0.0.1"
+}

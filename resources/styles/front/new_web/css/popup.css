@@ -1,0 +1,1356 @@
+@charset "UTF-8";
+
+body.popup{background-color:#eaeaea;}
+body.login #incont{margin:0;padding:0;}
+body.login #popWrap2 #pop_content{padding:0 0 50px 0;}
+
+#popWrap{position:relative;width:646px;min-height:100%;height:100%;height:auto !important;margin:0 0 -40px 0;padding:0 7px 0 0;background:#f8f8f8 url('/resources/images/front/new_web/img/common/popup/bg_pop_shadowline.gif') repeat-y 100% 0;}
+#popWrap #pop_header{position:relative;z-index:60;padding:43px 0 43px 15px;}
+#popWrap #pop_header .energy{margin:-10px 0 0 0;padding:0 0 0 15px;}
+#popWrap2 {position:relative;width:100%;height:100%;height:auto !important;min-height:100%;margin:0 0 -40px 0}
+#popWrap2 #pop_header {position:relative;z-index:60;height:30px;padding:12px 0 0 0; background:url('/resources/images/front/new_web/img/common/popup/bg_header.gif') repeat-x 0 0; /*text-align:center*/}
+#popWrap2 #pop_header h1 {display:inline-block; padding:0 0 0 24px; font-size:0; line-height:0}
+#popWrap2 #pop_header .nepass{overflow:hidden;position:absolute;left:155px;top:9px;}
+#popWrap2 #pop_header .nepass strong{float:left;}
+#popWrap2 #pop_header .nepass span{float:left;margin:7px 0 0 6px;}
+#popWrap #pop_content, #popWrap2 #pop_content, #popWrap2 .pop_content {position:relative;z-index:40;padding:0 0 70px 0;}/* 20150506 수정 */
+#pop_footer{position:relative;z-index:50;padding-top:17px;height:22px;border-top:1px solid #d6d6d6;background-color:#ffffff;text-align:center}
+body.popup #pop_footer{width:657px;border:none;background:#f8f8f8 url('/resources/images/front/new_web/img/common/popup/bg_pop_footer.gif') no-repeat 100% 0;text-align:center}
+.pop_wrap .header{height:auto} /* 20160824 추가*/
+
+.hGroup{overflow:hidden;}
+.hGroup h1{float:left;font-size:0;line-height:0;}
+.hGroup em{float:left;margin:0 0 0 15px;padding:0 0 0 15px;border-left:1px solid #bdbdbd;}
+.popCont .interval{padding:0 14px;}
+.popCont .interval .my_step{overflow:hidden;}
+.popCont .interval .my_step li{float:left;margin-left:1px;font-size:0;line-height:0;}
+.popCont .interval .my_step li:first-child{margin-left:0;}
+.popCont .interval .txt{margin:88px 0 0 4px;line-height:16px;letter-spacing:-1px;}
+.popCont .interval .sktxt{margin:40px 0 0 4px;line-height:16px;letter-spacing:-1px;}
+.popCont .section_wrap{position:relative;padding:33px 9px 0 9px; /*background:url('/resources/images/front/new_web/img/common/popup/bg_line.gif') repeat-x; margin:23px 0 0; */} /* 20161109 수정 */
+.popCont .group_terms2{overflow:hidden;position:relative;margin:44px 0 0 0;padding:44px 0 0 0;text-align:center;background:url('/resources/images/front/new_web/img/common/popup/bg_line.gif') repeat-x;}
+.popCont .section2{overflow:hidden;position:relative;margin:23px 0 0 0;text-align:center;background:url('/resources/images/front/new_web/img/common/popup/bg_line.gif') repeat-x}
+.popCont .group_terms2 p,
+.popCont .section2 p{margin:20px 0 0 0;}
+.popCont .group_terms3,
+.popCont .section_first{margin-top:40px;}
+.popCont .group_first{overflow:hidden;position:relative;padding-top:45px;}
+.popCont .group_terms4{overflow:hidden;position:relative;margin-top:23px;}
+.popCont a.policy{position:absolute;top:257px;right:14px;z-index:100;}
+.popCont a.policy1{position:absolute;top:230px;right:14px;z-index:100;}
+.popCont a.policy2{position:absolute;top:97px;right:14px;z-index:100;}
+.popCont .ofy{height:185px;border:1px solid #dbdbdb;background-color:#fff;}
+.popCont .agee_wrap{overflow:hidden;margin:13px 0 0 0;text-align:right;}
+.popCont .agee_wrap p{float:left;margin:0 0 0 10px;padding:0 0 0 8px;background:url('/resources/images/front/new_web/img/common/popup/bg_m_bar01.gif') no-repeat 0 6px;}
+.popCont .agee_wrap .agee_form{margin:0;}
+.popCont .agee_wrap1{overflow:hidden;margin:13px 0 0 0;}
+.popCont .agee_wrap1 p{width:440px;float:left;margin:0 0 0 10px;padding:0 0 0 8px;background:url('/resources/images/front/new_web/img/common/popup/bg_m_bar01.gif') no-repeat 0 6px;}
+.popCont .agee_wrap1 .agee_form{float:right; margin:0;}
+.popCont .agee_form{margin:13px 0 0 0;text-align:right;}
+.popCont .agee_form label{margin:0 15px 0 0;}
+.popCont .box_terms{padding:15px 15px 0 15px;}
+.popCont .box_terms h3{font-size:12px; color:#cf0000;}
+.popCont .box_terms h4{font-size:12px;color:#000; margin-top:20px}
+.popCont .box_terms .h4_red{font-size:12px;color:#cf0000; margin-top:20px}
+.popCont .box_terms h5{margin:19px 0 0 0;font-weight:bold; font-size:12px}
+.popCont .box_terms p{line-height:15px;}
+.popCont .utill_radio{margin:0 0 14px 0;text-align:right;}
+.popCont .utill_radio .radio,
+.popCont .agee_form .radio{margin:-2px 0 0 0;}
+
+.popCont .utill_radio label{margin:0 15px 0 0;}
+.popCont .inter_list{margin:27px 0 0 25px;}
+.popCont .inter_list2{position:absolute; left:20px; top:180px;}
+.popCont .tab_type{margin:0 0 0 14px;}
+.popCont .signup_desc .slist .last,
+.popCont .signup_desc{margin:18px 13px 0 0;}
+.popCont .signup_desc .ftxt{float:left;}
+.popCont .signup_desc .stxt{overflow:hidden;margin:0 0 0 19px;}
+.popCont .signup_desc .stxt{overflow:hidden;margin:0 0 0 19px;}
+.popCont .signup_desc .slist{margin:19px 0 0 27px;}
+.popCont .signup_desc .align{float:left;display:inline-block;margin:0 0 0 5px;}
+.popCont .bonus_txt{margin:23px 0 0 20px;}
+.popCont .bonus_txt .stxt2{padding:0 0 0 8px;background:url('/resources/images/front/new_web/img/common/popup/bg_square.gif') no-repeat 0 5px;}
+.popCont .bonus_txt .slist{margin:19px 0 0 6px;line-height:15px;}
+.popCont .signup_desc .slist .second {margin-top:19px}
+.popCont .interval .txt2{width:592px; margin:25px 0 0 4px; padding:7px 14px 6px 8px; background:#e7e7e7; line-height:16px; letter-spacing:-1px;}
+.popCont .interval .txt2_1{margin:15px 0 0 4px; line-height:16px; letter-spacing:-1px;}
+.popCont .interval .txt2 strong{font-weight:bold;}
+.popCont .section3{position:relative; margin:40px 0 0 0; overflow:hidden;position:relative; background:url('/resources/images/front/new_web/img/common/popup/bg_line.gif') repeat-x 0 100%;}
+.popCont .section4{position:relative; margin:12px 0 0 0; overflow:hidden;position:relative; background:url('/resources/images/front/new_web/img/common/popup/bg_line.gif') repeat-x 0 100%;}
+.popCont .box_style1 .txt2{margin:17px 0 0 0; color:#505050; letter-spacing:-1px; padding:0 0 0 8px; background:url('/resources/images/front/new_web/img/common/popup/bg_square.gif') no-repeat 0 6px}
+
+.box_style1,
+.box_style2{border:1px solid #dbdbdb;margin:0 14px;padding:35px 32px 16px 32px;background-color:#e5e5e5;}
+.box_style2{margin:20px 16px 0 14px;}
+.box_style1 p,
+.box_style2 p{margin:25px 0 0 0;letter-spacing:-1px;line-height:15px;color:#686868;}
+.box_style2 .imgTxt{display:inline-block;margin:45px 0 0 0;}
+.box_style2 .txt{margin:15px 0 0 2px;}
+.box_style3{border:1px solid #dbdbdb;margin:-1px 10px 0 10px;padding:27px 21px;background-color:#f4f4f4;}
+
+.box_card{margin:24px 0 0 0;}
+.box_card .stit{margin:0 0 0 15px;}
+.box_card .card_app{overflow:hidden;margin:6px 0 0 0;padding:33px 0 0 0;background:url('/resources/images/front/new_web/img/common/popup/bg_line.gif') repeat-x}
+.box_card .card_app .info{float:left;height:97px;margin:0 0 0 35px;padding:0 0 0 163px;background:url('/resources/images/front/new_web/img/common/popup/bg_card_app02.png') no-repeat 0 1px}
+.box_card .card_app h4{padding:4px 0 8px 8px;}
+.box_card .card_app .btn{float:left;margin:17px 0 0 25px;}
+.box_card .card_enro{overflow:hidden;border-top:1px solid #d6d6d6;margin:35px 0 0 0;padding:40px 0 0 25px;}
+.box_card .card_enro p{float:left;width:388px;margin:0 108px 0 0;letter-spacing:-1px;}
+.box_card .card_enro .btn{float:left;}
+
+.card_outer {background:#fff; padding:38px 0 20px 20px; margin-top:20px}
+.card_info{height:95px;padding:0 0 0 163px;background:url('/resources/images/front/new_web/img/common/popup/bg_card_app02.png') no-repeat 0 1px}
+.card_info3 h4,
+.card_info2 h4,
+.card_info h4{padding:9px 0 8px 7px;}
+.card_info2{margin-top:40px; height:95px;padding:0 0 0 163px;background:url('/resources/images/front/new_web/img/common/popup/bg_card_app02.png') no-repeat 0 1px}
+.card_info3{margin-top:25px; min-height:95px;padding:0 0 0 163px;background:url('/resources/images/front/new_web/img/common/popup/img_jeju_pop1.png') no-repeat 0 1px}
+.stab{display:inline-block;zoom:1;*display:inline;position:relative;z-index:100;margin:35px 10px 0 10px;padding:9px 20px 7px 20px;border:1px solid #dbdbdb;border-bottom:none;background-color:#f4f4f4;}
+.bg_line2 {background:url('/resources/images/front/new_web/img/common/popup/bg_line02.gif') repeat-x 0 161px}
+.margin_top_none {margin-top:0 !important}
+.card_info3 .service_select{margin:15px 0 0 0;}
+
+#incont {margin:0 auto;padding:12px 22px 0 23px}
+#incont .innerbox {margin-top:9px; border:1px solid #dbdbdb; background:#fff; padding:17px 18px 6px 17px}
+#incont .innerbox .space {margin:0 0 10px 30px;}
+#incont .add_clause {position:relative; width:510px; margin-top:29px}
+#incont .add_clause ul {margin-top:3px}
+#incont .add_clause li {zoom:1; line-height:15px}
+#incont .add_clause li:after {display:block; content:""; clear:both}
+#incont .add_clause li em {float:left; margin-right:10px; width:57px; font-weight:bold; color:#686868}
+#incont .add_clause li span {float:left}
+#incont .add_clause li .pre_personalInfoview {text-decoration:underline}
+#incont .add_clause .btn_close {position:absolute; right:0;top:21px}
+#incont .close_clause {width:510px; margin-top:15px; text-align:right}
+#incont .close_clause {position:relative; width:510px; margin-top:29px}
+#incont .txt_zip {color:#686868; margin-top:60px}
+#incont .txt_zip2 {color:#686868; margin-top:20px}
+#incont .innerbox4 {width:435px; margin-top:15px; border:1px solid #dbdbdb; background:#fff; padding:28px 23px 27px 17px}
+#incont .innerbox4 .btn_sch {margin-top:3px}
+#incont .innerbox4 .dongN {font-weight:bold; color:#505050; margin-right:23px}
+#incont .innerbox4 .space {margin-left:30px}
+#incont .box5_outer {padding:12px 0 17px 0}
+#incont .innerbox5 {margin-top:14px; width:475px; height:175px; overflow-x:hidden; overflow-y:auto; border:1px solid #dbdbdb; background:#fff}
+#incont .innerbox5 .zipnum_list li {zoom:1; padding:10px 5px 0 15px;}
+#incont .innerbox5 .zipnum_list li:after {display:block; content:""; clear:both}
+#incont .innerbox5 .zipnum_list li em {float:left;display:inline-block;width:54px;font-weight:bold; color:#767676; margin-right:5px; letter-spacing:0;}/* 20140402 추가 */
+#incont .innerbox5 .zipnum_list li span {float:left;display:inline-block;width:364px;}/* 20140402 수정 */
+#incont .innerbox5 .zipnum_list li a {float:left; display:block; color:#767676;letter-spacing:-1px;}
+
+/* 회원가입_본인확인_회원가입실패_아이디중복확인사용불가 */
+#incont .innerbox3 {margin-top:62px; border:1px solid #dbdbdb; background:#fff; padding:36px 43px 26px 35px}
+#incont .innerbox3 p {line-height:20px}
+#incont .txt_alr {margin-top:4px}
+#incont .id_realvalue {color:#cf0000; font-weight:bold; font-family:Myriad Pro; font-size:15px}
+#incont .txt_otherId {margin-top:27px; color:#505050}
+
+/* 주민등록도용처벌안내 */
+#incont .join_case p.stit {margin-top:33px; font-weight:bold; background-position:2px 3px; color:#484848; letter-spacing:-1px}
+#incont .innerbox2 {margin:20px 0 0 19px; border:1px solid #dbdbdb; background:#fff; padding:20px 11px 19px 12px}
+#incont .innerbox2 ul {margin-top:14px}
+#incont .innerbox2 p {line-height:17px}
+#incont .innerbox2 p em {text-decoration:underline}
+#incont .innerbox2 li {overflow:hidden;margin-bottom:8px;line-height:17px;}
+#incont .innerbox2 li strong {float:left}
+#incont .innerbox2 li span {float:left; letter-spacing:-.7px;width:355px;}
+#incont .innerbox2 .punish_law {color:#505050; font-weight:bold; letter-spacing:-1px}
+#incont .innerbox2 em.color_red2{display:block;line-height:17px;}
+
+/* 02_utility (개인정보취급방침)추가 */
+#incont .innerbox6 {position:relative;width:505px; height:417px; margin-top:9px; border:1px solid #dbdbdb; background:#fff; overflow-y:auto; overflow-x:hidden}
+#incont .perSonal {padding:17px 18px 6px 17px; letter-spacing:-.8px}
+#incont .perSonal p {margin-top:19px}
+#incont .perSonal h3 {font-size:12px}
+#incont .perSonal h4 {font-weight:bold; margin-top:19px}
+#incont .perSonal h5 {font-size:12px; margin-top:19px;}
+#incont .perSonal ul {margin-top:19px}
+#incont .perSonal ul > li:first-child {margin:0}
+#incont .perSonal ul li {margin-top:19px}
+#incont .perSonal ul li ul {margin:10px 0 0 10px}
+#incont .perSonal ul li ul li:first-child {margin:0}
+#incont .perSonal ul li ul li {margin-top:5px}
+#incont .perSonal .add_sec {margin-top:10px}
+#incont .perSonal .add_sec h5{font-size:12px}
+#incont .perSonal .add_sec p{margin-top:0}
+#incont .perSonal .add_sec a{display:block;}
+
+/* 공통로그인팝업 */
+#incont .incont_in{margin:0 auto;width:550px;padding:12px 22px 0 23px;}
+#incont .bgLogo {margin-top:18px; height:23px; width:179px; background:url('/resources/images/front/new_web/img/common/popup/imgSmall_skenergy_pass.gif') no-repeat 100% 0}
+#incont .login_visual {height:277px; background:url('/resources/images/front/new_web/img/common/bg_mlogin00.gif') no-repeat 80px 67px}
+#incont .enclean_welcome p {}
+#incont .log_inner {margin-top:16px; position:relative; width:368px; border:1px solid #d0d0d0; padding:25px 63px 23px 57px}
+#incont .log_inner label {display:inline-block; font-weight:bold; width:65px; letter-spacing:-1px}
+#incont .log_inner li:first-child {margin-bottom:7px}
+#incont .log_inner .btn_loginRed {position:absolute; top:22px; left:346px}
+.sk_info h3 {margin-left:4px}
+.sk_info p {margin-top:12px}
+.sk_golink {margin-top:47px; width:524px; height:151px; background:url('/resources/images/front/new_web/img/common/popup/bg_golinkBox.png') no-repeat}
+.sk_golink li {position:relative; float:left}
+.sk_golink li:first-child a {padding-left:0}
+.sk_golink li a {display:block; padding:26px 42px 40px 0}
+.sk_golink li span {display:block; margin-top:15px}
+.sk_golink li .btn_link {position:absolute; top:75px; left:111px}
+.sk_golink li .pos1 {left:133px}
+.sk_golink li .pos2 {left:149px}
+
+/* 공통로그인 이벤트용 */
+#incont .enclean_welcome2 h3 {margin-top:16px;}
+#incont .enclean_welcome2 .log_inner {margin-top:5px; position:relative; width:368px; border:1px solid #d0d0d0; padding:25px 63px 23px 57px;}
+#incont .log_nonmember {overflow:hidden; width:488px; border:1px solid #d0d0d0; margin:5px 0 0 0;}
+#incont .log_nonmember .txt {float:left; padding:17px 0; margin:10px 0 0 21px;}
+#incont .log_nonmember .btn_nonmem_ap {float:right; padding:17px 0; margin:0 20px 0 0;}
+
+/* common */
+.btn_area {text-align:center; margin:40px 0 0 0;}
+.btn_area a {padding-right:12px;}
+.btn {margin-top:-1px;}
+.btnL{margin:10px 0 0 0;}
+.btnL2{margin:15px 0 0 0;}
+.btnL3{margin:28px 0 0 0;}
+.btnC{margin:15px 0 0 0;text-align:center;}
+.btnC_1{margin:72px 0 0 0;text-align:center;}
+.btnC2{margin:45px 0 0 0;text-align:center;}
+.btnC3{margin:62px 0 0 0;text-align:center; border-top:1px solid #dadada; padding-top:14px}
+.btnC4{margin:28px 0 0 0;text-align:center;}
+.btnC5{margin:128px 0 0 0;text-align:center;}
+.btnR{margin:25px 0 0 0;text-align:right;}
+.btnR2{margin:12px 0 0 0;text-align:right}
+.btnR3{margin:33px 0 0 0;text-align:right;}
+.btnR3_1{margin:33px 13px 0 0;text-align:right;}
+.btnR3_2{margin:150px 13px 0 0;text-align:right;}
+.btnR4{margin:42px 0 0 0;text-align:right;}
+.btnR5{margin:74px 0 0 0;text-align:right;}
+.btnR6{margin:19px 0 0 0;text-align:right}
+.btnR7{margin:17px 0 0 0; padding:19px 0 0 0;text-align:right; border-top:1px solid #dadada}
+.btnR9{margin:19px 13px 0 0;text-align:right}
+.btnbox {text-align:center; margin-top:27px}
+.btnR_serpw{margin:130px 48px 0 0; text-align:right} 
+.btnR_rm{margin:63px 48px 0 0; text-align:right}
+.btnR_rm2{margin:130px 48px 0 0; text-align:right}
+.btnR_pw{margin:28px 33px 22px 0; text-align:right}
+.btnR1 {padding: 0 33px 22px 0; text-align:right}
+.btnR1_ipin {padding: 30px 40px 22px 0; text-align:right}
+.center {text-align:center}
+.color_red{font-weight:normal;color:#cf0000;}
+.color_red2{color:#cf0000;}
+.color_red3{color:#cf0000; font-weight:bold}
+.color_green{color:#2b8203; font-weight:bold}
+.color_grey {color:#232323}
+.color_grey2 {color:#505050}
+
+/* 너비값 실박스너비값, psd전체사이즈가 아닌 */
+
+/* 2013.04.10 삭제*/
+/*.wp395 {width:315px; padding:40px 0 35px 0 !important}
+.wp475 {width:475px; padding-bottom:35px !important}
+.wp480 {width:480px; padding:40px 0 35px 0 !important}
+.wp510 {width:430px; padding-bottom:54px !important}
+.wp550 {width:470px; padding-bottom:54px !important}
+.wp550_2 {width:550px; padding:38px 0 54px 0 !important}
+.w495 {width:415px}
+.w505 {width:505px}
+.wp1858 {width:1858px; padding-bottom:20px !important} /* 20130404 추가 */
+
+
+.txt_mno{margin:0 !important;}
+.input_addr .text{margin:5px 0 0 0;}
+.nobgcolor {background:none !important}
+.bold {font-weight:bold}
+.stit{display:block;visibility:visible;width:auto;height:auto;text-indent:0;margin:0 0 12px 0;padding:0 0 0 11px;text-align:left;background:url('/resources/images/front/new_web/img/common/popup/bg_aroow01.gif') no-repeat 0 3px;}
+.slist_1{padding:0 0 0 8px;background:url('/resources/images/front/new_web/img/common/popup/bg_square.gif') no-repeat 0 5px;}
+.slist li{padding:0 0 0 8px;background:url('/resources/images/front/new_web/img/common/popup/bg_square.gif') no-repeat 0 5px;}
+.slist2 {margin-top:52px}
+.slist2 li:first-child {margin:0}
+.slist2 li{padding:0 0 0 8px;background:url('/resources/images/front/new_web/img/common/popup/bg_square.gif') no-repeat 0 6px; margin-top:12px}
+.stit_area {height:40px; padding:11px 0 0 10px; background:url('/resources/images/front/new_web/img/common/popup/bg_h_meminfoentered.gif') repeat-x;}
+.stit_area .stit{display:block;visibility:visible;width:auto;height:auto;text-indent:0;margin:0 0 12px 0;padding:0 0 0 11px;text-align:left;background:url('/resources/images/front/new_web/img/common/popup/bg_aroow01.gif') no-repeat 0 4px;}
+.font_style {font-size:20px; margin-left:8px; letter-spacing:-1px;}
+.underline {text-decoration:underline}
+.btnimg {margin:3px 0 0 10px}
+
+/* 회원가입폼 테이블 */
+.tbl_info {position:relative; margin:4px 0 0 0; padding:0 0 16px 0;}
+.txt3 {position:absolute; right:10px; top:13px; letter-spacing:-1px;}
+.tbl_info .txt3_1 {letter-spacing:-1px;}
+.tbl_space {padding:0 0 57px 0;}
+.tbl_data {width:100%;}
+.tbl_data th {text-align:left; vertical-align:top; padding:14px 10px 6px 10px; line-height:15px;}
+.tbl_data td {text-align:left; vertical-align:middle; padding:10px 10px 10px 10px; line-height:16px;}
+.tbl_data th img {vertical-align:middle; margin-top:-2px; padding:0 5px 0 0;}
+.tbl_data .non_required th {padding:10px 0 10px 20px;}
+.tbl_data input.radio {vertical-align:middle; margin-top:-2px;}
+.tbl_data input.text, .tbl_data input.password {vertical-align:middle;}
+.tbl_data td label {margin-right:2px;}
+.input_space {margin-top:8px;}
+.tbl_data .table_box {min-height:45px; position:relative;}
+.tbl_data .table_box2 {min-height:60px; position:relative;}
+.tbl_data .table_box .tip {position:absolute; left:0; top:30px;}
+.tbl_data .table_box .tip2 {position:absolute; left:0; top:35px;}
+.tbl_data .table_box .tip4 {position:absolute; left:9px; top:30px; text-indent:-9px;}
+.tbl_data .table_box2 .tip3 {position:absolute; left:9px; top:30px; text-indent:-9px;}
+.tbl_data .table_box2 .tip5 {position:absolute; left:0; top:30px;}
+.tbl_data .table_box .tip_area, .tbl_data .table_box2 .tip_area {margin:0;}
+
+/*.tip {width:400px; position:relative; left:0; top:29px; text-indent:-9px; margin:0 0 0 7px;}
+.tip2 {position:relative; left:0; top:27px;}
+.tip3 {width:410px; position:relative; left:0; top:25px; text-indent:-9px; margin:0 0 0 7px;}
+.tip4 {width:450px; position:relative; left:0; top:8px; text-indent:-9px; margin:0 0 0 7px;}
+.tip_area {margin-top:-17px; padding-bottom:21px;}
+.tip_area a{vertical-align:middle;}
+.tip_area2 {margin-top:-33px; padding-bottom:40px;}
+.tip_area3 {margin-top:-33px; padding-bottom:30px;}
+.txt_top{display:block; padding-top:19px;}*/
+input.btn_img{margin-top:4px}
+input.btn_img2{margin:4px 0 0 10px}
+input.btn_img3{margin:-8px 0 0 10px}
+
+/* utill_member_fail01 - 기존회원으로인한 회원가입 실패 페이지 css */
+.box_right {width:360px;padding:21px 0 22px 258px; margin:0 14px; background:url('/resources/images/front/new_web/img/common/popup/bg_member_fail01.gif') no-repeat;}
+.box_right2 {width:360px;padding:32px 10px 22px 248px; margin:0 14px; background:url('/resources/images/front/new_web/img/common/popup/bg_member_fail01.gif') no-repeat;}
+.box_right2 p,
+.box_right p{margin-top:9px; color:#686868;}
+.box_right .btnL,
+.box_right2 .btnL,
+.box_right4 .btnL{margin-top:15px;}
+.box_right3 {width:360px; height:153px; padding:32px 0 22px 258px; margin:0 14px; background:url('/resources/images/front/new_web/img/common/popup/bg_id_search01.gif') no-repeat}
+.box_right3 h3 {font-weight:normal; color:#212121}
+.box_right3 .txt2{margin-top:12px}
+.box_right4 {width:360px; height:153px; padding:32px 0 22px 258px; margin:0 14px; background:url('/resources/images/front/new_web/img/common/popup/bg_id_search02.gif') no-repeat}
+.box_right4 p {color:#505050; margin-top:9px}
+.bg_fail2 {background:url('/resources/images/front/new_web/img/common/popup/bg_member_fail02.gif') no-repeat !important}
+.bg_fail3 {background:url('/resources/images/front/new_web/img/common/popup/bg_member_fail03.gif') no-repeat !important}
+
+/* 14세미만 부모동의 - 완료 */
+.box_parent {width:346px; height:156px; padding:35px 0 0 274px; margin:0 14px; background:url('/resources/images/front/new_web/img/common/popup/bg_14parentok.gif') no-repeat;}
+.box_parent p{margin-top:9px; color:#686868}
+.box_parent .btnL {margin-top:20px;}
+.box_parent_over {width:346px; height:156px; padding:35px 0 0 274px; margin:0 14px; background:url('/resources/images/front/new_web/img/common/popup/bg_14parentDblok.gif') no-repeat;}
+.box_parent_over p{margin-top:9px; color:#686868}
+.box_parent_over .btnL {margin-top:20px;}
+.box_parent_fail {width:346px; height:156px; padding:35px 0 0 274px; margin:0 14px; background:url('/resources/images/front/new_web/img/common/popup/bg_14parentfail.gif') no-repeat;}
+.box_parent_fail p{margin-top:9px; color:#686868}
+.box_parent_fail .btnL {margin-top:19px;}
+.txt4 {padding:0 0 0 8px;background:url('/resources/images/front/new_web/img/common/popup/bg_square.gif') no-repeat 0 5px;}
+
+/* 패스워드 찾기 */
+.box_style4 {margin:0 14px; border:1px solid #DBDBDB; background-color:#f4f4f4}/* 20130628 수정 */
+.box_style4 .password_ser{margin:56px 0px; padding:0 0 0 98px; color:#686868}
+.box_style4 .password_ser label{margin-right:102px}
+.box_style4 .password_remind {padding:32px 27px}
+.box_style4 .password_remind .txt_request {margin:0 0 0 110px; line-height:20px}
+.box_style4 .password_remind .txt_request p {font-size:14px}
+.box_style4 .password_remind strong.num{display:inline;width:auto;margin:0;letter-spacing:0}
+.box_style4 .password_remind strong {display:inline-block; width:180px; margin-bottom:14px; letter-spacing:-1px}
+.box_style4 .password_remind strong img {margin-top:-2px; padding: 0 5px 0 0; vertical-align:middle} 
+.box_pwbox{margin:0 14px; background:url('/resources/images/front/new_web/img/common/popup/bg_pw_emailadd_fail.gif') no-repeat;}
+.box_pwbox .password_fail{width:348px; height:169px; padding:22px 0 0 270px;}
+.box_pwbox .password_fail p{margin-top:10px}
+.password_cellphone{padding:42px 29px;}
+.password_cellphone strong {display:inline-block; width:165px; margin-bottom:16px}
+.password_cellphone strong img {margin-top:-2px; padding: 0 5px 0 0; vertical-align:middle} 
+.password_seoul {margin:29px 0 0 34px}
+.inter_listpw2 {position:absolute; left:25px; top:185px; /* margin: 27px 0 0 24px */}
+.password_ipin {padding:29px 0 0 35px}
+.txt_ipinsrc {margin: 80px 0 0 25px}
+.siren_btn {display:block;margin:30px 39px 0 0; text-align:right} 
+.txt_required {float:right; margin:-24px 13px 0 0;}
+
+/* 패스워드 변경 */
+.password_change {padding:47px 29px}
+.password_change strong {display:inline-block; width:195px; margin-bottom:16px}
+.password_change strong img {margin-top:-2px; padding: 0 5px 0 0; vertical-align:middle} 
+.inter_listC {position:absolute; left:30px; top:300px; /*margin:55px 0 0 26px*/} 
+.inter_listpw {position:absolute; left:25px; top:185px;} 
+.inter_listpw3 {position:absolute; left:25px; top:240px; /* margin: 27px 0 0 24px */}
+.stit_s1{margin-left:14px}
+.btnR_serpw2 {margin:150px 48px 0 0; text-align:right} 
+.txt_required2 {text-align:right; margin:0 12px 8px 0;}
+
+/* 로그인 실패 - 본인인증 성공 */
+.btnR_serpw3 {margin:60px 48px 0 0; text-align:right} 
+
+
+/* 로그인 실패 - 본인인증 후 LOCK */
+.txt_request2 {margin:0 0 0 70px; line-height:20px}
+
+
+/*회원가입 - 서비스 약관 동의 */
+.skpln_person3 {margin:11px 0 25px 10px; text-align:left !important;}
+.skpln_person3 p.skpln_p {margin:0; padding:0 }
+.box_terms li {margin:5px 0 0 17px; text-indent:-14px;}
+.box_terms .h3_top {margin-top:20px}
+.inner_u1 {padding-left:15px;}
+.inner_u1 ul{padding-left:2px;}
+.inner_preson {margin:10px 55px;}
+
+/* 13.02.17  엔크린보너스카드 신청  */
+.popCont .ofy01{height:185px; overflow-x:hidden !important; overflow-y: auto !important; position:relative; margin-top:24px; border:1px solid #dbdbdb; background-color:#fff;}
+.ofy_p {margin-bottom:15px; padding:15px 5px;text-align:left;} 
+.ofy_p p.p_des{margin:0 !important;} 
+.popCont a.policy3{position:absolute; top:22px; right:14px;}
+.popCont .section_first2{margin-top:45px !important;}
+.popCont .section5{overflow:hidden;position:relative;margin:23px 0 0 0;}
+.popCont .section5 p{margin:20px 0 0 0;}
+
+/* 마이엔크린 - 패스워드변경(팝업) */
+#incont .myenc_dv,
+#incont .myenc_dv4 {margin-top:27px; width:479px}
+#incont .myenc_dv2 {width:479px}
+#incont .myenc_dv3 {width:465px; margin:23px 0 0 0}
+.innerbox7 {position:relative; width:426px; border:1px solid #dbdbdb; margin-top:11px; padding:30px 24px 28px;line-height:16px;}/* 20140311 수정 */
+.innerbox7 p {letter-spacing:-.7px;line-height:16px;}
+.innerbox7 ul {margin-top:17px}
+.innerbox7 li label {display:inline-block; width:150px}
+.innerbox7 li {margin:6px 0 0 0}
+.innerbox7 li:first-child {margin:0}
+.innerbox7 .pw_noti {position:absolute; top:170px; left:25px}
+.innerbox7 .pw_noti li {margin:0}
+.innerbox7 .pw_noti li span {text-indent:9px; display:inline-block}
+
+/* 마이엔크린 - 우편번호찾기 검색실패(팝업) */
+.myenc_dv .txt_noaddr {margin-top:16px}
+.txt5 {display:block; margin-top:19px}
+.innerbox7 .txt_ipinnoti {font-weight:bold; margin-top:19px}
+.innerbox7 .pwchange {margin-top:20px}
+.innerbox7 .pwchange label {display:inline-block; margin:0 23px 0 7px}
+
+/* about - 주요소 검색 팝업 */
+.myenc_dv .myenc_dv {margin-top:39px;}
+#incont .innerbox8 {width:422px; margin-top:22px; border:1px solid #dbdbdb; background:#fff; padding:22px 19px 19px 21px}/* 20150122 수정 */
+#incont .innerbox8 p{margin-bottom:18px;}
+#incont .innerbox8 p strong{display:inline-block;width:88px;}
+.btnR8 {margin:20px 0 0 0;text-align:right;}
+.innerbox8 .btnImg {margin-top:3px}
+
+/* 3천원의행복 (이벤트팝업) */
+body.alert_sp #incont {padding:0}
+.alert_event {width:380px; height:508px; background: url('/resources/images/front/new_web/img/event/bg_eventpop.jpg') no-repeat; padding:29px 10px 23px 10px; text-align:center}
+.alert_event p {margin-top:7px}
+.alert_event .coupon_dv {position:relative; width:226px; height:220px; margin:0 auto; margin-top:30px}
+.alert_event .coupon_dv .btn_confirm {position:absolute; bottom:17px; left:76px}
+.alert_event .event_btm {text-align:left; border-top:2px solid #a2a2a2; padding-top:15px}
+.alert_event .event_btm em {display:block; margin-top:10px}
+
+/* 3천포인트 특권(유의사항팝업) */
+.notepop {width:470px; border-top:3px solid #df213a;}
+.notepop .header {overflow:hidden;height:37px; margin:0 20px; padding:22px 20px 12px 20px; border-bottom:1px solid #c2c2c2; background:url('/resources/images/front/new_web/img/event/bg_encleancom.gif') no-repeat 100% 28px} 
+.notepop .header h1 {float:left;}
+.notepop .header strong {float:right;}
+.notepop .rbox {width:394px; margin:10px auto 18px; background:url('/resources/images/front/new_web/img/event/bg_rbox_mid.gif') repeat-y 0 0}/* 20130703 수정 */
+.notepop .rbox_in {width:394px; background:url('/resources/images/front/new_web/img/event/bg_rbox_top.gif') no-repeat 0 0; padding-top:16px}
+.notepop .rbox_incont {width:353px; background:url('/resources/images/front/new_web/img/event/bg_rbox_btm.gif') no-repeat 0 100%; padding:5px 20px 23px 21px; color:#333}/* 20130703 수정 */
+.notepop .rbox_incont h3 {font-size:12px; margin-top:20px}
+.notepop .rbox_incont h3 span {font-weight:normal}
+.notepop .rbox_incont h3:first-child {margin:0}
+.notepop .rbox_incont li {margin-top:9px; padding-left:7px; background:url('/resources/images/front/new_web/img/common/popup/bg_square02.gif') no-repeat 0 6px}
+.notepop .rbox_incont li span {color:#767676}
+.notepop .note_btm {width:394px; margin:0 auto; text-align:center}
+.notepop .note_btm p {font-weight:bold; color:#333}
+.notepop .note_btm p .link {text-decoration:underline; color:#005aff}
+.notepop .note_btm .imgbtn {margin:20px 0 0 0}
+.notepop .footer {position:relative; border-top:1px solid #e5e5e5; padding:18px 0 0 25px; margin-top:28px}
+.notepop .footer .popclose {position:absolute; right:26px; top:8px}
+.notepop .lbox_incont{width:353px; background:url('/resources/images/front/new_web/img/event/bg_rbox_btm.gif') no-repeat 0 100%; padding:5px 20px 23px 21px;} /* 20140926 추가 */
+.notepop .lbox_incont li{line-height:1.6;} /* 20140926 추가 */
+.notepop .wbox_incont{clear:both;float:left;width:353px; background:url('/resources/images/front/new_web/img/event/bg_rbox_btm.gif') no-repeat 0 100%; padding:0 20px 1px 21px; color:#555;text-align:center; margin-top:-11px;} /* 20150729 수정 */
+.notepop .wbox_incont .cardnum{margin-bottom:19px;padding:24px 0;}/* 20140926 추가 */
+.notepop .desc_ocb {width:394px;margin:0 auto;}/* 20140926 추가 */
+.notepop .desc_ocb img {vertical-align:top;}/* 20140926 추가 */
+.notepop .wbox_incont .tit_pconfirm{float:left;width:220px;color:#000;text-align:left;margin:14px 0 18px;}/* 20150729 수정 */
+.notepop .wbox_incont a.btn_go{float:right;margin:15px}/* 20140926 추가 */
+.notepop .rbox:after{content:''; display:block; clear:both;}/* 20140926 추가 */
+
+.bg_gift {padding-bottom:80px; background:url('/resources/images/front/new_web/img/gift/bg_giftcard_pop.gif') no-repeat 100% 100%}
+
+
+/* 엔크린보너스카드 > 1천포인트 바로결제 유의사항 팝업창  */
+#incont .innerbox9 {width:505px; height:642px; margin-top:9px; border:1px solid #dbdbdb; background:#fff; overflow-y:auto; overflow-x:hidden}
+#incont .perSonal2 {margin:42px 11px 6px 16px; letter-spacing:-1px}
+#incont .perSonal2 p {margin:0 0 25px 0;}
+#incont .perSonal2 p.etc_p{margin:18px 0;}
+#incont .perSonal2 h3 {font-size:12px}
+#incont .perSonal2 h4 {font-size:12px; font-weight:bold; margin-top:19px;text-indent:-4px;}
+#incont .perSonal2 ul {margin:0 0 0 10px;}
+#incont .perSonal2 ul > li:first-child {margin:0}
+#incont .perSonal2 ul li {padding:0 5px;text-indent:-14px;}
+
+.person_1000p {margin:17px 0 0 0;}
+
+/* 엔크린보너스카드 > 1천포인트 바로결제 OK캐쉬백 비밀번호 입력 팝업(신청/해지 공통)  */
+#incont2 {margin:0 auto;padding:0 22px 0 23px}
+#incont2 .bouns_1000 {margin-top:28px; width:503px}
+.innerbox10 {position:relative; width:453px; border:1px solid #dbdbdb; margin-top:11px;padding:37px 25px;}
+.innerbox10 a:hover{color:#cf0000 !important;}
+.innerbox10 ul {margin-top:50px}
+.innerbox10 li {margin:6px 0 0 0}
+.innerbox10 li:first-child {margin:0}
+.innerbox10 p {margin:25px 0 0 0;letter-spacing:-1px;vertical-align:middle;}
+.innerbox10 p strong {display:inline-block;width:118px;}
+.innerbox10 .btn_confirm {padding-top:3px;}
+
+/* 엔크린보너스카드 카드등록 */
+.noti_dv {width:438px; padding:29px 0 25px 24px; background:#f6f6f6; border:1px solid #e5e5e5;}
+.noti_dv p {margin:10px 0 0 0}
+
+.innerbox8 {position:relative; width:400px; border:1px solid #dbdbdb; margin-top:11px; padding:31px 33px 27px 31px;line-height:16px;}
+.innerbox8 .chg_txt {/*position:absolute; top:200px; left:20px*/margin:20px 0 0 !important;}/* 20150122 수정 */
+.innerbox8 .form_list li:first-child {height:54px; margin:0}
+.innerbox8 .form_list li.first {height:auto}
+.innerbox8 .form_list li {margin:10px 0 0 0}
+.innerbox8 .form_list li span,
+.innerbox8 .form_list li label {display:inline-block; width:90px}
+.innerbox8 .form_list li label.op {width:auto}
+.innerbox8 .form_list li .direct_inp {margin:0 0 0 227px}
+.innerbox8 .form_list li .direct_inp input{margin-top:3px}
+.innerbox8 .form_list .email {position:relative; height:100px}
+.innerbox8 .form_list .email .oftenemail {position:absolute; top:66px; left:100px; width:auto}
+.innerbox8 .form_list .email .oftenemail img {position:relative; top:-2px}
+.card_sqbox {background:url('/resources/images/front/new_web/img/bonuscard/bg_sqbox.jpg') no-repeat; width:464px; height:91px; text-align:center; padding:31px 0 20px 0}
+
+.cardnum {margin:17px 0 0 0}
+.cardnum label {display:inline-block; width:90px}
+.cardnum p {margin:30px 0 0 0}
+.innerbox8 .lawinfo {display:block; margin:30px 0 16px 0}
+
+/* 20150122 추가 */
+.private_area{width:465px;padding:0 0 18px;border-bottom:1px solid #d6d6d6;}
+.private_area strong.tit{display:block;padding:19px 0 15px}
+.private_area .private_box{border:1px solid #dbdbdb;background:#fafafa;width:425px;padding:22px 19px 19px;}
+.private_area .private_box dt{font-size:11px;color:#333;}
+.private_area .private_box dd{font-size:11px;color:#666;padding:3px 0 10px 10px;}
+.private_area .private_box p{font-size:11px;color:#000;padding:0 0 0 10px;}
+.private_area .optbox{text-align:center;padding:15px 0 5px;}
+.private_area .optbox label{margin:0 5px 0 0;}
+/* //20150122 추가 */
+
+#popWrap3 {position:relative; margin:0 auto -40px; width:510px; height:auto !important; min-height:100%}/*20131028 수정 - 내트럭VIP멤버쉽 */
+#popWrap3 #pop_header1 {overflow:hidden; padding:36px 0 0 23px}
+#popWrap3 #pop_header1 h1,
+#popWrap3 #pop_header1 span {float:left}
+#popWrap3 #pop_header1 span {padding-left:14px; margin-left:17px; background:url('/resources/images/front/new_web/img/common/popup/bg_line03.gif') no-repeat 0 2px}
+#popWrap3 #pop_header1 span.nobg {background:none; padding:0}
+
+/* 내트럭 이벤트 팝업창들 */
+body.alert_sp #incont {padding:0}
+.netruck_event {position:relative; width:500px; text-align:center}
+.btn_confirm_netruck {position:absolute; bottom:55px; left:45%}
+.btn_confirm_netruck2 {position:absolute; bottom:100px; left:45%}
+.today_close {text-align:right; padding:10px 12px 8px 0; background:#000}
+.today_close a {color:#fff; text-decoration:underline; font-size:11px;}
+.today_close input.check {margin:1px 0 0 0}
+.bg_netruck {width:500px; height:578px; padding:22px 0 0 0;background:url('/resources/images/front/new_web/img/event/bg_netruck.gif') no-repeat}
+.bg_netruck .txt_ntruck1 {margin:11px 0 0 0}
+.bg_netruck .txt_ntruck2 {margin:16px 0 0 10px}
+.bg_netruck .txt_ntruck3 {margin:15px 0 0 40px}/* 20140306 수정 */
+.bg_netruck h2 {margin:60px 0 0 0}/* 20140306 수정 */
+.bg_netruck .txt_ntruck4 {margin:9px 0 0 20px}/* 20140106 수정 */
+.bg_netruck .injungbox {width:365px;height:135px;background:url('/resources/images/front/new_web/img/event/bg_smallbox.gif') no-repeat; margin:11px 0 0 62px; padding:14px 5px 14px 15px}/* 20140106 수정 */
+.bg_netruck .injungbox .txt_n {text-align:left;color:#cf0000;}
+.btn_h {margin:17px 0 0 0}
+.btn_h2 {}/* 20140106 수정 */
+.injungbox ul {height:26px; border-bottom:2px solid #fd4901}
+.injungbox ul li {float:left}
+.injungbox ul li a {color:#777; height:26px;display:block; text-indent:-9999px}
+.injungbox ul li.active a {color:#fff;}
+.injungbox ul li a.self {width:64px; background:url('/resources/images/front/new_web/img/event/btn_tab_self.gif') no-repeat}
+.injungbox ul li.active a.self {background-position:0 -26px}
+.injungbox ul li a.ipin {width:88px; background:url('/resources/images/front/new_web/img/event/btn_tab_inpin.gif') no-repeat}
+.injungbox ul li.active a.ipin {background-position:0 -26px}
+.injungbox .injung_txt {text-align:center; margin:16px 0 0 0}
+.inj_btn {margin:10px 0 0 0}
+
+/* 개인정보 수집 이용동의 */
+.ps_popup {width:350px; margin:0 auto; padding:40px 40px 0}
+.ps_popup .scrollbox {width:320px; height:98px; overflow-x:hidden; overflow-y:auto; padding:16px; background:#f7f7f7}
+.ps_popup .scrollbox h2 {font-size:11px; color:#333; margin:15px 0 0 0}
+.ps_popup .scrollbox h2:first-child {margin:0}
+.ps_popup .scrollbox h3 {color:#333; font-size:11px; font-weight:normal; margin:5px 0 0 0}
+.ps_popup .scrollbox dl {overflow:hidden; margin:3px 0 0 10px; font-size:11px; color:#7f7e7e}
+.ps_popup .scrollbox dt,
+.ps_popup .scrollbox dd {float:left; color:#7f7e7e}
+.ps_popup .scrollbox dt {margin-right:5px}
+.ps_popup .scrollbox .txt {display:block; margin:4px 0 0 10px; color:#7f7e7e; font-size:11px}
+.agreebox {text-align:center}
+.agreebox p {color:#666; font-weight:bold; margin:13px 0 0 0}
+.agreebox p span {color:#666; font-size:11px; font-weight:normal}
+.agreebox .radiobtn {padding:11px 0 15px 0; border-bottom:1px solid #eaeaea}
+.agreebox label {font-weight:bold; color:#333; margin-right:20px}
+.agreebox label:first-child {margin:0}
+.becareful_txt {padding:18px 0 16px 4px}
+.becareful_txt ul li {padding-left:5px; background:url('/resources/images/front/new_web/img/common/popup/bg_square_red.gif') no-repeat 0 6px; color:#ff0000; margin:3px 0 0 0; font-weight:bold}
+.becareful_txt ul li:first-child {margin:0}
+.okcashnum {background:#f7f7f7; padding:5px 20px 25px 15px}
+.okcashnum label {display:block; color:#555; font-weight:bold; padding-left:6px; background:url('/resources/images/front/new_web/img/common/popup/bg_aroow03.gif') no-repeat 0 4px; margin:15px 0 0 0}
+.okcashnum .boxinp {margin:7px 0 0 6px}
+.okcashnum .boxinp input.text {color:#444}
+.okcashnum .boxinp input.password {letter-spacing:-.5px}
+.okcashnum .txt_pw {margin:7px 0 0 0; color:#999; font-size:11px; padding:0 -2px 0 8px}
+.okcashnum .btn_okcash_l {margin:4px 0 0 0}
+.notepop .sp_footer {padding-bottom:23px; background:#f8f8f8}
+
+/* 상품권 - 온라인 주문내역서 프린트 팝업 */
+.wp794 {width:794px !important}
+
+#incont .gift_print {width:794px}
+.innerbox11 {position:relative; width:749px; border:1px solid #dbdbdb; margin-top:11px; padding:36px 28px 28px;line-height:16px;}
+.gift_print h3{padding:10px 0 0;}/* 20150304 추가 */
+.gift_prti {position:relative;}
+.gift_prti h4.first {margin:60px 0 0 0}
+.gift_prti h4 {margin:0}/* 20150304 수정 */
+.gift_prti .h_top {margin:30px 0 0}/* 20150304 수정 */
+.gift_prti p,
+.gift_prti ul {line-height:18px; margin:5px 0 0 0}
+.gift_prti h4.shead1 {border-top:1px solid #e1e1e1; border-bottom:1px solid #e1e1e1; background:#fafafa; padding:11px 0 10px 10px}
+/* 20150304 추가 */
+.giftcard_order{border-bottom:1px solid #d6d6d6 !important;}
+.giftcard_order th.total{background:#f1f1f1;border-top:1px solid #d6d6d6;text-align:right;padding-right:45px;color:#737373;}
+.giftcard_order td.total{background:#f1f1f1;border-top:1px solid #d6d6d6;}
+.giftcard_order td input,.gift_cal input{text-align:right;padding:0 5px 0 0;width:97px}
+label.total_fee {color:#d00000;margin:0 0 0 14px}
+/* //20150304 추가 */
+.sqbox .gift_cal {background:#f1f1f1; padding:23px 51px 27px 0; text-align:right; font-weight:bold; color:#505050;}
+.sqbox .gift_cal span {display:inline-block; width:108px}
+.sqbox .gift_cal .c_red {color:#cf0000}
+.sqbox .btn {text-align:center; margin:20px 0 0 0}
+
+.prt_tit{margin:23px 0 0 0;}/* 20150304 수정 */
+.h4cen {text-align:center}
+
+.git_hopebox{min-height:70px;}/* 20150304 수정 */
+.git_hopebox p{margin:17px 0 0 12px}
+
+.gift_prti ul {background:none; padding:0; margin:20px 0 0 0}
+.info_list1 li {background:none; padding:0; margin:12px 0 0 0}/* 20150304 수정 */
+.info_list1 li span {font-weight:bold; display:inline-block; width:225px}
+.info_list1 li img {position:relative; top:-2px}
+
+
+/* 이벤트 - 내트럭 장학금지급 대상자 확인 */
+.tbl_data2 {}
+.tbl_data2 th {text-align:left; vertical-align:top; padding:6px 0 4px 0; font-weight:normal; line-height:15px;}
+.tbl_data2 td {text-align:left; vertical-align:middle; line-height:16px;}/* 20140106 수정 */
+.tbl_data2 td input[type="radio"] {margin:0 2px 0 0;}
+.netruck_event .btn_close {margin:4px auto 0;}
+
+
+/* 이벤트 정보변경 팝업 */
+.innerbox12{margin:10px 0 0 0;padding:20px 18px;border:1px solid #dbdbdb;}
+.recent_info {position:relative;height:218px;}
+.recent_info li{position:relative;margin:24px 0 0 0} /* 20140528 수정 */
+.recent_info li:first-child {margin:0}
+.recent_info li strong {color:#505050; display:inline-block;width:110px}
+.recent_info li .check{margin:0 0 0 10px;}
+.recent_info .self_info{margin:27px 0 0 0;}
+.recent_info .self_info ul{float:left;}/* 20140530 추가 */
+.recent_info .info_chk{/*display:inline-block;position:absolute;top:-14px;left:422px;*/float:left;margin:32px 0 0 10px;}/* 20140530 수정 */
+
+/*  3.27 수정  */
+.recent_info .self_info .hideinp{clear:both;float:left;margin:8px 0 0 276px;}/* 20140530 수정 */
+.recent_info .self_restrict {position:absolute; top:183px; right:0; color:#686868}/* 20140528 수정 */
+/* // */
+.recent_info .self_basic {position:absolute; top:203px; right:0; color:#7c7c7c; font-size:11px}/* 20140528 수정 */
+.recent_info .policy{position:absolute;top:274px;right:0;font-size:11px;text-decoration:underline;color:#7c7c7c;}/* 20140528 수정 */
+.innerbox12 .btnC4 input:first-child{margin:-1px 0 0 0;}
+.personal_outer{border-bottom:1px solid #d6d6d6;margin-bottom:25px;padding-bottom:30px;}
+.personal_outer .scrollbox {height:109px; overflow-y:auto; overflow-x:hidden; border:1px solid #d3d3d3; padding:8px 16px}
+.personal_outer .scrollbox h3 {font-size:12px; color:#333; margin-top:5px}
+.personal_outer .scrollbox h3:first-child {margin:0}
+.personal_outer .scrollbox ul {margin:10px 0 0 0}
+.personal_outer .scrollbox li {margin:10px 0 0 0}
+.personal_outer .scrollbox li span,
+.personal_outer .scrollbox li p {display:block; color:#7f7e7e; margin:3px 0 0 9px; font-size:11px}
+.personal_outer .scrollbox li ul {margin:3px 0 0 9px; color:#7f7e7e}
+.personal_outer .scrollbox li li {margin:0; font-size:11px}
+.personal_outer .txt_agreable {text-align:center; margin:20px 0 0 0;letter-spacing:-1px}
+.personal_outer .txt_agreable p {font-weight:bold; color:#333; font-size:14px}
+.personal_outer .txt_agreable span {color:#767676; margin:5px 0 0 0; display:block}
+.personal_outer .optbox {padding:19px 0 0 0}
+.personal_outer .optbox .radio{margin:0;}
+.personal_outer .optbox label {position:relative; top:2px; margin:0 5px 0 0; display:inline-block}
+
+/* 홈플러스 이벤트 팝업 */
+body.event_pop #pop_content{padding:0;}
+body.event_pop #incont{margin:0;padding:0;}
+.oil_search{width:830px;height:707px;background:#f6bc02 url('/resources/images/front/new_web/img/event/bg_home_oil.jpg') no-repeat 0 0;}
+.oil_search .search_wrap{overflow:hidden;width:762px;margin:0 auto;}
+.oil_search h1{margin:41px;text-align:right;font-size:0;line-height:0;}
+.oil_search .search_area{height:525px;margin:27px 0 0 0;padding:0 37px;background:url('/resources/images/front/new_web/img/event/bg_home_white.gif') no-repeat 0 0;}
+.oil_search .local_search{overflow:hidden;margin:27px 0 0 0;}
+.oil_search .local_search .selection{overflow:hidden;float:left;}
+.oil_search .local_search .selection select{float:left;margin:0 10px 0 0;font-size:11px;}
+.oil_search .local_search .form{zoom:1;float:right;margin:1px 0 0 0;}
+.oil_search .local_search .form:after{content:'';display:block;clear:both;}
+.oil_search .local_search .form input.text{float:left;height:18px;background:#fff;}
+.oil_search .local_search .form .btn{float:left;margin:-2px 0 0 0;}
+.oil_search .local_search label{float:left;display:inline-block;margin:4px 10px 0 0;padding:0 0 0 8px;line-height:12px;height:12px;font-weight:bold;background:url('/resources/images/front/new_web/img/event/bg_arrow.gif') no-repeat 0 3px;}
+.oil_search .local_search select{height:20px;border:1px solid #c6c6c6;background:#fff;}
+.oil_search .gas_station{margin:20px 0 0 0;}
+.oil_search .ofy{height:400px;}
+.oil_search .data_list2{margin:10px 0 0 0;background:url('/resources/images/front/new_web/img/event/bg_th.gif') repeat-x 0 0;}
+.oil_search .data_list2 table{width:100%;text-align:center;}
+.oil_search .data_list2 th{padding:9px 0;font-weight:bold;}
+.oil_search .data_list2 td{padding:8px 0;border-bottom:1px solid #e2e2e2;}
+
+
+/* 홈플러스 쿠폰 */
+.hplus_coupon{width:700px;height:510px;background:#fff url('/resources/images/front/new_web/img/event/bg_hplus_coupon.jpg') no-repeat 0 0;}
+.hplus_coupon .hGroup{overflow:hidden;width:662px;margin:0 0 0 20px;}
+.hplus_coupon .hGroup h1{float:left;margin:28px 0 0 0;font-size:0;line-height:0;}
+.hplus_coupon .hGroup strong{float:right;margin:16px 0 0 0;}
+.hplus_coupon .coupon{height:222px;margin:78px 0 0 116px;}
+.hplus_coupon .coupon h2{padding:0 0 0 23px;font-size:0;line-height:0;}
+.hplus_coupon .coupon li{margin:0 0 3px 0;}
+.hplus_coupon .coupon li input.text{height:23px;background:#e4e4e4;border:none;letter-spacing:-1px;font-weight:bold;font-size:12px;}
+.hplus_coupon .coupon li:first-child input.text{font-size:14px;}
+.hplus_coupon .coupon li .terms{margin:0 4px 0 0;}
+
+.hplus_coupon .coupon .img{padding:5px 0 0 23px;}
+.hplus_coupon .coupon_num{margin:19px 0 0 0;}
+.hplus_coupon .notice{margin:14px 0 0 80px;}
+.hplus_coupon .btnC{margin:17px 0 0 0;}
+
+
+/* 전체보기 레이어 팝업 */
+#layer_popup {width:687px; position:absolute; left:50%; top:110px; z-index:9999999; margin:0 0 0 -327px; padding:4px 0 0 0;}/* 20140303 수정 */
+#layer_popup .content {min-height:406px; background: url('/resources/images/front/new_web/img/common/popup/bg_layerpop.png') no-repeat 0 100%;}
+#layer_popup .content_inner {padding:46px 0 70px 0; background: url('/resources/images/front/new_web/img/common/popup/img_layerpop_compass2.png') no-repeat 90% 90%;}/* 20140731 수정 */
+#layer_popup .content > div > div > ul > li {background: url('/resources/images/front/new_web/img/common/popup/btn_direct_go.gif') no-repeat 100% 10px;}
+#layer_popup .menu_box1:after, .menu_box2:after, .menu_box3:after {content:''; display:block; clear:both;}
+#layer_popup .menu_box1 {min-height:160px; margin:0 0 31px 0;}
+#layer_popup .menu_box2 {min-height:160px; padding:0 0 0 37px; margin:0 0 31px 0;}
+#layer_popup .menu_box3 {min-height:160px; padding:0 0 0 37px;}
+#layer_popup .menu_box1 h1, .menu_box1 div, .menu_box2 div, .menu_box3 div {float:left;}
+#layer_popup .menu_box1 h1 {margin:0 83px 0 33px;}
+#layer_popup .menu_box1 div, .menu_box2 div, .menu_box3 div {width:185px;}
+#layer_popup .menu_box1 ul, .menu_box2 ul, .menu_box3 ul {margin:0 0 0 0;}
+#layer_popup .menu_box1 ul li, .menu_box2 ul li, .menu_box3 ul li {padding:8px 0 8px 0; border-top:1px solid #dedede; font-weight:bold; color:#505050; background:url('/resources/images/front/new_web/img/common/popup/btn_direct_go.png') no-repeat 100% 48%;}
+#layer_popup .menu_box1 ul li:first-child, .menu_box2 ul li:first-child, .menu_box3 ul li:first-child {border-top:0 none;}
+#layer_popup .menu_box1 .menu1, .menu_box2 .menu3, .menu_box2 .menu4, .menu_box3 .menu6 {margin:0 28px 0 0;}
+#layer_popup .menu_box1 a, #layer_popup .menu_box2 a,#layer_popup .menu_box3 a{display:block;}
+#layer_popup .menu_box1 h2, .menu_box2 h2, .menu_box3 h2{border-bottom:2px solid #c7c7c7; padding:0 0 6px 0;}
+#layer_popup .menu_box1 .img_visual {position:absolute; left:-18px; top:67px;}
+.overay{display:block;position:fixed;top:0;left:0;z-index:200;width:100%;height:100%;background:#000;opacity:0.7;filter:alpha(opacity=70);}
+/* 닫기버튼 */
+#layer_popup .btn_close {position:absolute; right:-41px; top:-32px;}
+
+/* 20130325 지역판촉이벤트 */
+.promo.gofestival .oil_search {width:720px;height:689px;background:url('/resources/images/front/new_web/img/event/bg_gofestival_gas.jpg') no-repeat 0 0;}
+.promo.donghak .oil_search {width:720px;height:689px;background:url('/resources/images/front/new_web/img/event/bg_donghak_gas.jpg') no-repeat 0 0;}
+.promo .oil_search h1 {margin:0;}
+.promo .oil_search .search_area {width:566px;height:55px;margin-top:155px;background:none;}
+.promo .oil_search .search_wrap {width:642px;}
+.promo .oil_search .local_search {width:568px;}
+.promo .oil_search .local_search label {line-height:15px;}
+.promo .box_list {width:568px;height:353px;margin-top:10px;overflow-y:scroll;}
+.promo .oil_search .gas_station {width:572px;padding:0 37px;}
+.promo select {border:1px solid #c6c6c6;}
+.promo .oil_search .data_list2 {width:550px;margin-top:0;}
+/* //20130325 지역판촉이벤트 */
+
+/* 20130326 3천포인트 2차 */
+
+/* pop_유의사항 */
+
+/* 20130409 수정 */
+.pop_proposal{width:470px;text-align:center; padding-bottom:20px; border-radius:20px; overflow:hidden; box-shadow: 0px 0px 3px #c7c7c7;}/* 20220805 수정 */
+.pop_proposal h1{padding:35px 0 0}/* 20141016 수정 */
+.pop_proposal .box_info{overflow:hidden;width:405px;height:21px;margin-left:20px;padding:15px 0 5px 27px;border-top:1px solid #aebac8;text-align:left}
+/* //20130409 수정 */
+
+.pop_proposal .box_info dt,.pop_proposal .box_info dd{float:left}
+
+.pop_proposal .box_info dd{padding-left:6px;font-size:16px;line-height:20px;font-weight:bold;color:#1f3d57}/* 20130628 수정 */
+
+.pop_proposal strong{display:block;padding:15px 0 20px;}/* 20130628 수정 */
+.pop_proposal .banner_area{margin:32px 0 0;font-size:0;line-height:0;text-align:center}
+
+/* pop_주유소변경 */
+.pop_oilchange{width:550px}
+.pop_oilchange .header{padding:22px 0 12px}
+.pop_oilchange .popcont{margin:0 20px}
+.pop_oilchange .txt{margin-top:9px;padding-left:7px;background:url(/resources/images/front/new_web/img/common/popup/bg_square02.gif) no-repeat 0 6px;font-size:11px}
+.pop_oilchange .box_style4{margin:7px 0 18px}
+.pop_oilchange .password_ser{width:458px;margin:0;padding:20px 26px 14px}/* 20140721 수정 */
+.pop_oilchange dl{overflow:hidden}
+.pop_oilchange dt,.pop_oilchange dd{float:left;padding-bottom:15px;font-weight:bold}
+.pop_oilchange dt{clear:both;width:150px;color:#000}
+.pop_oilchange dd{width:300px;color:#f00;text-decoration:underline}
+.pop_oilchange .area{clear:both;width:450px;padding:0 0 8px 18px;color:#666;text-decoration:none}
+.pop_oilchange .area label{width:52px}
+.pop_oilchange .area select{width:139px}
+.pop_oilchange .area .etc{margin-left:27px}
+.pop_oilchange .box_style4 .password_ser label{margin-right:0}
+.pop_oilchange .btn_search{margin-top:2px}
+.pop_oilchange .btn_change{padding-top:35px;text-align:center}
+.pop_oilchange .data_list .txt{float:right;padding-bottom:5px}
+.pop_oilchange .data_list{clear:both}
+.pop_oilchange .cl{clear:both}
+/* //20130326 3천포인트 2차 */
+
+/* 20130402 3천포인트 2차 / 비회원 */
+/* 신청내역확인 */
+.wrap_non_event .popcont .tit_pconfirm {display:block;padding: 0 0 0 7px;background: url('/resources/images/front/new_web/img/common/popup/bg_square.gif') no-repeat 0 6px;}
+.wrap_non_event .popcont .cardnum .cnum {display:block;width:300px;padding:0 0 5px 7px;font-weight:bold;background: url('/resources/images/front/new_web/img/event/bg_arrow.gif') no-repeat 0 3px;}
+.wrap_non_event .popcont .cardnum {padding:16px 14px;background:#f7f7f7;}
+/* //20130402 3천포인트 2차 / 비회원 */
+
+
+/* 20130408 3천포인트 2차 / groupon */
+.groupon .note_btm .imgbtn {display:inline;}
+
+/* 오늘 다시보지 않기 체크박스 */
+.not_show{margin:50px 0 0 0;text-align:right;}
+.not_show1{margin:-34px 0 0 0;text-align:left;}
+.not_show label{vertical-align:middle;}
+
+/* btn */
+.btn_first{margin-top:-1px;}
+
+/* 제주단체카드발급 팝업*/
+/* 기본정보 form */
+.section_form{padding:0 15px;}
+.section_form .stit_area h4{padding:0;background:none;}
+.section_form .tbl_info4 {padding-bottom:23px;}
+.section_form .tbl_info4 .tbl_data th {letter-spacing:-1px;}
+.txt_tip {margin-top:6px;}
+.table_tip {margin:0 20px;padding:14px 30px 0 10px;border-top:1px solid #d6d6d6;}
+.table_tip p {background:url('/resources/images/front/new_web/img/myenc/ico_cir_meminfo.gif') no-repeat 0 5px; padding-left:10px; margin:15px 0 0 0;}
+.table_tip2 {padding:14px 0 0 10px; border-top:1px solid #d6d6d6;}
+.table_tip2 p {margin:15px 0 0 0;text-align:center}
+.btn_type2 {margin-top:32px; text-align:center;}
+.btn_type2 a {padding-right:12px;}
+.btn_type03 {margin-top:16px; text-align:center;}
+.btn_type03 a {padding-right:12px;}
+
+
+/* 추가정보 form */ 
+.section_form .stit_area .h4_tip {display:inline-block; margin-top:2px; padding:0 0 0 21px; vertical-align:top; font-size:12px; font-weight:normal;}
+
+.section_form .tbl_info5 th,
+.section_form .tbl_info5 td {padding:5px;}
+.section_form .tbl_info5 th {vertical-align:middle;}
+.section_form .tbl_info5 .th_space {vertical-align:top; padding:1px 0 3px 0; line-height:12px;}
+.section_form .tbl_info5 .manufacturer_box {min-height:66px; position:relative;}
+.section_form .tbl_info5 .car_box {min-height:24px; position:relative;}
+.section_form .tbl_info5 .manufacturer_box .manufacturer_zone {margin:0 0 0 110px;}
+.section_form .tbl_info5 .manufacturer_box .manufacturer_zone .txt_tip1 {position:absolute; left:112px; top:35px;}
+
+#content .img_vehicle {position:absolute; left:0; top:0;}
+#content .img_vehicle img {border:1px solid #e2e2e2;}
+
+.section_form .tbl_info5 .car_box .txt_tip2 {position:absolute; left:156px; top:4px;}
+
+.section_form .tbl_info5 ul {overflow:hidden; margin-left:-10px; padding:5px 0 19px 0;}
+.section_form .tbl_info5 ul li {height:80px; float:left; margin:0 0 0 15px;}
+.section_form .tbl_info5 ul li p {padding:41px 0 0 0;}
+.section_form .tbl_info5 ul li input[type="radio"] {margin:8px 0 0 20px;}
+.section_form .tbl_info5 .bg_ico1 {background:url('/resources/images/front/new_web/img/myenc/bg_ico_drive1.gif') no-repeat;}
+.section_form .tbl_info5 .bg_ico2 {background:url('/resources/images/front/new_web/img/myenc/bg_ico_drive2.gif') no-repeat;}
+.section_form .tbl_info5 .bg_ico3 {background:url('/resources/images/front/new_web/img/myenc/bg_ico_drive3.gif') no-repeat;}
+.section_form .tbl_info5 .bg_ico4 {background:url('/resources/images/front/new_web/img/myenc/bg_ico_drive4.gif') no-repeat;}
+.section_form .tbl_info5 .bg_ico5 {background:url('/resources/images/front/new_web/img/myenc/bg_ico_drive5.gif') no-repeat;}
+.section_form .tbl_info5 .bg_ico6 {background:url('/resources/images/front/new_web/img/myenc/bg_ico_drive6.gif') no-repeat;}
+.section_form .tbl_info5 .bg_ico7 {background:url('/resources/images/front/new_web/img/myenc/bg_ico_drive7.gif') no-repeat;}
+.section_form .tbl_info5 .bg_ico8 {background:url('/resources/images/front/new_web/img/myenc/bg_ico_drive8.gif') no-repeat;}
+
+/* 제주봉사단체카드 기타페이지 추가 */
+.section_form p.form_toptxt {color:#bf0000;line-height:1.3em;margin-bottom:5px;font-size:14px;}
+
+/* 20130404 영상정보처리기기 운영관리방침 */
+.pop_reflection {color:#000;}
+.pop_reflection h2 {padding:30px 0 20px 0;color:#595959;}
+.pop_reflection h3 {padding:13px 0 5px 0;}
+.pop_reflection p {padding:0 0 5px 5px;color:#666;}
+.pop_reflection ul li {margin: 0 0 2px 17px;padding: 0 0 0 7px;background: url('/_newimg/img/common/bul_arrow_red3.gif') no-repeat 0 6px;color:#666;}
+.pop_reflection .fb {font-weight:bold;}
+.pop_reflection .txt_conduct {margin: 5px 0 0 5px;padding: 0 20px 0 10px;background: url('/_newimg/img/common/bul_square_orange.gif') no-repeat 0 7px;}
+.pop_reflection table{width:100%;border-bottom:1px solid #838383;text-align:center;}
+.pop_reflection td {padding:10px 0;text-align:center;border-bottom:1px solid #d0d0d0;}
+.pop_reflection th {padding:10px 0;background:#898989;font-weight:bold;color:#fff;border-top:1px solid #838383;border-bottom:1px solid #898989;}
+.pop_reflection .bc {background:#efefef;}
+.pop_reflection .btn_close {padding:20px 0 56px 0;text-align:right;}
+/* 세부내역확인_사이즈조절 */
+.pop_reflection_detail h2 {padding:30px 0 20px 0;color:#595959;}
+.pop_reflection_detail table{width:100%;text-align:center;letter-spacing:-1px;}
+.pop_reflection_detail table th {padding:10px 5px;background:#767676;border-top:1px solid #c2c2c2;border-bottom:1px solid #c2c2c2;color:#fff;}
+.pop_reflection_detail table td {padding:15px 5px;border-bottom:1px solid #c2c2c2;}
+.pop_reflection_detail .bb {border-bottom:1px solid #c2c2c2;}
+.pop_reflection_detail .bc {background:#e8e9e8;}
+.pop_reflection_detail ul li {color:#888;}
+.pop_reflection_detail .btn_close {padding:20px 0 56px 0;text-align:right;}
+.data_list .bc76 {background:#767676;}
+.data_list .bc89 {background:#898989;color:#fff;}
+.data_list .bd89 {border-bottom:1px solid #898989;}
+
+/* 패스워드찾기 아이핀 본인확인완료 */
+.box_pwsuccess{width:618px;height:221px;margin:0 14px; background:url('/resources/images/front/new_web/img/common/popup/bg_member_success.gif') no-repeat;}
+.box_pwsuccess .password_success{width:348px; height:169px; padding:22px 0 0 270px;}
+.password_success p {margin-top:18px;color:#555;}
+.password_success .onepassid {margin-top:43px;}
+.password_success .onepassid strong {letter-spacing:-1px;margin-right:10px;}
+.password_success .onepassid img {position:relative;top:-1px;}
+.btnR8{margin:10px 30px 0 0; text-align:right;}
+.inter_listpw3 {position:absolute; left:25px; top:265px;}
+
+/* 약관 추가페이지 */
+#incont .perSonal .added_policy {margin-top:20px;}
+#incont .perSonal .added_policy h3 {font-size:18px;line-height:20px;letter-spacing:-1px;}
+#incont .perSonal .added_policy h4 {font-size:16px;}
+#incont .innerbox6 .btn_personal {position:absolute; top:15px; right:10px;}
+
+/* 20130412 지역판촉이벤트 */
+/* 전주영화사랑페스티벌/울산지역봄맞이대잔치 */
+.promo.jounju .oil_search {width:572px;height:537px;padding:170px 74px 0 74px;background:url('/resources/images/front/new_web/img/event/img_jounjuoil.jpg') no-repeat 0 0;}
+.promo.ulsan .oil_search {width:572px;height:537px;padding:170px 74px 0 74px;background:url('/resources/images/front/new_web/img/event/img_ulsanoil.jpg') no-repeat 0 0;}
+.promo .oil_search p, .promo .oil_search h1  {margin:0;padding:0;font-size:0;line-height:0;width:0;height:0;overflow:hidden;visibility:hidden;display:block;position:absolute;left:-9999px;}
+.promo.jounju .box_style {height:22px;margin:1px 0 10px 0;padding:10px 0;border:1px solid #dbdbdb;background-color:#f4f4f4;}
+.promo.jounju .password_ser {overflow:hidden;}
+.promo.jounju .box_style .area {float:left;padding-left:30px;}
+.promo.jounju .box_style .area label {font-weight:bold;}
+.promo .oil_search .search_area {width:572px;height:55px;margin-top:155px;background:none;}
+.promo .oil_search .search_wrap {width:572px;}
+.promo .data_list{overflow-y:auto;height:431px;}/* 20130415 수정 */
+.promo .data_list table {border-bottom:1px solid #eaeaea;}
+/* //20130412 지역판촉이벤트 */
+
+/* 2013.04.24 약관 수신여부 */
+.svc_bouncing{margin:20px 0 30px 10px;}
+.svc_bouncing li{margin:0 0 3px 0;}
+.svc_bouncing li span{display:inline-block;width:110px;}
+.svc_bouncing li span.check{display:inline-block;width:135px;}
+
+
+
+/* 20130426 진행중이벤트 */
+.promo.gyeonggi .oil_search {height:525px;background:url('/resources/images/front/new_web/img/event/img_gyeonggioil.jpg') no-repeat 0 0;}
+.promo.gyeonggi .paging {padding-top:10px;}
+.promo.gyeongbuk .oil_search {height:525px;background:url('/resources/images/front/new_web/img/event/img_gyeongbukoil.jpg') no-repeat 0 0;}
+.promo.gyeongbuk .paging {padding-top:10px;}
+.promo.gwangju .oil_search {height:525px;background:url('/resources/images/front/new_web/img/event/img_gwangjuoil.jpg') no-repeat 0 0;}
+.promo.gwangju .paging {padding-top:10px;}
+/* //20130426 진행중이벤트 */
+
+/* 20130528 엔크린 게임 */
+.innerbox13 {height:376px;border:1px solid #dbdbdb;overflow-y:auto;margin-top:16px;}
+.innerbox13 ol {margin:15px 20px;}
+.innerbox13 li {height:28px;background:url('/resources/images/front/new_web/img/event/bg_rank.gif') 0 -24px no-repeat;color:#505050;}
+.innerbox13 li.high{background:url('/resources/images/front/new_web/img/event/bg_rank.gif') 0 4px no-repeat;font-weight:bold;}
+.innerbox13 li em {display:inline-block;width:20px;height:25px;color:#fff;font:bold 11px tahoma;padding-top:7px;text-align:center;vertical-align:middle;}
+.innerbox13 li strong {display:inline-block;padding:0 17px 0 23px;}
+
+/* 20130529 대구지역고객감사페스티벌 */
+.thanksbox {width:641px;height:520px;background:url('/resources/images/front/new_web/img/event/popbg_thanks_degu.jpg') no-repeat;margin:15px auto 0;padding:189px 39px 0 40px;}
+.thanksbox .local_search {width:550px;height:39px;border:1px solid #dbdbdb;background:#f4f4f4;font-weight:bold;padding:6px 0 0 20px;margin:0 0 8px 34px;}
+.thanksbox .local_search fieldset {display:inline;padding-left:10px;}
+.thanksbox .local_search label {padding-right:8px;vertical-align:middle;}
+.local_list {width:572px;height:376px;overflow:hidden;overflow-y:auto;margin:0 0 24px 34px;}
+.local_list table{width:100%;}
+.local_list th{height:34px;background:#767676;color:#fff;font-weight:bold;width:38%}
+.local_list td{border-bottom:1px solid #d6d6d6;padding:12px 0 10px;}
+.local_list th:last-child{width:24%;}
+
+/* 20130531 사랑의책나눔 약정기부 */
+.tit_donation {width:800px;height:291px;background:url('/resources/images/front/new_web/img/about/popup/h_pop_donation.jpg') no-repeat;text-indent:-999em;}
+.con_donation {width:800px;height:59px;background:url('/resources/images/front/new_web/img/about/popup/tit_pop_donation.gif') no-repeat;text-indent:-999em;overflow:hidden;}
+.info_donation {width:800px;height:59px;background:url('/resources/images/front/new_web/img/about/popup/tit_pop_donation.gif') 0 -60px no-repeat;text-indent:-999em;overflow:hidden;}
+.box_donation {width:636px;background:url('/resources/images/front/new_web/img/about/popup/box_pop_donation_bg.gif') 82px bottom no-repeat;padding:0 82px;margin-bottom:21px;}
+	.box_donation ul {width:458px;background:url('/resources/images/front/new_web/img/about/popup/box_pop_donation_top.gif') no-repeat;padding:21px 85px 0 95px;}
+	.box_donation ul li{padding:0 0 10px;}
+	.box_donation ul li strong{display:inline-block;padding:0 0 0 24px;background:url('/resources/images/front/new_web/img/about/popup/arrow_red.gif') 18px 4px no-repeat;}
+	.box_donation select{background:#fff;}
+	.box_donation input{margin:-1px 2px 1px;.margin:0;}
+	.box_donation input.inp{border:1px solid #e2e2e2;color:#555;font:12px dotum;padding:2px;height:16px;}
+	.box_donation label{vertical-align:middle;margin:0 10px 0 3px;}
+	.box_donation .desc{display:block;color:#ff0000;font-size:11px;text-align:right;padding:8px 22px 0 0;}
+	.box_donation .txt{display:block;font-weight:bold;padding:8px 0 10px 25px;}
+	.box_donation .agree{text-align:center;font-weight:bold;padding:12px 0;}
+	.box_donation .info{width:510px;padding:0 0 21px 54px;line-height:1.6;}
+.desc_donation {width:712px;text-align:right;color:#ff0000;font-size:11px;text-align:right;padding:8px 88px 5px 0;}
+.btn_donation {width:800px;text-align:center;}
+	.btn_donation p{padding-top:30px;}
+	
+.bg_system {width:464px;height:480px;padding:0;background:url('/resources/images/front/new_web/img/main/txt_system_check.gif') 20px 29px no-repeat;}/* 시스템 공지안내 */	
+
+/* 포인트적립행사 설문조사 */
+.tit_research {margin:20px;}
+.cont_research {width:617px;margin:40px 20px;}
+.cont_research dl {clear:both;float:left;.float:none;}
+.cont_research dt {clear:both;color:#963201;font-weight:bold;margin:20px 0 10px;}
+.cont_research dd {clear:both;float:left;.float:none;margin:0 0 10px 28px;}
+.cont_research dd dd {margin:0 0 0 28px;}
+.cont_research li {float:left;padding-bottom:5px;}
+.cont_research ul.line li {clear:both;float:none;}
+.cont_research li label {display:inline-block;min-width:165px;vertical-align:middle;padding:1px 0 0 4px;.padding:0;}
+.cont_research ul.odd label {min-width:225px;}
+.cont_research li input[type="text"] {margin-left:4px;}
+.cont_research ul.box li {position:relative;height:66px;text-align:center;margin-right:1px;}
+.cont_research ul.box li span {position:absolute;top:34px;left:0;width:177px;height:22px;border:1px solid #ddd;padding:9px 0 0;.padding:4px 0;}
+.cont_research ul.box li span label {min-width:16px;margin-top:1px;}
+.cont_research ul.box li label.txt {width:177px;height:21px;border:1px solid #ddd;padding:9px 0 0;background:#f3f3f3;color:#666;}
+.btn_research {clear:both;padding-top:30px;text-align:center;}
+	.btn_research p{padding-top:30px;}
+	
+/* 파일업로드 */
+.fileuploadbox {width:468px;margin:10px 0 0 0;padding:20px 18px;border:1px solid #dbdbdb;}
+.fileuploadbox .text{height:22px;margin-top:-3px;}
+.fileuploadbox .file{position:absolute;left:422px;width:90px;overflow:hidden;}
+.fileuploadbox .file input{width:85px;height:24px;opacity:0;filter:alpha(opacity=0);-moz-opacity:0;cursor:pointer;}
+.fileuploadbox ul {padding-top:20px;}
+.fileuploadbox ul li {padding:0 0 4px 8px;}
+
+/* KS SQI 1위 수상기념 이벤트 */
+.kssqi_winner {position:relative;width:400px;height:482px;background:url('/resources/images/front/new_web/img/event/bgpop_kssqi_list.jpg') no-repeat;}
+.kssqi_winner .coupon_dv {position:absolute;top:5155px;left:5091px; width:226px; height:220px;margin-top:30px;text-indent:0;}
+.kssqi_winner .coupon_dv .btn_confirm {position:absolute; bottom:17px; left:78px; cursor:pointer; }
+.kssqi_winner .btn_golist {display:block;position:absolute;top:5434px;left:5146px;width:66px;height:22px;text-indent:0;}
+.kssqi_winner .winner_list {clear:both;float:left;width:342px;margin:183px 0 0 30px;}
+.kssqi_winner .winner_list .search{height:42px;text-align:center;padding-top:1px;.padding:0;}
+.kssqi_winner .winner_list .search select{margin-top:-2px;}
+.kssqi_winner .winner_list .winner_listbox {width:342px;height:192px;border-bottom:1px solid #a3b5ba;overflow:hidden;overflow-y:auto;}
+.kssqi_winner .winner_list ol{float:left;width:342px;padding:1px 0 4px;}
+.kssqi_winner .winner_list li{ width:342px;color:#000;padding:0 0 4px;}
+.kssqi_winner .winner_list li em{display:inline-block;width:33px;color:#2a7680;font:normal 11px Tahoma;text-align:center;vertical-align:top;}
+.kssqi_winner .winner_list li strong{display:inline-block;width:280px;word-break:break-all;}
+.kssqi_winner .winner_list .btn_close {position:absolute;top:435px;left:163px;}
+
+/* 20130628 */
+#popWrap2{/*.margin-bottom:0*/}/* 20130708 삭제 */
+.note_3rd {clear:both;border-top:0;min-width:395px;padding:25px 0 0;margin:0 auto;}
+.note_3rd h2 {padding-left:42px;margin:0 auto;}/* 20140926 수정 */
+.note_3rd .txt{margin-left:12px;padding-left:8px;}
+.pop_oilchange {margin-bottom:-70px;}
+.pop_oilchange h2{padding-left:0;margin-bottom:8px;}/* 20140721 수정 */
+.pop_proposal .box_info{overflow:hidden;width:420px;padding:15px 0 0;margin-left:25px;}
+.pop_proposal .box_info dt{padding-left:12px;}
+.pop_proposal p.desc{padding-bottom:15px;}
+.footer {position:relative;float:left;width:100%; border-top:1px solid #e5e5e5; padding:18px 0 0; margin-top:28px;z-index:50;}/* 20140722 수정 */
+.footer p {margin-left:25px;}
+.footer .popclose {position:absolute; right:26px; top:8px}
+.sp_footer{padding-bottom:23px; background:#f8f8f8}
+
+/* 20130702 본인확인 */
+.privacy .tbl_info{border:1px solid #d0d0d0;background:#f4f4f4;padding:7px 0 0 33px;}
+.privacy .tbl_info .tbl_data .table_box{min-height:32px;}
+.privacy .tbl_info .tbl_data th{width:104px;}
+.privacy .tbl_info .tbl_data .tip_area input.text{margin-bottom:0;}
+.privacy .tbl_info .tbl_data .tip_area p,.privacy .tbl_info .tbl_data .tip_area .img_btn3{margin:10px 0;}
+
+/* 20130704 신청내역확인 */
+.note_3rd .tit_pconfirm {display:block;padding: 0 0 0 7px;background: url('/resources/images/front/new_web/img/common/popup/bg_square.gif') no-repeat 0 6px;}
+.note_3rd .cardnum {padding:16px 14px;background:#f7f7f7;}
+.note_3rd .cardnum .cnum {display:block;width:300px;padding:0 0 5px 7px;font-weight:bold;background: url('/resources/images/front/new_web/img/event/bg_arrow.gif') no-repeat 0 3px;}
+.note_3rd .cardnum input {background-color:#fff;}
+.alert .sp_footer{margin-top:-10px;}
+
+/* 20130716 썸머페스티벌 추가 */
+.event_summer{height:540px;padding:164px 39px 0 40px;background:url('/resources/images/front/new_web/img/event/imgpop_summer_festival02.jpg') no-repeat;}
+.event_summer .local_list{margin:0 0 47px 34px;}
+.event_summer .local_search {padding-left:70px;width:500px;}
+.event_summer_info{width:788px;height:586px;padding:141px 50px 0;background:url('/resources/images/front/new_web/img/event/imgpop_summer_festival01.jpg') no-repeat;}
+.event_summer_info .local_list{width:788px;height:510px;margin:0}
+.event_summer_info .local_list th{width:auto;height:32px;}
+.event_summer_info .local_list th.area{width:13%;}
+.event_summer_info .local_list th.date{width:19%;}
+.event_summer_info .local_list td{padding:0;height:33px;color:#737373;white-space:nowrap;}
+.event_summer_info .local_list td a.oil{color:#b40000;text-decoration:underline;}
+
+/* 20130718 사랑의책나눔기념증정이벤트 추가 */
+.event_lovebook{height:568px;padding:178px 39px 0 40px;background:url('/resources/images/front/new_web/img/event/popbg_lovebook_oil.jpg') no-repeat;}
+.event_lovebook .local_list{height:415px;margin:0 0 44px 34px;}
+
+/* 20130807 추가 - 신청회원정보입력 */
+.regist_name {clear:both;float:left;padding:35px 0 22px;}
+.regist_name dt{float:left;width:60px;font-weight:bold;color:#666;padding:0 0 0 35px;}
+.regist_name dd{float:left;font-weight:bold;color:#666;padding:0 0 0 28px;background:url('/resources/images/front/new_web/img/common/popup/bg_bar_gray.gif') 0 2px no-repeat;}
+.regist_inpbox {clear:both;border:1px solid #dbdbdb;background:#f4f4f4;padding:22px 0 5px 35px;min-width:460px;}
+.regist_inpbox dl {clear:both;float:left;padding:0 0 18px;min-width:458px;}
+.regist_inpbox dt {float:left;width:118px;font-weight:bold;color:#666;padding:2px 0 0 0;}
+.regist_inpbox dt span{color:#ee381d;}
+.regist_inpbox dd {float:left;font-weight:bold;color:#666;}
+.regist_inpbox dd.chk {padding-top:2px;}
+.regist_member .slist {padding:40px 0 0 30px;}
+.regist_member .slist li {font-size:11px;color:#666;}
+
+/* 20130821 한가위선물잔치 추가 */
+.event_chusuck{height:540px;padding:164px 39px 0 40px;background:url('/resources/images/front/new_web/img/event/imgpop_chusuck02.jpg') no-repeat;}
+.event_chusuck .local_list{margin:0 0 47px 34px;}
+.event_chusuck .local_search {padding-left:70px;width:500px;background:#deeaff;}
+.event_chusuck_info{width:740px;height:212px;padding:134px 74px 0;background:url('/resources/images/front/new_web/img/event/imgpop_chusuck01.jpg') no-repeat;}
+.event_chusuck_info .local_list{width:740px;height:136px;margin:0}
+.event_chusuck_info .local_list th, .event_chusuck .local_list th{width:auto;height:32px;background:#054f8c;}
+.event_chusuck_info .local_list th.area{width:13%;}
+.event_chusuck_info .local_list td{padding:0;height:32px;color:#737373;white-space:nowrap;}
+.event_chusuck_info .local_list td a.oil{color:#b40000;text-decoration:underline;}
+
+/* 20130912 회원가입완료-삼성카드 추가 */
+.view_card{position:relative;margin:40px 0 0;padding:29px 0 0 42px;border-top:1px solid #d0d0d0;}
+.view_card .app{position:absolute;top:-60px;right:18px;}
+.view_card .desc{position:absolute;top:30px;left:218px;}
+.view_card .tel{position:absolute;top:66px;left:505px;}
+.view_card .cont_wrap{*zoom:1;position:relative;width:587px;margin:44px 0 0;padding-bottom:10px;}
+.view_card .cont_wrap:after{content:'';display:block;clear:both;}
+.view_card .cont_wrap .img{float:left;width:211px;}
+.view_card .cont_wrap .info{float:left;width:360px;letter-spacing:-1px;}
+.view_card .cont_wrap .slist{overflow:hidden;margin:5px 0 0 0;}
+.view_card .cont_wrap .slist li{float:none;margin:0 0 2px 0;padding:0 0 0 6px;background:url('/resources/images/front/new_web/img/common/ico/ico_square.gif') no-repeat 0 5px;}
+.view_card .cont_wrap dl{overflow:hidden;margin:14px 0 0 0;}
+.view_card .cont_wrap dl dt{clear:left;float:left;width:11%;font-weight:bold;margin:0 0 4px 0;}
+.view_card .cont_wrap dl dd{float:left;margin:0 0 4px 0;width:89%;}
+.view_card .cont_wrap .dc{position:absolute;bottom:-8px;right:8px;}
+
+/*20131107 추가 - 개인정보수집이용동의*/
+.private_input th, .private_input td{border-bottom:0;padding-right:0;}
+.private_input .etc{display:block;color:#7F7E7E;font-size:11px;padding:5px 0 0 10px;}
+
+/* 내트럭 장학금 - 20140106 추가 */
+h3.h_net{padding:10px 10px 0;}
+.netruck_cont {width:670px;border:1px solid #d6d6d6;margin:10px auto;padding:27px 0 0;}
+	.netruck_cont h4{text-align:center;padding:0 0 25px;}
+	.netruck_cont p.netruck_desc{width:618px;padding:0 0 25px;border-bottom:2px solid #e7b4a8;text-align:center;margin:0 auto;}
+	.netruck_cont table{width:618px;margin:0 auto;border-top:1px solid #e0e0e0;table-layout:auto;}
+	.netruck_cont table th{width:118px;background:#e0c09f;border:1px solid #e0e0e0;}
+	.netruck_cont table td{padding:15px;text-align:left;border-right:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;color:#666;}
+	.netruck_cont table td input, .netruck_cont table td select{background-color:#fff;color:#505050;}
+	.netruck_cont table td label{padding:2px 8px 0 0;vertical-align:middle}
+	.netruck_cont table td strong{display:inline-block;padding:0 0 10px;color:#cf0000;}
+	.netruck_cont table td dt{float:left;width:165px;padding:6px 0 0;}
+	.netruck_cont table td dd{float:left;width:280px;padding:3px 0;}
+	.netruck_cont .btn{text-align:center;padding:30px 0 20px;}
+
+/* 3천포인트특권8탄 - 20140113 추가 */
+.box_choicegift{width:494px;border:1px solid #d3d3d3;background:url('/resources/images/front/new_web/img/point/box_gift_line.gif') 50% 0 no-repeat;margin:15px auto 0;}
+.box_choicegift:after {display:block; content:""; clear:both}
+.box_choicegift p{float:left;width:237px;text-align:center;/*height:325px;*/min-height:285px;padding-bottom:16px;}/* 20141001 수정 */
+.box_choicegift p.gift2{float:right;}
+.pop_proposal p.box_info{margin:0 auto;display:block;text-align:center; font-size:16px;font-weight:bold;color:#1f3d57;padding-bottom:10px;}
+.pop_proposal p.box_info img{vertical-align:middle;margin:0 0 -3px 0;}/* 20220805 수정 */
+
+/* 20140121 - 3관왕 기념이벤트 */
+.triplecrown_winner {position:relative;width:800px;height:600px;background:url('/resources/images/front/new_web/img/event/imgpop_triplecrown_list.jpg') no-repeat;}
+.triplecrown_winner .winner_list {clear:both;float:left;width:576px;margin:247px 0 0 113px;}
+.triplecrown_winner .winner_list .search{height:35px;text-align:center;}
+.triplecrown_winner .winner_list .search select{margin-top:-2px;}
+.triplecrown_winner .winner_list .winner_listbox {width:576px;height:206px;border-bottom:1px solid #d6d6d6;overflow:hidden;overflow-y:auto;}
+.triplecrown_winner .winner_list table{width:100%;}
+.triplecrown_winner .winner_list th{height:34px;background:#767676;color:#fff;}
+.triplecrown_winner .winner_list td{height:35px;border-top:1px solid #d6d6d6;color:#737373;}
+.triplecrown_winner .winner_list .btn_close {position:absolute;top:520px;left:335px;}
+.triplecrown_win{padding:10px;}
+
+/* 20140328 추가(OK캐쉬백 포인트 적립 서비스 변경 안내)*/
+.okcash_info h3{padding:30px 0 20px 0;}
+.okcash_info p.desc{padding:0 0 0 0;}
+
+/* 20140402 추가 (우편번호찾기) */
+.myenc_dv:after {display:block; content:""; clear:both}
+h3.find_addr{position:absolute;left:23px;top:38px;}
+	h3.find_addr a{display:block;width:134px;height:27px;border:1px solid #e1e1e1;font-size:12px;padding:14px 0 0;text-align:center;border-bottom:0;}
+h3.find_road{position:absolute;left:158px;top:38px;}
+	h3.find_road a{display:block;width:134px;height:27px;border:1px solid #e1e1e1;font-size:12px;padding:14px 0 0;text-align:center;border-bottom:0;}
+	h3.find_addr a.selected,h3.find_road a.selected{background:#f4f4f4;}
+.cont_findzip{clear:both;float:left;width:459px;border:1px solid #e1e1e1;margin-top:41px;background:#f4f4f4;padding:23px 0 20px 17px;position:relative;}
+.cont_findzip:after {display:block; content:""; clear:both}
+	.cont_findzip fieldset{margin-top:15px;}
+	.cont_findzip .desc_zip{padding:0 0 0 8px;background:url('/resources/images/front/new_web/img/common/bul_gray.gif') 0 5px no-repeat;color:#686868;}
+	.cont_findzip .dongN{font-weight:bold;letter-spacing:-1px;padding-right:4px;}
+	.cont_findzip .cityN{display:inline-block;width:48px;font-weight:bold;letter-spacing:-1px;padding:0 4px 10px 0;}
+	.cont_findzip .zoneN{display:inline-block;width:74px;font-weight:bold;letter-spacing:-1px;padding:0 4px 10px 27px;}
+	.cont_findzip .roadN{display:inline-block;width:48px;font-weight:bold;letter-spacing:-1px;padding-right:4px;}
+	.cont_findzip input.btn_img{margin-top:3px;}
+	.cont_findzip ol{padding:5px 0 20px 10px;}
+	.cont_findzip ol li{font-size:11px;color:#686868;line-height:1.4;}
+	.cont_findzip select{vertical-align:top;}/* 20140523_3 추가 */
+.cont_listzip{display:none;clear:both;padding:18px 0 0;}
+.cont_listzip p{padding:0 0 0 17px}
+.cont_listzip p.result{text-align:center;font-weight:bold;color:#686868;padding:12px 0 10px;}
+.cont_road{display:none;}
+.cont_addr:after,.cont_road:after{display:block; content:""; clear:both}
+.cont_road table.zipnum_list{width:420px;margin:0 auto;}
+.cont_road table.zipnum_list th{background:#767676;color:#fff;height:34px;}
+.cont_road table.zipnum_list th:first-child{width:66px;}
+.cont_road table.zipnum_list td{padding:4px 0;border-bottom:1px solid #d6d6d6;}
+.cont_road table.zipnum_list td:last-child{text-align:left;}
+.cont_road table.zipnum_list td strong,.cont_road table.zipnum_list td span{letter-spacing:-1px;color:#737373;}
+
+.myenc_dv{.float:left;}/*20140430 추가*/
+.btnR7{.float:left;.width:100%;}/*20140430 추가*/
+
+/* 20140523_2 추가(주유블록이벤트) */
+.oilblock_thumb{width:640px;text-align:center;}
+.oilblock_thumb img{max-width:640px;min-width:640px;vertical-align:middle;}
+.oilblock_info{clear:both;position:relative;width:640px;height:70px;background:url('/resources/images/front/new_web/img/event/popbg_oilblock.jpg') no-repeat;color:#aa9553;}
+.oilblock_info .btn_rcmd{position:absolute;top:20px;left:15px;}
+.oilblock_info .btn_close{position:absolute;top:27px;right:18px;}
+.oilblock_info strong{float:left;color:#000;padding:0px 0 0 108px;padding-top:31px;}
+.oilblock_info em{float:left;padding:31px 3px 0 4px;}
+.oilblock_info span{float:left;width:305px;white-space:nowrap;overflow:hidden;color:#000;padding-top:31px;vertical-align:middle;}
+.oilblock_info em.day{position:absolute;top:32px;right:88px;font:10px tahoma;color:#927d47;padding:0;}
+
+/* 20140527 추가(카드등록프로세스추가) */
+#incont .card_choice{text-align:center;padding-bottom:40px;}
+.card_choice_box{width:85%;margin:0 auto;}
+.card_choice_box:after{display:block; content:""; clear:both}
+.card_choice_box li{float:left;width:49%;text-align:center;padding:40px 0 30px;}/* 20150325 수정 */
+.card_choice_box li label{display:block;height:120px}/* 20150325 추가 */
+
+/* 20140718 추가(COOL한썸머페스트벌) */
+.event_vacance2014 {height:523px;background:url('/resources/images/front/new_web/img/event/popbg_vacance2014.jpg') no-repeat;padding-top:178px;}
+.event_vacance2014 .local_list{margin:0 0 45px 34px;}
+.event_vacance2014 .local_list th{width:47%}
+.event_vacance2014 .local_list th:first-child{width:30%}
+.event_vacance2014 .local_list th:last-child{width:23%}
+
+/* 20140723 추가(내트럭특권_유의사항) */
+.tb_notice{margin:5px 0;}
+.tb_notice th, .tb_notice td{padding:3px;border:1px solid #eaeaea;}
+.tb_notice th{border:1px solid #c9c9c9;background:#e9e9e9;}
+
+/* 20140731 추가 (엔크린 주유클럽) */
+.box_service{border:1px solid #d3d3d3;padding:20px 15px;margin-top:11px;}
+.box_service strong.tit{display:block;margin-bottom:22px;}
+.box_service label{display:inline-block;padding-right:12px;min-width:100px;}
+.box_service input.text,.box_service input.password{height:22px;vertical-align:middle;}
+.box_service .desc {margin:14px 0 0;}
+.box_service .desc li{color:#686868;padding:9px 0 0;}
+.box_service .desc li a{color:#686868;text-decoration:underline;}
+
+
+/* 20140813 추가 (문화이벤트-이달의 여행) */
+body.culture{background:#f2f2f2;}
+.pop_culture{position:relative;}
+	.pop_culture .btn{clear:both;text-align:center;}
+	.pop_culture .btn_close{position:absolute;top:14px;right:18px;}
+	.pop_culture .cont_oildc{background:#fff;padding-bottom:37px;}
+.tit_oildc{width:690px;margin:0 auto;background:url('/resources/images/front/new_web/img/culture/line_gray.gif') bottom left repeat-x;padding-bottom:36px;}
+	.tit_oildc h1.tit{display:block;line-height:1.2;color:#2a2a2a;font-family:Malgun Gothic,'맑은 고딕',NanumGothic,Dotum,'돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;font-size:30px;text-align:center;font-weight:normal;padding:52px 0 18px;}
+	.tit_oildc h1.tit strong{color:#42a719;}
+	.tit_oildc p.tit_pierod{clear:both;font-size:13px;font-family:Malgun Gothic,'맑은 고딕',NanumGothic,Dotum,'돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;text-align:center;}
+	.tit_oildc p.tit_pierod span{display:inline-block;padding:0 0 0 10px;background:url('/resources/images/front/new_web/img/culture/dot_black.gif') 0 8px no-repeat;}
+.box_oildc{clear:both;width:690px;margin:0 auto;padding:30px 0 16px;}
+	.box_oildc:after{content:'';display:block;clear:both;}
+	.box_oildc ul.box_oildc_apply{width:695px;text-align:center;margin:0 auto;}
+		.box_oildc_apply li{float:left;width:136px;padding:0 0 25px;margin-right:3px;}
+		.box_oildc_apply li label{display:block;width:122px;height:70px;background:url('/resources/images/front/new_web/img/culture/bg_oildc_coupon.gif') repeat-x;overflow:hidden;font-family:Malgun Gothic,'맑은 고딕',NanumGothic,Dotum,'돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;color:#3f3f3f;padding:0 9px 0 5px;overflow:hidden;.height:46px;.padding-top:20px;}/* 20140902 수정 */
+		.box_oildc_apply li label span{display:table-cell;.display:block;width:122px;height:64px;text-align:center;vertical-align:middle;.white-space:normal;}/* 20140902 수정 */
+		.box_oildc_apply li.disabled label{background-position:0 -70px;color:#8b8b8b;}/* 20140902 수정 */
+	.box_oildc ul.tabs_2,.box_oildc ul.tabs_4{width:287px;}
+	.box_oildc ul.tabs_3,.box_oildc ul.tabs_6{width:423px;}
+	.box_oildc ul.tabs_7,.box_oildc ul.tabs_8{width:559px;}
+.useinfo_oildc{clear:both;background:#f4f4f4;padding:27px 0 10px 37px;}
+.box_oildc h2.tit{font-size:18px;font-family:Malgun Gothic,'맑은 고딕',NanumGothic,Dotum,'돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;font-weight:normal;color:#2a2a2a;}
+.box_oildc .map_oilcenter{border:1px solid #e0e0e0;background:#fff;margin:18px 0;}
+	.map_oilcenter .img_oilcenter{float:left;width:207px;height:205px;overflow:hidden;}
+	.map_oilcenter .tb_oilcenter{padding:18px;height:169px;overflow:auto;overflow-x:hidden;}
+	.map_oilcenter .tb_oilcenter table{width:100%;.width:auto;}
+	.map_oilcenter .tb_oilcenter th{width:50%;height:33px;background:#363636;color:#fff;}
+	.map_oilcenter .tb_oilcenter th:first-child,.map_oilcenter .tb_oilcenter th:last-child{width:25%;}
+	.map_oilcenter .tb_oilcenter td{border-bottom:1px solid #f0f0f0;padding:11px 5px 9px;font-size:11px;color:#575757;}
+
+/* 20141007 추가 (3천포인트 특권 홍보 영상) */
+.pop_movie{width:465px;margin:37px auto -70px;}
+	.pop_movie h2{padding-bottom:20px;}
+	.pop_movie .tab_movie_view{margin-top:10px;}
+
+/* 20141229 추가 (나의 주유 충전 내역 - 상세보기) */
+.myenc_list_more{width:666px;height:680px;padding:50px 20px 0;background:#fff url('/resources/images/front/new_web/img/myenc/bg_myenc_list_more.gif') right 0 no-repeat;z-index:300;}/* 20210720 수정 */
+	.myenc_list_more h4{font-size:14px;font-weight:bold;}
+	.myenc_list_more h4 strong{color:#338e10;}
+	.myenc_list_more .btn_close{position:absolute;top:0;right:0;}
+	.myenc_list_more .data_list02 table{margin:38px 0 0;}
+	.myenc_list_more .data_list02 .sim{display:inline-block;background:url('/resources/images/front/new_web/img/myenc/td_mylist.png') no-repeat;overflow:hidden;font-size:0;line-height:0;height:14px;}
+	.myenc_list_more .data_list02 .th01{width:25px;background-position:0 -149px}
+	.myenc_list_more .data_list02 .th02{width:48px;background-position:-79px -149px}
+	.myenc_list_more .data_list02 .th03{width:90px;background-position:-191px -149px}
+	.myenc_list_more .data_list02 .th04{width:25px;background-position:-342px -149px}
+	.myenc_list_more .data_list02 .th05{width:80px;background-position:-417px -149px}
+	.myenc_list_more .data_list02 .th06{width:58px;background-position:-540px -149px}
+	.myenc_list_more .box_style3{margin:40px 0 0;background-color:#eee;border-color:#e5e5e5;}/* 20210720 추가 */
+	/* 20211125 추가 */
+	.myenc_list_more .data_list02 th[colspan="2"] {padding-bottom: 5px;}
+	.myenc_list_more .data_list02 tr:nth-of-type(2) th {padding-top: 5px;}
+	.myenc_list_more .data_list02 .sim02{display:inline-block;background:url('/resources/images/front/new_web/img/myenc/td_mylist211125.png') no-repeat;overflow:hidden;font-size:0;line-height:0;height:14px;} 
+	.myenc_list_more .data_list02 .sim02.th07 {width:61px;background-position:0 0;}
+	.myenc_list_more .data_list02 .sim02.th08 {width:22px;background-position:-232px 0;}
+	.myenc_list_more .data_list02 .sim02.th09 {width:21px;background-position:-320px 1px;}
+	.myenc_list_more .data_list02 .sim02.th10 {width:49px;background-position:-370px 0;}/* //20211125 추가 */
+	
+/* 20150202 추가(개인정보수집이용동의 추가)*/
+.cardnum .private_info{border:1px solid #e2e2e2;background:#fff;padding:10px 15px 16px;}
+	.cardnum .private_info dl {padding:0 0 10px;}
+	.cardnum .private_info dt {padding:7px 0 4px;color:#333;}
+	.cardnum .private_info dd {font-size:11px;color:#666;padding:0 0 0 10px;}
+	.cardnum .private_info p {margin:0;word-break:keep-all;word-wrap:break-word;}
+.cardnum .private_agree{padding:14px 0 0;}
+.cardnum .private_agree strong{display:inline-block;width:184px; }
+.cardnum .private_agree span input{background-color:transparent;}
+.cardnum .private_agree span label{display:inline-block;width:auto;margin-right:4px;}
+/* //20150202 추가(개인정보수집이용동의 추가)*/
+
+
+/* 20150901 추가 (주유플러스9월이벤트) */
+body.popup2{min-width:auto;}
+.pop_oilcharge{width:380px;height:362px;}
+.pop_oilcharge h5{padding:0 0 30px;}
+.pop_oilcharge table{width:100%;background:url(/resources/images/front/new_web/img/event/event01_layer_th.gif) no-repeat;}
+.pop_oilcharge table thead tr{height:35px;text-indent:-999em;}
+.pop_oilcharge table tbody tr td{height:35px;border-top:2px solid #fff;background:#f3f3f3 url(/resources/images/front/new_web/img/event/event01_layer_bar.gif) 0 11px no-repeat;}
+.pop_oilcharge table tbody tr:nth-child(even) td{background:#fbfbfb url(/resources/images/front/new_web/img/event/event01_layer_bar.gif) 0 11px no-repeat}
+.pop_oilcharge table tbody tr td:first-child{background-image:none}
+.pop_oilcharge .paging{text-align:center;padding:18px 0 8px;}
+.pop_oilcharge .paging a{display:inline-block;width:8px;margin:0 6px;text-align:center;color:#000;font-weight:bold;}
+.pop_oilcharge .paging strong{display:inline-block;width:8px;margin:0 6px;text-align:center;color:#e72b18;}
+.pop_oilcharge .btn_confirm{padding-top:12px;text-align:center;}
+
+/* 20160907 추가 (개인정보수집출처안내)*/
+#popWrap4 {position:relative;width:100%;height:100%;height:auto !important;min-height:100%;margin:0 0 -40px 0}
+#popWrap4 #pop_header {position:relative;z-index:60;height:30px;padding:5px 0 6px 0; background:url(/resources/images/front/new_web/img/common/popup/bg_header.gif) repeat-x 0 0;}
+#popWrap4 #pop_header h1 {display:inline-block; padding:0 0 0 24px; font-size:0; line-height:0}
+/* //20160907 추가 (개인정보수집출처안내)*/
+
+/* 20161018 추가 (SpeedMate 할인이벤트 팝업)*/
+.speddmate {width:711px;}
+
+/* 20180330 추가 선물리스트 */
+.pop_change_list3 .box_choicegift {overflow:hidden;}
+.pop_change_list3 .box_choicegift p{width:164px;float:left;}
+
+/* 20181226 추가 */
+strong.period_info {font-weight:bold;font-size:15px;text-decoration:underline;}
+
+/* 20200818 추가 (이마트 경품 이벤트)*/
+.emart_event{background-color:#482473;}
+.emart_info .agree_terms{width:410px;height:220px;margin:20px auto;padding:15px;box-sizing:border-box;overflow-y:auto;background:#fff;text-align:left;}
+.emart_info .btn_terms{background:none;-webkit-appearance:none;border:none;}
+.emart_info .btn_terms:before{content:'▼';color:#c6b4d5;padding-right:8px;}
+.emart_info .open_terms:before{content:'▲';}
+/* 20200828 수정 */
+.emart_info .agree_wrap{margin-bottom:30px;}
+.emart_info .agree_terms:first-child{display:none;}
+.emart_info .open_terms + .agree_wrap hr,
+.emart_info .open_terms + .agree_wrap .agree_terms:first-child{display:block;}
+/*// 20200828 수정 */
+.emart_event .btn_wrap{margin-top:20px;padding-bottom:50px;}
+.emart_event .btn_wrap a,.emart_event .btn_wrap input[type="image"]{box-shadow:0px 10px 5px #422267;border-radius:28px;vertical-align:middle;margin:0 15px;}
+.agree_terms strong{padding:0;}
+.agree_terms dt {padding:10px 0 4px;}
+.agree_terms dd {color:#666;padding:0 0 0 10px;letter-spacing:-0.05em;}
+/* 20200827 추가 */
+.table_emart_terms table{width:100%;border:1px solid #dfdfdf;margin:7px 0 10px}
+.table_emart_terms th{padding:5px;background-color:#e4e4e4;font-weight:normal;text-align:center;font-size:12px;color:#333}
+.table_emart_terms .inner_table {margin:0;text-align:left;border:none;color:#666}
+.table_emart_terms .inner_table th{padding:10px 0 0 10px;font-size:11px;text-align:left;background:none;color:#666}
+.table_emart_terms .inner_table td{padding-left:10px;vertical-align:top;font-size:11px}
+.table_emart_terms .inner_table tr:last-child td{padding-bottom:10px;}
+.table_emart_terms .inner_table th:first-child,.table_emart_terms .inner_table td:first-child{border-right:1px solid #dfdfdf;}
+/* //20200827 추가 */
+
+/* 20210623 추가 : 머핀 전환 */
+.h_muffin_logo{position:absolute;right:0;top:12px;padding-right:24px;}
+.private_underline{font-size:1.2em;line-height:1.4;text-decoration:underline;color:#be0b26;}
+.choose_box{margin:15px 0 ;text-align:center;}
+.choose_box .inp_grp{position:relative;display:inline-block;padding:0 5px;}
+.choose_box input{margin-right:7px;}
+.box_point_muffin{display:none;}
+/*// 20210623 추가 */

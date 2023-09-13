@@ -1,0 +1,16 @@
+{
+  "name": "ske_newenc",
+  "version": "1.0.0",
+  "description": "SKE NEWENC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sh ./build.sh",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}
