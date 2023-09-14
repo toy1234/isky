@@ -7,6 +7,7 @@ $(document).ready(function () {
     var pointEvent = $('.muffin_point_wrap_mobile')
     var $body = $('body')
 
+
     //body scroll
     function bodyScroll() {
         $(window).on('scroll', function () {
@@ -54,49 +55,73 @@ $(document).ready(function () {
 
 
 
-    function isFocusOut(obj) {
-        var inpBox = $(obj).parent('.input_box')
-        inpBox.removeClass('is_focus')
+
+
+    function numberWithCommas(num) {
+        var parts = num.toString().split(".")
+        return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (parts[1] ? "." + parts[1] : "")
     }
 
-    function isFocus(obj) {
-        var inpBox = $(obj).parent('.input_box')
-        inpBox.addClass('is_focus')
+    function chkNumber(obj) {
+        var tmpValue = obj.value.replace(/[^0-9,]/g, '')
+        tmpValue = tmpValue.replace(/[,]/g, '');
+        obj.value = numberWithCommas(tmpValue)
+    }
+
+    function chkValue(obj) {
+        var el = obj.closest('.input_box')
+        if (obj.value == "") {
+            el.classList.remove('is_focus')
+        } else {
+            el.classList.add('is_focus')
+        }
+    }
+
+    function inpComma(obj) {
+        if (obj.classList.contains('comma')) {
+            chkNumber(obj)
+        }
+    }
+
+    function chkUnit(obj) {
+        var inpUnit = obj.dataset.unit
+        var el = obj.parentNode
+        if (inpUnit !== undefined) {
+            el.insertAdjacentHTML('beforeend', '<i class="unit">' + inpUnit + '</i>')
+        }
     }
 
     // form input
     function inputVal() {
-        var inpTxt = $('.input_box > .inp')
-        var inpValDel = $('.input_box > .del')
+        var inpTxt = document.querySelectorAll('.inp')
+        var inpReset = document.querySelectorAll('.del')
 
-        inpTxt.each(function () {
-            if ($(this).val()) {
-                isFocus(this)
-            }
-        })
 
-        inpTxt.on('keyup ', function () {
-            if ($(this).val().trim() == '') {
-                isFocusOut(this)
-            } else {
-                isFocus(this)
-            }
-        })
+        for (var i = 0; i < inpTxt.length; i++) {
+            chkValue(inpTxt[i])
+            chkUnit(inpTxt[i])
+            inpComma(inpTxt[i])
 
-        inpTxt.on('blur', function () {
-            if ($(this).val().trim() == '') {
-                isFocusOut(this)
-            } else {
-                isFocus(this)
-            }
-        })
+            inpTxt[i].addEventListener('keyup', function (e) {
+                e.preventDefault()
+                chkValue(this)
+                inpComma(this)
+            })
 
-        inpValDel.on('click', function (e) {
-            e.preventDefault();
-            $(this).prev('.inp').val('')
-            isFocusOut(this)
-        })
+            inpTxt[i].addEventListener('blur', function (e) {
+                e.preventDefault()
+                chkValue(this)
+            })
+
+            inpReset[i].addEventListener("click", function (e) {
+                e.preventDefault()
+                chkValue(this)
+                e.target.previousElementSibling.value = ''
+                e.target.previousElementSibling.focus()
+            })
+        }
     }
 
 
-})
+
+});

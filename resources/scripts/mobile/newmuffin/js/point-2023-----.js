@@ -2,7 +2,9 @@ $(document).ready(function () {
 
     bodyScroll()
     inputVal()
-    layerPopup()
+    layerOpen()
+    layerClose()
+
 
     var body = document.querySelector('body')
     var pointEvent = document.querySelector('.muffin_point_wrap_mobile')
@@ -13,10 +15,11 @@ $(document).ready(function () {
     function bodyScroll() {
         document.addEventListener("scroll", function () {
             var scrollY = document.documentElement.scrollTop
-            var state = body.classList.contains('scroll_blocked')
+            var layerOpen = body.classList.contains('scroll_blocked')
             var target = pointEvent.firstElementChild
+
             // header fixed
-            if (!state) {
+            if (!layerOpen) {
                 if (scrollY >= 16) {
                     target.classList.add("active")
                 } else {
@@ -31,38 +34,53 @@ $(document).ready(function () {
     function layerActive(obj) {
         var el = obj.firstElementChild
         var altPop = el.classList.contains('alert')
+
         // show/hide
         var type = (obj.style.display == '') ? 'block' : ''
         obj.style.display = type
+
         // slideUp
         if (!altPop) {
             el.classList.toggle('fade')
         }
         // body scroll 차단
         body.classList.toggle('scroll_blocked')
+
         var posY = (body.style.top == '') ? - pageY + 'px' : ''
         body.style.top = posY
+
         window.scrollTo({ 'top': pageY })
     }
 
 
-    function layerPopup() {
-        var btn_layer = document.querySelectorAll('.l_open, .l_close, .overlay')
-        for (var i = 0; i < btn_layer.length; i++) {
-            btn_layer[i].addEventListener("click", function (e) {
+    function layerOpen() {
+        var btnOpen = document.querySelectorAll('.l_open')
+        for (var i = 0; i < btnOpen.length; i++) {
+            btnOpen[i].addEventListener("click", function (e) {
                 e.preventDefault()
-                var btn_open = this.classList.contains('l_open')
-                if (btn_open) {
-                    var item = this.dataset.id
-                    var target = document.querySelector(item)
-                    pageY = document.documentElement.scrollTop
-                } else {
-                    var target = this.closest('.muffin_point_layer_popup')
-                }
+                var item = this.dataset.id
+                var target = document.querySelector(item)
+                pageY = document.documentElement.scrollTop
                 layerActive(target)
+                // console.log(pageY)
             })
         }
     }
+
+
+    function layerClose() {
+        var btnClose = document.querySelectorAll('.l_close, .overlay')
+        for (var i = 0; i < btnClose.length; i++) {
+            btnClose[i].addEventListener("click", function (e) {
+                e.preventDefault()
+                var target = this.closest('.muffin_point_layer_popup')
+                layerActive(target)
+                // console.log(pageY)
+            })
+        }
+    }
+
+
 
 
     //Comma 
@@ -73,9 +91,9 @@ $(document).ready(function () {
 
     //number
     function chkNumber(obj) {
-        var tmp_value = obj.value.replace(/[^0-9,]/g, '')
-        tmp_value = tmp_value.replace(/[,]/g, '');
-        obj.value = numberWithCommas(tmp_value)
+        var tmpValue = obj.value.replace(/[^0-9,]/g, '')
+        tmpValue = tmpValue.replace(/[,]/g, '');
+        obj.value = numberWithCommas(tmpValue)
     }
 
     function inpComma(obj) {
@@ -85,10 +103,10 @@ $(document).ready(function () {
     }
 
     function chkUnit(obj) {
-        var inp_unit = obj.dataset.unit
+        var inpUnit = obj.dataset.unit
         var el = obj.parentNode
-        if (inp_unit !== undefined) {
-            el.insertAdjacentHTML('beforeend', '<i class="unit">' + inp_unit + '</i>')
+        if (inpUnit !== undefined) {
+            el.insertAdjacentHTML('beforeend', '<i class="unit">' + inpUnit + '</i>')
         }
     }
 
@@ -104,26 +122,27 @@ $(document).ready(function () {
 
     // form input
     function inputVal() {
-        var inp = document.querySelectorAll('.inp')
-        var inp_reset = document.querySelectorAll('.del')
+        var inpTxt = document.querySelectorAll('.inp')
+        var inpReset = document.querySelectorAll('.del')
 
-        for (var i = 0; i < inp.length; i++) {
-            chkValue(inp[i])
-            chkUnit(inp[i])
-            inpComma(inp[i])
 
-            inp[i].addEventListener('keyup', function (e) {
+        for (var i = 0; i < inpTxt.length; i++) {
+            chkValue(inpTxt[i])
+            chkUnit(inpTxt[i])
+            inpComma(inpTxt[i])
+
+            inpTxt[i].addEventListener('keyup', function (e) {
                 e.preventDefault()
                 chkValue(this)
                 inpComma(this)
             })
 
-            inp[i].addEventListener('blur', function (e) {
+            inpTxt[i].addEventListener('blur', function (e) {
                 e.preventDefault()
                 chkValue(this)
             })
 
-            inp_reset[i].addEventListener("click", function (e) {
+            inpReset[i].addEventListener("click", function (e) {
                 e.preventDefault()
                 chkValue(this)
                 e.target.previousElementSibling.value = ''
@@ -132,4 +151,6 @@ $(document).ready(function () {
         }
     }
 
-})
+
+
+});

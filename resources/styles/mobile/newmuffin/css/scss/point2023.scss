@@ -17,7 +17,7 @@
     width: 1px !important;
     height: 1px !important;
     clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(50%);
+
     clip-path: inset(50%);
 }
 
@@ -295,7 +295,6 @@
                                 width: 100%;
                                 height: 8px;
                             }
-
                         }
 
                         &.inform_box {
@@ -413,7 +412,7 @@
                                     border-radius: 12px;
 
                                     img {
-                                        width: 82px;
+                                        width: 100%;
                                         height: auto;
                                     }
                                 }
@@ -545,7 +544,6 @@
                     .inform_box {
                         display: block;
                         text-align: center;
-
                         padding: 40px 0;
                         font-size: 16px;
                         color: $pc4;
@@ -598,8 +596,8 @@
             font-size: 1.4rem;
             font-weight: 400;
             line-height: 2.5rem;
-            color: $pc9;
             letter-spacing: 0;
+            color: $pc9;
 
             .item-inner {
                 position: relative;
@@ -657,11 +655,11 @@
 }
 
 .txt_info {
+    display: flex;
     margin-top: 6px;
     color: $pc9;
     font-size: 14px;
     line-height: 20px;
-    display: flex;
 
     &:before {
         flex: none;
@@ -729,7 +727,7 @@ button {
     box-sizing: border-box;
     overflow: hidden;
 
-    &:not(.link, .ico_btn, .arrow_down) {
+    &:not(.link, .ico_btn) {
 
         &:active:after {
             content: '';
@@ -743,8 +741,8 @@ button {
         }
     }
 
-    &.disabled,
-    &:disabled {
+    &:not(.ico_btn).disabled,
+    &:not(.ico_btn):disabled {
         background-color: $pcD !important;
         border-color: $pcD !important;
         color: $pcF;
@@ -806,7 +804,6 @@ button {
             width: 1px !important;
             height: 1px !important;
             clip: rect(1px, 1px, 1px, 1px);
-            -webkit-clip-path: inset(50%);
             clip-path: inset(50%);
         }
 
@@ -884,7 +881,6 @@ button {
 
     //flag
     @at-root [class*=flag_] {
-        align-self: flex-end;
         display: inline-block;
         text-align: center;
         padding: 0 4px;
@@ -917,12 +913,12 @@ button {
 
         a {
             width: 100%;
-            display: inline-flex;
             height: 32px;
-            box-sizing: border-box;
-            font-size: 16px;
+            display: inline-flex;
             justify-content: center;
             align-items: center;
+            box-sizing: border-box;
+            font-size: 16px;
             border-bottom: 1px solid $pc8;
         }
 
@@ -945,9 +941,9 @@ button {
         }
 
         a {
+            border: 1px solid $pcD;
             border-radius: 32px;
             font-size: 12px;
-            border: 1px solid $pcD;
         }
 
         &.active {
@@ -1021,14 +1017,16 @@ table {
     input {
         z-index: 1;
         background-color: transparent;
-        color: $pc4;
-        font-size: 16px;
+        border-bottom: 1px solid $pc8;
         width: 100%;
         height: 32px;
         padding: 2px;
-        border-bottom: 1px solid $pc8;
+        color: $pc4;
+        font-size: 16px;
+        caret-color: $pcR;
 
         &::placeholder {
+            text-align: left;
             color: $pc8;
         }
 
@@ -1036,20 +1034,19 @@ table {
             border-color: $pc5;
         }
 
-        &.inp {
-            padding-right: 29px;
-        }
-
         &.comma {
-            color: $pcR;
-
-            &::placeholder {
-                text-align: left;
-            }
-
             &[data-unit] {
                 text-align: right;
                 padding-right: 26px;
+            }
+
+            &[data-unit=P] {
+                color: $pcR;
+
+                &+.del+.unit {
+                    color: $pcR !important;
+
+                }
             }
 
             @at-root .input_box.is_focus {
@@ -1087,7 +1084,6 @@ table {
         position: absolute;
         bottom: 8px;
         right: 8px;
-        color: $pcR !important;
         font-size: 16px;
         line-height: 1.5;
         padding: 0 !important;
@@ -1096,6 +1092,14 @@ table {
     &.is_focus {
         input {
             border-color: $pc5;
+
+            &.inp {
+                padding-right: 29px;
+
+                &:read-only+button {
+                    display: none;
+                }
+            }
         }
 
         .unit {
@@ -1111,11 +1115,13 @@ table {
 .input_group {
     width: 100%;
 
+    &.d-flex,
     &.search {
         display: flex;
+        gap: 16px;
 
         .input_box {
-            flex: 1 1 auto;
+            flex: 1;
         }
 
         .ico_btn {
@@ -1130,7 +1136,6 @@ table {
             flex: none;
             align-self: flex-end;
             margin-bottom: 4px;
-            margin-left: 16px;
         }
     }
 }
@@ -1161,8 +1166,8 @@ table {
 
             &:before {
                 flex: none;
-                display: inline-block;
                 content: '';
+                display: inline-block;
                 width: 20px;
                 height: 20px;
                 background: url('/resources/images/mobile/newmuffin/img/point/202308/ico-radio-off.svg') 0 0/contain no-repeat;
@@ -1348,8 +1353,8 @@ table {
 
             &:before {
                 flex: none;
-                display: inline-block;
                 content: '';
+                display: inline-block;
                 width: 20px;
                 height: 20px;
                 background: url('/resources/images/mobile/newmuffin/img/point/202308/ico-chk-off.svg') 0 0/contain no-repeat;
@@ -1364,7 +1369,6 @@ table {
             }
         }
     }
-
 
     &.all {
         input[type=checkbox] {
@@ -1413,13 +1417,13 @@ table {
 
             @at-root .link {
                 flex: none;
+                align-self: center;
                 display: inline-block;
-                color: $pc5;
-                font-size: 12px;
                 padding-bottom: 1px;
                 border-bottom: 1px solid $pc5;
+                font-size: 12px;
                 line-height: 14px;
-                align-self: center;
+                color: $pc5;
             }
         }
     }
@@ -1446,14 +1450,15 @@ table {
         >p {
             font-size: 12px;
             color: $pc9;
-            word-break: break-word;
             line-height: 1.4;
+            word-break: break-word;
         }
     }
 }
 
 //body scroll 차단
 body.scroll_blocked {
+    overflow: hidden;
     position: fixed;
     left: 0;
     width: 100%;
@@ -1461,33 +1466,32 @@ body.scroll_blocked {
     bottom: 0;
     right: 0;
     pointer-events: none;
-    overflow: hidden;
 }
 
 //layer_popup
 .muffin_point_layer_popup {
-    display: none;
     pointer-events: none;
+    display: none;
 
     .muffin_point_layer_wrap {
-        z-index: 2400;
-        display: flex;
         pointer-events: none;
+        display: flex;
+        justify-content: center;
+        z-index: 2400;
         position: fixed;
         left: 0;
         top: 0;
         bottom: 0;
         right: 0;
-        justify-content: center;
         margin: auto;
 
         .modal_content {
+            pointer-events: auto;
             display: flex;
             flex-direction: column;
             background-color: $pcF;
             outline: none;
             position: absolute;
-            pointer-events: auto;
             border-radius: 12px;
             padding: 40px 16px 16px;
             box-sizing: border-box;
@@ -1581,5 +1585,4 @@ body.scroll_blocked {
         right: 0;
         top: 0;
     }
-
 }
