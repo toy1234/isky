@@ -726,15 +726,20 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 12px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 4px;
   line-height: 1.5;
   letter-spacing: -0.02em;
 }
 .is-has-btn dd {
   min-height: 28px !important;
+  line-height: 28px !important;
 }
 .is-has-btn dd .txt_btn {
   display: inline-block !important;
@@ -768,21 +773,15 @@ body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: auto;
-  padding-right: 12px;
+  white-space: nowrap;
   color: #74797D;
 }
 .muffin_point_wrap_mobile section.contents .inner .section dd span + span {
   margin-left: auto;
-  margin-right: 0;
-  padding-right: 0;
   text-align: right;
+  white-space: initial;
 }
 .muffin_point_wrap_mobile section.contents .inner .section dd span + span + .txt_btn {
-  margin-left: 16px;
   display: none;
 }
 .muffin_point_wrap_mobile section.contents .inner .section dd:first-of-type {
@@ -1041,17 +1040,42 @@ button:not(.link, .ico_btn):active:after {
   background-color: #000000;
   opacity: 0.1;
 }
-a:not(.ico_btn).disabled, a:not(.ico_btn):disabled,
-button:not(.ico_btn).disabled,
-button:not(.ico_btn):disabled {
+a:not(.ico_btn, .line).disabled, a:not(.ico_btn, .line):disabled,
+button:not(.ico_btn, .line).disabled,
+button:not(.ico_btn, .line):disabled {
   background-color: #dadfe3 !important;
   border-color: #dadfe3 !important;
   color: #fff;
   cursor: default !important;
 }
-a:not(.ico_btn).disabled:after, a:not(.ico_btn):disabled:after,
-button:not(.ico_btn).disabled:after,
-button:not(.ico_btn):disabled:after {
+a:not(.ico_btn, .line).disabled:before, a:not(.ico_btn, .line):disabled:before,
+button:not(.ico_btn, .line).disabled:before,
+button:not(.ico_btn, .line):disabled:before {
+  -webkit-filter: brightness(10);
+          filter: brightness(10);
+}
+a:not(.ico_btn, .line).disabled:after, a:not(.ico_btn, .line):disabled:after,
+button:not(.ico_btn, .line).disabled:after,
+button:not(.ico_btn, .line):disabled:after {
+  display: none;
+}
+a[class*=line]:disabled, a[class*=line].disabled,
+button[class*=line]:disabled,
+button[class*=line].disabled {
+  background-color: #fff !important;
+  border-color: #dadfe3 !important;
+  color: #9ba1a7 !important;
+  cursor: default !important;
+}
+a[class*=line]:disabled:before, a[class*=line].disabled:before,
+button[class*=line]:disabled:before,
+button[class*=line].disabled:before {
+  -webkit-filter: grayscale(1) opacity(0.5);
+          filter: grayscale(1) opacity(0.5);
+}
+a[class*=line]:disabled:after, a[class*=line].disabled:after,
+button[class*=line]:disabled:after,
+button[class*=line].disabled:after {
   display: none;
 }
 a.btn,
@@ -1081,19 +1105,12 @@ a.btn.c_black,
 button.btn.c_black {
   background-color: #000000;
 }
-a.btn.line,
-button.btn.line {
+a.btn[class*=line],
+button.btn[class*=line] {
   background-color: #fff;
   border: 1px solid #ef3340;
   color: #ef3340;
   font-weight: 500;
-}
-a.btn.line:disabled, a.btn.line.disabled,
-button.btn.line:disabled,
-button.btn.line.disabled {
-  background-color: #fff !important;
-  border-color: #dadfe3 !important;
-  color: #9ba1a7 !important;
 }
 a.ico_btn,
 button.ico_btn {
@@ -1142,13 +1159,22 @@ button.ico_btn.l_close:before {
 }
 a.txt_btn,
 button.txt_btn {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   background-color: #F3F4F6;
   padding: 0 8px;
   font-size: 12px;
   color: #4e5054;
   border-radius: 4px;
+  min-width: 37px;
   height: 28px;
   line-height: 28px;
 }
@@ -1158,46 +1184,55 @@ button.txt_btn:before {
   background-repeat: no-repeat;
   background-size: contain;
 }
-a.txt_btn[class*=arrow_],
-button.txt_btn[class*=arrow_] {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+a.txt_btn[class*=line],
+button.txt_btn[class*=line] {
+  background-color: #fff;
+  border: 1px solid #525FA4;
+  color: #525FA4;
+}
+a.txt_btn[class*=arrow],
+button.txt_btn[class*=arrow] {
   padding-right: 24px;
 }
-a.txt_btn[class*=arrow_]:before,
-button.txt_btn[class*=arrow_]:before {
+a.txt_btn[class*=arrow]:before,
+button.txt_btn[class*=arrow]:before {
+  content: "";
   position: absolute;
-  right: 4px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  content: "";
-  display: block;
+}
+a.txt_btn.arrow:before,
+button.txt_btn.arrow:before {
+  right: 4px;
   width: 20px;
   height: 20px;
+  background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-arrow-down.svg");
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-a.txt_btn.arrow_down:before,
-button.txt_btn.arrow_down:before {
-  background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-arrow-down.svg");
-}
-a.txt_btn.arrow_down.up:before,
-button.txt_btn.arrow_down.up:before {
+a.txt_btn.arrow.up:before,
+button.txt_btn.arrow.up:before {
   -webkit-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
+}
+a.txt_btn.line_arrow,
+button.txt_btn.line_arrow {
+  padding-right: 28px;
+}
+a.txt_btn.line_arrow:before,
+button.txt_btn.line_arrow:before {
+  right: 10px;
+  width: 8px;
+  height: 13px;
+  background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-arrow.svg");
 }
 [class*=flag_] {
   display: inline-block;
   text-align: center;
-  padding: 0 4px;
-  height: 19px;
-  line-height: 19px;
+  padding: 0 5px;
+  height: 20px;
+  line-height: 20px;
   font-size: 12px;
   border-radius: 2px;
   color: #fff;
@@ -1517,9 +1552,8 @@ table.table_01 td:first-child {
   background-color: #C2C9D1;
 }
 .radio_box input[type=radio]:disabled + label .info_box:before {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-  opacity: 0.7;
+  -webkit-filter: grayscale(1) opacity(0.7);
+          filter: grayscale(1) opacity(0.7);
 }
 
 .radio_box_group {
