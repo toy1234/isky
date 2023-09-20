@@ -13,10 +13,10 @@ $(document).ready(function () {
     function bodyScroll() {
         document.addEventListener("scroll", function () {
             var scrollY = document.documentElement.scrollTop
-            var state = body.classList.contains('scroll_blocked')
+            var inst = body.classList.contains('scroll_blocked')
             var target = pointEvent.firstElementChild
             // header fixed
-            if (!state) {
+            if (!inst) {
                 if (scrollY >= 16) {
                     target.classList.add("active")
                 } else {
@@ -30,12 +30,12 @@ $(document).ready(function () {
     //layerPopup
     function layerActive(obj) {
         var el = obj.firstElementChild
-        var altPop = el.classList.contains('alert')
+        var inst = el.classList.contains('alert')
         // show/hide
         var type = (obj.style.display == '') ? 'block' : ''
         obj.style.display = type
         // slideUp
-        if (!altPop) {
+        if (!inst) {
             el.classList.toggle('fade')
         }
         // body scroll 차단
@@ -50,9 +50,8 @@ $(document).ready(function () {
         var btn_layer = document.querySelectorAll('.l_open, .l_close, .overlay')
         for (var i = 0; i < btn_layer.length; i++) {
             btn_layer[i].addEventListener("click", function (e) {
-                e.preventDefault()
-                var btn_open = this.classList.contains('l_open')
-                if (btn_open) {
+                var inst = this.classList.contains('l_open')
+                if (inst) {
                     var item = this.dataset.id
                     var target = document.querySelector(item)
                     pageY = document.documentElement.scrollTop
@@ -78,17 +77,17 @@ $(document).ready(function () {
         obj.value = numberWithCommas(tmp_value)
     }
 
-    function inpComma(obj) {
+    function chkComma(obj) {
         if (obj.classList.contains('comma')) {
             chkNumber(obj)
         }
     }
 
     function chkUnit(obj) {
-        var inp_unit = obj.dataset.unit
+        var tmp_unit = obj.dataset.unit
         var el = obj.parentNode
-        if (inp_unit !== undefined) {
-            el.insertAdjacentHTML('beforeend', '<i class="unit">' + inp_unit + '</i>')
+        if (tmp_unit !== undefined) {
+            el.insertAdjacentHTML('beforeend', '<i class="unit">' + tmp_unit + '</i>')
         }
     }
 
@@ -105,29 +104,26 @@ $(document).ready(function () {
     // form input
     function inputVal() {
         var inp = document.querySelectorAll('.inp')
-        var inp_reset = document.querySelectorAll('.del')
 
         for (var i = 0; i < inp.length; i++) {
+            var inp_reset = inp[i].nextElementSibling
             chkValue(inp[i])
             chkUnit(inp[i])
-            inpComma(inp[i])
+            chkComma(inp[i])
 
-            inp[i].addEventListener('keyup', function (e) {
-                e.preventDefault()
+            inp[i].addEventListener('keyup', function () {
                 chkValue(this)
-                inpComma(this)
+                chkComma(this)
             })
 
-            inp[i].addEventListener('blur', function (e) {
-                e.preventDefault()
+            inp[i].addEventListener('blur', function () {
                 chkValue(this)
             })
 
-            inp_reset[i].addEventListener("click", function (e) {
-                e.preventDefault()
-                chkValue(this)
+            inp_reset.addEventListener("click", function (e) {
                 e.target.previousElementSibling.value = ''
                 e.target.previousElementSibling.focus()
+                chkValue(this)
             })
         }
     }

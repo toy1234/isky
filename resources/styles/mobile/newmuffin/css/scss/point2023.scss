@@ -728,7 +728,7 @@ button {
 
     &:not(.link, .ico_btn) {
 
-        &:active:after {
+        &:active:before {
             content: '';
             position: absolute;
             left: 0;
@@ -749,11 +749,11 @@ button {
             color: $pcF;
             cursor: default !important;
 
-            &:before {
+            &:after {
                 filter: brightness(10);
             }
 
-            &:after {
+            &:before {
                 display: none;
             }
         }
@@ -768,11 +768,11 @@ button {
             color: $pc9 !important;
             cursor: default !important;
 
-            &:before {
+            &:after {
                 filter: grayscale(1) opacity(0.5);
             }
 
-            &:after {
+            &:before {
                 display: none;
             }
         }
@@ -825,7 +825,7 @@ button {
             clip-path: inset(50%);
         }
 
-        &:before {
+        &:after {
             content: '';
             width: 24px;
             height: 24px;
@@ -835,14 +835,14 @@ button {
         }
 
         &.back {
-            &:before {
+            &:after {
                 background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-back.svg');
             }
         }
 
         &.close,
         &.l_close {
-            &:before {
+            &:after {
                 background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-close.svg');
             }
         }
@@ -862,7 +862,7 @@ button {
         height: 28px;
         line-height: 28px;
 
-        &:before {
+        &:after {
             background-position: 50% 50%;
             background-repeat: no-repeat;
             background-size: contain;
@@ -874,20 +874,14 @@ button {
             color: $pc5;
         }
 
-
         &[class*=arrow] {
             padding-right: 24px;
 
-            &:before {
+            &:after {
                 content: '';
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-            }
-        }
-
-        &.arrow {
-            &:before {
                 right: 4px;
                 width: 20px;
                 height: 20px;
@@ -896,7 +890,7 @@ button {
             }
 
             &.up {
-                &:before {
+                &:after {
                     transform: translateY(-50%) rotate(180deg);
                 }
             }
@@ -905,18 +899,14 @@ button {
         &.line_arrow {
             padding-right: 28px;
 
-            &:before {
+            &:after {
                 right: 10px;
                 width: 8px;
                 height: 13px;
                 background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-arrow.svg');
             }
         }
-
-
-
     }
-
 
     //flag
     @at-root [class*=flag_] {
@@ -1111,7 +1101,7 @@ table {
             z-index: 1;
 
             &.del {
-                &:before {
+                &:after {
                     background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-delete.svg');
                 }
             }
@@ -1165,7 +1155,7 @@ table {
 
         .ico_btn {
             &.search {
-                &:before {
+                &:after {
                     background-image: url('/resources/images/mobile/newmuffin/img/point/202308/ico-delete.svg');
                 }
             }

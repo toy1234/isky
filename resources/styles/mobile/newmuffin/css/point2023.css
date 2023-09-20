@@ -1029,8 +1029,8 @@ button {
           box-sizing: border-box;
   overflow: hidden;
 }
-a:not(.link, .ico_btn):active:after,
-button:not(.link, .ico_btn):active:after {
+a:not(.link, .ico_btn):active:before,
+button:not(.link, .ico_btn):active:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1048,15 +1048,15 @@ button:not(.ico_btn, .line):disabled {
   color: #fff;
   cursor: default !important;
 }
-a:not(.ico_btn, .line).disabled:before, a:not(.ico_btn, .line):disabled:before,
-button:not(.ico_btn, .line).disabled:before,
-button:not(.ico_btn, .line):disabled:before {
-  -webkit-filter: brightness(10);
-          filter: brightness(10);
-}
 a:not(.ico_btn, .line).disabled:after, a:not(.ico_btn, .line):disabled:after,
 button:not(.ico_btn, .line).disabled:after,
 button:not(.ico_btn, .line):disabled:after {
+  -webkit-filter: brightness(10);
+          filter: brightness(10);
+}
+a:not(.ico_btn, .line).disabled:before, a:not(.ico_btn, .line):disabled:before,
+button:not(.ico_btn, .line).disabled:before,
+button:not(.ico_btn, .line):disabled:before {
   display: none;
 }
 a[class*=line]:disabled, a[class*=line].disabled,
@@ -1067,15 +1067,15 @@ button[class*=line].disabled {
   color: #9ba1a7 !important;
   cursor: default !important;
 }
-a[class*=line]:disabled:before, a[class*=line].disabled:before,
-button[class*=line]:disabled:before,
-button[class*=line].disabled:before {
-  -webkit-filter: grayscale(1) opacity(0.5);
-          filter: grayscale(1) opacity(0.5);
-}
 a[class*=line]:disabled:after, a[class*=line].disabled:after,
 button[class*=line]:disabled:after,
 button[class*=line].disabled:after {
+  -webkit-filter: grayscale(1) opacity(0.5);
+          filter: grayscale(1) opacity(0.5);
+}
+a[class*=line]:disabled:before, a[class*=line].disabled:before,
+button[class*=line]:disabled:before,
+button[class*=line].disabled:before {
   display: none;
 }
 a.btn,
@@ -1139,8 +1139,8 @@ button.ico_btn > span {
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
 }
-a.ico_btn:before,
-button.ico_btn:before {
+a.ico_btn:after,
+button.ico_btn:after {
   content: "";
   width: 24px;
   height: 24px;
@@ -1148,13 +1148,13 @@ button.ico_btn:before {
   background-repeat: no-repeat;
   background-size: contain;
 }
-a.ico_btn.back:before,
-button.ico_btn.back:before {
+a.ico_btn.back:after,
+button.ico_btn.back:after {
   background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-back.svg");
 }
-a.ico_btn.close:before, a.ico_btn.l_close:before,
-button.ico_btn.close:before,
-button.ico_btn.l_close:before {
+a.ico_btn.close:after, a.ico_btn.l_close:after,
+button.ico_btn.close:after,
+button.ico_btn.l_close:after {
   background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-close.svg");
 }
 a.txt_btn,
@@ -1178,8 +1178,8 @@ button.txt_btn {
   height: 28px;
   line-height: 28px;
 }
-a.txt_btn:before,
-button.txt_btn:before {
+a.txt_btn:after,
+button.txt_btn:after {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1194,16 +1194,13 @@ a.txt_btn[class*=arrow],
 button.txt_btn[class*=arrow] {
   padding-right: 24px;
 }
-a.txt_btn[class*=arrow]:before,
-button.txt_btn[class*=arrow]:before {
+a.txt_btn[class*=arrow]:after,
+button.txt_btn[class*=arrow]:after {
   content: "";
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-a.txt_btn.arrow:before,
-button.txt_btn.arrow:before {
   right: 4px;
   width: 20px;
   height: 20px;
@@ -1211,8 +1208,8 @@ button.txt_btn.arrow:before {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-a.txt_btn.arrow.up:before,
-button.txt_btn.arrow.up:before {
+a.txt_btn[class*=arrow].up:after,
+button.txt_btn[class*=arrow].up:after {
   -webkit-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
 }
@@ -1220,8 +1217,8 @@ a.txt_btn.line_arrow,
 button.txt_btn.line_arrow {
   padding-right: 28px;
 }
-a.txt_btn.line_arrow:before,
-button.txt_btn.line_arrow:before {
+a.txt_btn.line_arrow:after,
+button.txt_btn.line_arrow:after {
   right: 10px;
   width: 8px;
   height: 13px;
@@ -1434,7 +1431,7 @@ table.table_01 td:first-child {
   height: 24px;
   z-index: 1;
 }
-.input_box input + .ico_btn.del:before {
+.input_box input + .ico_btn.del:after {
   background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-delete.svg");
 }
 .input_box .unit {
@@ -1483,7 +1480,7 @@ table.table_01 td:first-child {
       -ms-flex: 1;
           flex: 1;
 }
-.input_group.d-flex .ico_btn.search:before, .input_group.search .ico_btn.search:before {
+.input_group.d-flex .ico_btn.search:after, .input_group.search .ico_btn.search:after {
   background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-delete.svg");
 }
 .input_group.d-flex .txt_btn, .input_group.search .txt_btn {
