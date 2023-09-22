@@ -20,10 +20,19 @@
     <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/jquery.event.drag-1.5.min.js"></script>
     <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/common.js"></script>
     <!-- <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/lottie-player.js"></script> -->
-    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/point-2023.js"></script>
+    <script type="text/javascript" src="/resources/scripts/mobile/newmuffin/js/point-2023-es6.js"></script>
 
 
-
+    <style>
+        xmp {
+            width: calc(100% - 36px);
+            white-space: nowrap;
+            margin: 0;
+            font-size: 14px;
+            font-weight: 100;
+            color: #9ba1a7;
+        }
+    </style>
     <!-- 20230526 수정 -->
     <script type="text/javascript">
         $(document).ready(function () {
@@ -97,18 +106,17 @@
                             <a href="#none" class="btn line disabled">취소</a>
                             <a href="#none" class="btn disabled">선택완료</a>
                         </div>
-                        <br><br>
 
-                        <div>
+                        <div class="btn_group">
                             <button class="btn">button</button>
-                            <br><br>
+                        </div>
+                        <div class="btn_group">
                             <button class="btn" disabled>button</button>
-
-
-                            <br><br>
+                        </div>
+                        <div class="btn_group">
                             <a href="#none" class="btn">a:button</a>
-
-                            <br><br>
+                        </div>
+                        <div class="btn_group">
                             <a href="#none" class="btn disabled">a:button</a>
                         </div>
                     </div>
@@ -130,95 +138,97 @@
                     <div class="section">
                         <h2 class="title">Form</h2>
 
-                        <div class="input_group d-flex">
-                            <div class="input_box">
-                                <input type="tel" maxlength="4" class="inp" placeholder="Placeholder" value="010"
-                                    readonly>
-                                <button class="ico_btn del"><span>삭제</span></button>
-                            </div>
-                            <div class="input_box">
-                                <input type="tel" maxlength="4" class="inp" placeholder="0000" value="">
-                                <button class="ico_btn del"><span>삭제</span></button>
-                            </div>
-                            <div class="input_box">
-                                <input type="tel" maxlength="4" class="inp" placeholder="0000" value="">
-                                <button class="ico_btn del"><span>삭제</span></button>
-                            </div>
-                        </div>
-
-
-                        <div class="input_group">
-                            <div class="input_box">
-                                <input type="text" maxlength="12" placeholder="Placeholder" value="">
-                            </div>
-                            <div class="input_box">
-                                <input type="text" inputmode="numeric" class="inp comma" data-unit="P"
-                                    placeholder="포인트를 입력해주세요." value="1220">
-                                <button class="ico_btn del"><span>삭제</span></button>
-                            </div>
-
-                            <div class="input_box">
-                                <input type="text" inputmode="numeric" class="inp comma" data-unit="원"
-                                    placeholder="금액을 입력해주세요" value="">
-                                <button class="ico_btn del"><span>삭제</span></button>
-                            </div>
-                        </div>
-
-
-                        <div class="input_group search">
-                            <div class="input_box">
-                                <input type="text" class="inp" placeholder="도로명 주소 또는 주유소명" value="">
-                                <button class="ico_btn del"><span>삭제</span></button>
-                            </div>
-                            <button class="txt_btn"><span>조회</span></button>
-                        </div>
-
-                        <br><br>
-
-                        <div class="radio_group">
-                            <div class="radio_box">
-                                <input type="radio" name="rd00" id="rdt01" checked><label for="rdt01">머핀포인트</label>
-                            </div>
-                            <div class="radio_box">
-                                <input type="radio" name="rd00" id="rdt02"><label for="rdt02">OK캐쉬백</label>
-                            </div>
-                            <div class="radio_box">
-                                <input type="radio" name="rd00" id="rdt03"><label for="rdt03">블루멤버스</label>
-                            </div>
-                        </div>
-
-                        <br>
-
-                        <div class="chk_box">
-                            <input type="checkbox" name="chk01" id="chkt11">
-                            <label for="chkt11">(필수) 개인정보 제3자 동의</label>
-                        </div>
-
-                        <br>
-
-                        <div class="chk_box all">
-                            <input type="checkbox" name="chk00" id="chkt00" checked>
-                            <label for="chkt00">
-                                전체 동의
-                            </label>
-                        </div>
-
-                        <ul class="chk_list">
-                            <li>
-                                <div class="chk_box">
-                                    <input type="checkbox" name="chk00" id="chkt01" checked>
-                                    <label for="chkt01">(필수) 머핀 회원 이용약관</label>
+                        <form>
+                            <div class="input_group d-flex">
+                                <div class="input_box">
+                                    <input type="tel" maxlength="4" class="inp" placeholder="Placeholder" value="010"
+                                        readonly>
+                                    <button class="ico_btn del"><span>삭제</span></button>
                                 </div>
-                                <a href="#none" class="link" title="약관">보기</a>
-                            </li>
-                            <li>
-                                <div class="chk_box">
-                                    <input type="checkbox" name="chk00" id="chkt02">
-                                    <label for="chkt02">(필수) 머핀 회원 개인정보 수집 및 이용 동의 글씨가 길어질 경우</label>
+                                <div class="input_box">
+                                    <input type="tel" maxlength="4" class="inp" placeholder="0000" value="">
+                                    <button class="ico_btn del"><span>삭제</span></button>
                                 </div>
-                                <a href="#none" class="link" title="약관">보기</a>
-                            </li>
-                        </ul>
+                                <div class="input_box">
+                                    <input type="tel" maxlength="4" class="inp" placeholder="0000" value="">
+                                    <button class="ico_btn del"><span>삭제</span></button>
+                                </div>
+                            </div>
+
+
+                            <div class="input_group">
+                                <div class="input_box">
+                                    <input type="text" maxlength="12" placeholder="Placeholder" value="">
+                                </div>
+                                <div class="input_box">
+                                    <input type="text" inputmode="numeric" class="inp comma" data-unit="P"
+                                        placeholder="포인트를 입력해주세요." value="1220">
+                                    <button class="ico_btn del"><span>삭제</span></button>
+                                </div>
+
+                                <div class="input_box">
+                                    <input type="text" inputmode="numeric" class="inp comma" data-unit="원"
+                                        placeholder="금액을 입력해주세요" value="">
+                                    <button class="ico_btn del"><span>삭제</span></button>
+                                </div>
+                            </div>
+
+
+                            <div class="input_group search">
+                                <div class="input_box">
+                                    <input type="text" class="inp" placeholder="도로명 주소 또는 주유소명" value="">
+                                    <button class="ico_btn del"><span>삭제</span></button>
+                                </div>
+                                <button class="txt_btn"><span>조회</span></button>
+                            </div>
+
+                            <br><br>
+
+                            <div class="radio_group">
+                                <div class="radio_box">
+                                    <input type="radio" name="rd00" id="rdt01" checked><label for="rdt01">머핀포인트</label>
+                                </div>
+                                <div class="radio_box">
+                                    <input type="radio" name="rd00" id="rdt02"><label for="rdt02">OK캐쉬백</label>
+                                </div>
+                                <div class="radio_box">
+                                    <input type="radio" name="rd00" id="rdt03"><label for="rdt03">블루멤버스</label>
+                                </div>
+                            </div>
+
+                            <br>
+                            <br>
+
+                            <div class="chk_box">
+                                <input type="checkbox" name="chk01" id="chkt11">
+                                <label for="chkt11">(필수) 개인정보 제3자 동의</label>
+                            </div>
+
+
+                            <div class="chk_box all">
+                                <input type="checkbox" name="chk00" id="chkt00" checked>
+                                <label for="chkt00">
+                                    전체 동의
+                                </label>
+                            </div>
+
+                            <ul class="chk_list">
+                                <li>
+                                    <div class="chk_box">
+                                        <input type="checkbox" name="chk00" id="chkt01" checked>
+                                        <label for="chkt01">(필수) 머핀 회원 이용약관</label>
+                                    </div>
+                                    <a href="#none" class="link" title="약관">보기</a>
+                                </li>
+                                <li>
+                                    <div class="chk_box">
+                                        <input type="checkbox" name="chk00" id="chkt02">
+                                        <label for="chkt02">(필수) 머핀 회원 개인정보 수집 및 이용 동의 글씨가 길어질 경우</label>
+                                    </div>
+                                    <a href="#none" class="link" title="약관">보기</a>
+                                </li>
+                            </ul>
+                        </form>
                     </div>
 
                     <div class="section">
@@ -234,14 +244,41 @@
                     <div class="section">
                         <h2 class="title">Emoji</h2>
                         <br>
-                        <h2 class="title">
+                        <h2 class="title d-flex">
                             &#127881;
+                            <xmp>
+                                &#127881;
+                            </xmp>
                             &#128549;
+                            <xmp>
+                                &#128549;
+                            </xmp>
                             &#127873;
+                            <xmp>
+                                &#127873;
+                            </xmp>
                             &#127939;
+                            <xmp>
+                                &#127939;
+                            </xmp>
                             &#129395;
+                            <xmp>
+                                &#129395;
+                            </xmp>
                             &#128664;
+                            <xmp>
+                                &#128664;
+                            </xmp>
+                            💁🏻‍♀️
+                            <xmp>
+                                💁🏻‍♀️
+                            </xmp>
+                            &#128129;
+                            <xmp>
+                                &#128129;
+                            </xmp>
                         </h2>
+
                     </div>
 
                     <div class="section">

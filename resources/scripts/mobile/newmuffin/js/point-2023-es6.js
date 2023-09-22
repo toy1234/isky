@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const bodyScroll = () => {
         document.addEventListener("scroll", () => {
             const scrollY = document.documentElement.scrollTop
-            const inst = body.classList.contains('scroll_blocked')
+            const opts = body.classList.contains('scroll_blocked')
             const target = pointEvent.firstElementChild
             // header fixed
-            if (!inst) {
+            if (!opts) {
                 if (scrollY >= 16) {
                     target.classList.add("active")
                 } else {
@@ -28,12 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
     //layerPopup
     const layerActive = obj => {
         const el = obj.firstElementChild
-        const inst = el.classList.contains('alert')
+        const opts = el.classList.contains('alert')
         // show/hide
         const type = (obj.style.display == '') ? 'block' : ''
         obj.style.display = type
         // slideUp
-        if (!inst) {
+        if (!opts) {
             el.classList.toggle('fade')
         }
         // body scroll 차단
@@ -47,12 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const layerPopup = () => {
         const btn_layer = document.querySelectorAll('.l_open, .l_close, .overlay')
         btn_layer.forEach((obj) => {
-            obj.addEventListener("click", () => {
+            obj.addEventListener("click", (e) => {
+                e.preventDefault
                 const inst = obj.classList.contains('l_open')
-                const item = obj.dataset.id
+                const opts = obj.dataset.id
 
                 if (inst) {
-                    target = document.querySelector(item)
+                    target = document.querySelector(opts)
                     pageY = document.documentElement.scrollTop
                 } else {
                     target = obj.closest('.muffin_point_layer_popup')
@@ -111,14 +112,19 @@ document.addEventListener('DOMContentLoaded', () => {
             chkUnit(obj)
             chkComma(obj)
 
-            obj.addEventListener('keyup', () => {
+            obj.addEventListener('keyup', (e) => {
+                e.preventDefault
                 chkValue(obj)
                 chkComma(obj)
             })
 
-            obj.addEventListener('blur', chkValue(obj))
+            obj.addEventListener('blur', (e) => {
+                e.preventDefault
+                chkValue(obj)
+            })
 
-            reset.addEventListener("click", () => {
+            reset.addEventListener("click", (e) => {
+                e.preventDefault
                 obj.value = ''
                 obj.focus()
                 chkValue(obj)

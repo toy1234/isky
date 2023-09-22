@@ -588,7 +588,7 @@ body {
 .muffin_point_wrap_mobile section.contents .inner .section.inform_box {
   position: relative;
   text-align: center;
-  padding-bottom: 48px;
+  padding-bottom: 16px;
   min-height: 104px;
 }
 .muffin_point_wrap_mobile section.contents .inner .section.inform_box:before {
@@ -603,8 +603,14 @@ body {
   height: 42px;
   background: transparent url("/resources/images/mobile/newmuffin/img/point/202308/ico-comp.svg") 0 0/contain no-repeat;
 }
+.muffin_point_wrap_mobile section.contents .inner .section.inform_box.none {
+  padding-bottom: 48px;
+}
 .muffin_point_wrap_mobile section.contents .inner .section.inform_box.none:before {
   background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-none-data.svg");
+}
+.muffin_point_wrap_mobile section.contents .inner .section.inform_box.error, .muffin_point_wrap_mobile section.contents .inner .section.inform_box.cancel {
+  padding-bottom: 48px;
 }
 .muffin_point_wrap_mobile section.contents .inner .section.inform_box.error:before, .muffin_point_wrap_mobile section.contents .inner .section.inform_box.cancel:before {
   background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-cancel.svg");
@@ -719,6 +725,9 @@ body {
 }
 .muffin_point_wrap_mobile section.contents .inner .section dt.d-flex-column-center + dd, .muffin_point_wrap_mobile section.contents .inner .section dt.d-flex-column-center + dd + dd {
   padding: 0 8px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .muffin_point_wrap_mobile section.contents .inner .section dd {
   font-size: 16px;
@@ -737,6 +746,9 @@ body {
   line-height: 1.5;
   letter-spacing: -0.02em;
 }
+.muffin_point_wrap_mobile section.contents .inner .section dd .tip_box {
+  margin-top: 20px;
+}
 .is-has-btn dd {
   min-height: 28px !important;
   line-height: 28px !important;
@@ -750,7 +762,6 @@ body {
 }
 
 .muffin_point_wrap_mobile section.contents .inner .section dd.btn_area {
-  margin-top: 20px;
   padding-bottom: 24px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -981,6 +992,10 @@ body {
 }
 .dot_list ul > li {
   letter-spacing: 0.01em;
+  padding-left: 0;
+}
+.dot_list ul > li:before {
+  display: none;
 }
 
 .hyphen_list {
@@ -1005,6 +1020,35 @@ body {
   background-color: #4e5054;
 }
 
+.tip_box {
+  width: 100%;
+  padding: 20px 16px;
+  background-color: rgba(230, 245, 253, 0.8);
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  color: #4e5054;
+}
+.tip_box strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.tip_box strong > [class*=emoji] {
+  display: inline-block;
+  margin-left: 4px;
+  line-height: 0;
+}
+.tip_box .hyphen_list {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.tip_box .hyphen_list li + li {
+  margin-top: 4px;
+}
+
 .btn_group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1015,7 +1059,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
+}
+.btn_group .btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.btn_group .txt_btn {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 .btn_group + .btn_group {
   margin-top: 40px;
@@ -1326,7 +1382,7 @@ button.txt_btn.line_arrow:after {
 }
 
 table.table_01 {
-  margin-top: 12px;
+  margin: 12px 0 20px;
   width: 100%;
   font-size: 12px;
   color: #4e5054;
@@ -1695,6 +1751,13 @@ table.table_01 td:first-child {
 .chk_box input[type=checkbox]:checked + label:before {
   background-image: url("/resources/images/mobile/newmuffin/img/point/202308/ico-chk-on.svg");
 }
+.chk_box.all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #e7e9ed;
+  margin-bottom: 10px;
+}
 .chk_box.all input[type=checkbox] + label {
   font-size: 16px;
   color: #000000;
@@ -1702,8 +1765,6 @@ table.table_01 td:first-child {
 }
 
 .chk_list {
-  border-top: 1px solid #e7e9ed;
-  padding-top: 10px;
   margin-bottom: 51px;
 }
 .chk_list > li {

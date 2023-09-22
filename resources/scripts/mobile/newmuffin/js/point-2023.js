@@ -50,6 +50,7 @@ $(document).ready(function () {
         var btn_layer = document.querySelectorAll('.l_open, .l_close, .overlay')
         for (var i = 0; i < btn_layer.length; i++) {
             btn_layer[i].addEventListener("click", function (e) {
+                e.preventDefault
                 var inst = this.classList.contains('l_open')
                 if (inst) {
                     var item = this.dataset.id
@@ -111,16 +112,19 @@ $(document).ready(function () {
             chkUnit(inp[i])
             chkComma(inp[i])
 
-            inp[i].addEventListener('keyup', function () {
+            inp[i].addEventListener('keyup', function (e) {
+                e.preventDefault
                 chkValue(this)
                 chkComma(this)
             })
 
-            inp[i].addEventListener('blur', function () {
+            inp[i].addEventListener('blur', function (e) {
+                e.preventDefault
                 chkValue(this)
             })
 
             inp_reset.addEventListener("click", function (e) {
+                e.preventDefault
                 e.target.previousElementSibling.value = ''
                 e.target.previousElementSibling.focus()
                 chkValue(this)
