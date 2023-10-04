@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const btn_layer = document.querySelectorAll('.l_open, .l_close, .overlay')
         btn_layer.forEach((obj) => {
             obj.addEventListener("click", (e) => {
-                e.preventDefault
+                e.preventDefault()
                 const inst = obj.classList.contains('l_open')
                 const opts = obj.dataset.id
 
@@ -113,18 +113,18 @@ document.addEventListener('DOMContentLoaded', () => {
             chkComma(obj)
 
             obj.addEventListener('keyup', (e) => {
-                e.preventDefault
+                e.preventDefault()
                 chkValue(obj)
                 chkComma(obj)
             })
 
             obj.addEventListener('blur', (e) => {
-                e.preventDefault
+                e.preventDefault()
                 chkValue(obj)
             })
 
             reset.addEventListener("click", (e) => {
-                e.preventDefault
+                e.preventDefault()
                 obj.value = ''
                 obj.focus()
                 chkValue(obj)
